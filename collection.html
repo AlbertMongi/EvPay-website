@@ -49,6 +49,8 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="https://ranyeh24.github.io/inazuma-tailwind" />
+<link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
     <!-- Favicon -->
     <link
@@ -168,9 +170,13 @@
             class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
           >
             <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
-              <li class="group relative">
-                <a href="#home" class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 active">Home</a>
-              </li>
+               <li class="group relative">
+  <a href="/index.html" 
+     onclick="window.location.href='/index.html'; return false;"
+     class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
+    Home
+  </a>
+</li>
              <li class="group relative">
   <a href="#services" class="ic-page-scroll mx-8 flex items-center py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
     Services
@@ -198,12 +204,12 @@
         </a>
       </li>
       <li>
-        <a href="payout.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
+        <a href="#" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
           Payout
         </a>
       </li>
       <li>
-        <a href="payment.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
+        <a href="#" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
           Card Payment
         </a>
       </li>
@@ -253,22 +259,27 @@
           <div class="-mx-5 flex flex-wrap items-center">
             <div class="w-full px-5">
               <div class="scroll-revealed mx-auto max-w-[780px] text-center">
+                               <h3 class="mb-6 text-4xl font-extrabold text-primary-color underline decoration-4 decoration-primary/40">
+  Collection Service
+</h3>
+
+
                 <h1
                   class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight"
                 >
-                 Payment gateway and financial solution developed by EvMak Tanzania
+                 Get paid across mobile money, bank and cards
                 </h1>
 
                 <p
                   class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal"
                 >
-                Payment platform  that helps businesses receive and send money easily. It allows companies to accept payments from mobile money, banks, cards, and QR codes using just one simple API or dashboard.
+             One integration. Multiple rails. Faster confirmations, fewer failures, cleaner books.
                 </p>
 
                 <ul
                   class="mb-10 flex flex-wrap items-center justify-center gap-4 md:gap-5"
                 >
-                  <li>
+                  <!-- <li>
                     <a
                       href="javascript:void(0)"
                       class="inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]"
@@ -284,7 +295,7 @@
                       role="button"
                       ><i class="lni lni-play text-lg/none"></i> Watch Intro</a
                     >
-                  </li>
+                  </li> -->
                 </ul>
 
                 <div>
@@ -342,289 +353,177 @@
         </div>
       </section>
 
-<!-- About section -->
-<section id="about" class="section-area">
-  <div class="container">
-    <div class="grid grid-cols-1 gap-14 lg:grid-cols-2">
-      <div class="w-full">
-        <figure class="scroll-revealed max-w-[480px] mx-auto">
+ <!-- About section -->
+<section id="about" class="section-area py-16 bg-gray-50 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Image -->
+      <div class="w-full flex justify-center">
+        <figure class="max-w-[480px] w-full">
           <img
             src="./assets/img/about-img.jpg"
-            alt="About EvPay by EvMak"
-            class="rounded-xl"
+            alt="Collection Service by EvMak"
+            class="rounded-xl shadow-lg object-cover w-full h-auto"
           />
         </figure>
       </div>
 
+      <!-- Content -->
       <div class="w-full">
-        <div class="scroll-revealed">
-          <h6 class="mb-2 block text-lg font-semibold text-primary">
-            About EvPay
-          </h6>
-          <h2 class="mb-6">
-            Powering Digital Payments & Business Growth in Tanzania
+        <div class="mb-6">
+          <h6 class="text-lg font-semibold text-primary mb-2">Common Use Cases</h6>
+          <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100">
+            The following are the common use cases for our Collection Service.
           </h2>
         </div>
 
-        <div class="tabs scroll-revealed">
-          <nav
-            class="tabs-nav flex flex-wrap gap-4 my-8"
-            role="tablist"
-            aria-label="About us tabs"
-          >
-            <button
-              type="button"
-              class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-              data-web-toggle="tabs"
-              data-web-target="tabs-panel-profile"
-              id="tabs-list-profile"
-              role="tab"
-              aria-controls="tabs-panel-profile"
-            >
-              Our Profile
-            </button>
+        <!-- Feature List with Icons -->
+        <div class="space-y-5">
 
-            <button
-              type="button"
-              class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-              data-web-toggle="tabs"
-              data-web-target="tabs-panel-vision"
-              id="tabs-list-vision"
-              role="tab"
-              aria-controls="tabs-panel-vision"
-            >
-              Our Vision
-            </button>
-
-            <button
-              type="button"
-              class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
-              data-web-toggle="tabs"
-              data-web-target="tabs-panel-history"
-              id="tabs-list-history"
-              role="tab"
-              aria-controls="tabs-panel-history"
-            >
-              Our History
-            </button>
-          </nav>
-
-          <!-- PROFILE TAB -->
-          <div
-            class="tabs-content mt-4"
-            id="tabs-panel-profile"
-            tabindex="-1"
-            role="tabpanel"
-            aria-labelledby="tabs-list-profile"
-          >
-            <p>
-              EvPay is a modern payment gateway developed by EvMak Tanzania, a 
-              leading PayTech and software company dedicated to powering digital 
-              payments across the country. We enable businesses to accept mobile 
-              money, bank transfers, card payments, QR payments, and USSD payments 
-              through a single unified platform.
-            </p>
-            <p>
-              Our solutions help merchants automate collections, track transactions 
-              in real time, integrate payments into apps and websites, and scale 
-              their operations with secure and reliable infrastructure.
-            </p>
+          <!-- Feature Item -->
+          <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-shadow group">
+            <div class="flex-shrink-0 text-primary text-2xl mt-1">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">Retail & Services</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                Accept payments from customers for products, services, and online orders seamlessly. 
+                Automate collections and track transactions in real-time.
+              </p>
+            </div>
           </div>
 
-          <!-- VISION TAB -->
-          <div
-            class="tabs-content mt-4"
-            id="tabs-panel-vision"
-            tabindex="-1"
-            role="tabpanel"
-            aria-labelledby="tabs-list-vision"
-          >
-            <p>
-              Our vision is to build the most trusted and impactful digital payment 
-              ecosystem in East Africa — enabling businesses of all sizes to thrive 
-              in a cashless and connected world. We aim to simplify payments, empower 
-              SMEs, and increase financial inclusion across the region.
-            </p>
-            <p>
-              We believe that every business, from startups to large enterprises, 
-              should have access to fast, secure, and affordable financial technology 
-              that fuels innovation and economic growth.
-            </p>
+          <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-shadow group">
+            <div class="flex-shrink-0 text-primary text-2xl mt-1">
+              <i class="fas fa-ticket-alt"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">Events & Ticketing</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                Collect ticket fees, registrations, and entry payments for events, conferences, 
+                and entertainment venues easily with our platform.
+              </p>
+            </div>
           </div>
 
-          <!-- HISTORY TAB -->
-          <div
-            class="tabs-content mt-4"
-            id="tabs-panel-history"
-            tabindex="-1"
-            role="tabpanel"
-            aria-labelledby="tabs-list-history"
-          >
-            <p>
-              EvMak Tanzania was founded by a team of innovative engineers and 
-              fintech professionals who recognized the gaps in Tanzania’s digital 
-              payment landscape. Starting with custom software solutions, the 
-              company expanded into PayTech and built EvPay to solve real-world 
-              payment challenges faced by local businesses.
-            </p>
-            <p>
-              Over the years, EvMak has grown into a recognized fintech provider, 
-              working with SMEs, corporates, financial institutions, and government 
-              partners. EvPay continues to evolve with new features, increased 
-              integrations, and a strong commitment to reliability and innovation.
-            </p>
+          <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-shadow group">
+            <div class="flex-shrink-0 text-primary text-2xl mt-1">
+              <i class="fas fa-school"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">Utilities & School Fees</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                Automate collections for utilities, school fees, and other recurring payments, 
+                reducing manual effort and late payments.
+              </p>
+            </div>
           </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-shadow group">
+            <div class="flex-shrink-0 text-primary text-2xl mt-1">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">Subscriptions & Donations</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                Manage recurring subscriptions and donations efficiently. Enable recurring billing 
+                for your services or non-profit contributions.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-shadow group">
+            <div class="flex-shrink-0 text-primary text-2xl mt-1">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-800 dark:text-gray-100 mb-1 group-hover:text-primary transition-colors">B2B Invoices & Retainers</h4>
+              <p class="text-gray-600 dark:text-gray-300 text-sm">
+                Send invoices, collect payments, and manage retainers for business-to-business 
+                transactions and professional services seamlessly.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#start-collecting" class="px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary-dark transition-all">
+            Start Collecting
+          </a>
+          <a href="#docs" class="px-6 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all">
+            Read Collections Docs
+          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Include Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 <!-- Lineicons CDN (REQUIRED for icons to show) -->
 <link
   rel="stylesheet"
   href="https://cdn.lineicons.com/4.0/lineicons.css"
 />
-
-<!-- Services section -->
-<section id="services" class="section-area">
+<!-- FAQ section -->
+<section id="faq" class="section-area relative">
   <div class="container">
     <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-      <!-- <h6 class="mb-2 block text-lg font-semibold text-primary">
-        Services
-      </h6> -->
-      <h2 class="mb-6">Why you should choose Evpay</h2>
+      <h2 class="mb-6">What You Get</h2>
       <p>
-        EvPay by EvMak provides a complete suite of digital payment solutions 
-        designed for businesses in Tanzania — enabling fast, secure, and flexible 
-        payment collection across mobile money, banks, cards, and more.
+       The following is what you get when you use Collection Service.
       </p>
     </div>
 
-    <div class="row">
+    <div class="grid gap-x-8 gap-y-12 grid-cols-1 lg:grid-cols-2">
 
-      <!-- Mobile Money Payments -->
-      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-        <div class="group hover:-translate-y-1">
-          <div
-            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
-                   text-[37px] bg-primary text-white"
-          >
-            <i class="lni lni-mobile"></i>
-          </div>
-          <div class="w-full">
-            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-              Mobile Money Payments
-            </h4>
-            <p>
-              Accept fast and secure payments from all major mobile money 
-              platforms including M-Pesa, Tigo Pesa, Airtel Money, and Halopesa.
-            </p>
-          </div>
+      <!-- FAQ 1 -->
+      <div class="scroll-revealed flex">
+        <div class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]">
+          <i class="lni lni-stats-up"></i>
+        </div>
+        <div class="w-full">
+          <h3 class="mb-6 text-xl font-semibold">Payment Links</h3>
+          <p>Create a link in seconds and share via SMS/WhatsApp. No code. Great for invoices, deposits, and one-off orders.</p>
         </div>
       </div>
 
-      <!-- Bank Transfer Payments -->
-      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-        <div class="group hover:-translate-y-1">
-          <div
-            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
-                   text-[37px] bg-primary text-white"
-          >
-            <i class="lni lni-bank"></i>
-          </div>
-          <div class="w-full">
-            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-              Bank Transfer Payments
-            </h4>
-            <p>
-              Seamless bank integrations allowing customers to pay directly
-              from over 30 supported Tanzanian banks.
-            </p>
-          </div>
+      <!-- FAQ 2 -->
+      <div class="scroll-revealed flex">
+        <div class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]">
+          <i class="lni lni-cart"></i>
+        </div>
+        <div class="w-full">
+          <h3 class="mb-6 text-xl font-semibold">Hosted Checkout</h3>
+          <p>A brandable page that supports mobile money, bank, and cards. Save details for returning customers where allowed.</p>
         </div>
       </div>
 
-      <!-- Card Payments -->
-      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-        <div class="group hover:-translate-y-1">
-          <div
-            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
-                   text-[37px] bg-primary text-white"
-          >
-            <i class="lni lni-credit-cards"></i>
-          </div>
-          <div class="w-full">
-            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-              Card Payments
-            </h4>
-            <p>
-              Accept Visa, Mastercard, and other major cards with secure 
-              3D authentication and real-time confirmation.
-            </p>
-          </div>
+      <!-- FAQ 3 -->
+      <div class="scroll-revealed flex">
+        <div class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]">
+          <i class="lni lni-support"></i>
+        </div>
+        <div class="w-full">
+          <h3 class="mb-6 text-xl font-semibold">Webhooks & Status</h3>
+          <p>Real-time events for success, pending, failure, and settlement. Clear error codes. Idempotent retries.</p>
         </div>
       </div>
 
-      <!-- QR Code Payments -->
-      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-        <div class="group hover:-translate-y-1">
-          <div
-            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
-                   text-[37px] bg-primary text-white"
-          >
-            <i class="lni lni-qr-code"></i>
-          </div>
-          <div class="w-full">
-            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-              QR Code Payments
-            </h4>
-            <p>
-              Generate dynamic or static QR codes to allow quick, 
-              app-based payments at physical or digital points of sale.
-            </p>
-          </div>
+      <!-- FAQ 4 -->
+      <div class="scroll-revealed flex">
+        <div class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]">
+          <i class="lni lni-reload"></i>
         </div>
-      </div>
-
-      <!-- USSD Push Payments -->
-      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-        <div class="group hover:-translate-y-1">
-          <div
-            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
-                   text-[37px] bg-primary text-white"
-          >
-            <i class="lni lni-network"></i>
-          </div>
-          <div class="w-full">
-            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-              USSD Push Payments
-            </h4>
-            <p>
-              Enable customers to pay instantly using USSD on any mobile 
-              phone — no internet required, making payments accessible to all.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- API & System Integration -->
-      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-        <div class="group hover:-translate-y-1">
-          <div
-            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
-                   text-[37px] bg-primary text-white"
-          >
-            <i class="lni lni-code-alt"></i>
-          </div>
-          <div class="w-full">
-            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
-              API & System Integration
-            </h4>
-            <p>
-              Developer-friendly APIs and plugins for integrating payments 
-              into mobile apps, websites, POS systems, and ERP platforms.
-            </p>
-          </div>
+        <div class="w-full">
+          <h3 class="mb-6 text-xl font-semibold">Reconciliation Tools</h3>
+          <p>Match payments to orders automatically. Export CSV/PDF. Push to your ERP or accounting tool.</p>
         </div>
       </div>
 
@@ -633,35 +532,7 @@
 </section>
 
 
-      <!-- Intro video section -->
-      <section id="intro" class="section-area">
-        <div class="container">
-          <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 block text-lg font-semibold text-primary">
-              Intro Video
-            </h6>
-          
-            <p>
-             Listen to our videos to get to know more about EvPay and how it can help your business grow with seamless digital payments.
-            </p>
-          </div>
-
-          <div class="scroll-revealed relative max-w-[900px] mx-auto">
-            <img
-              src="./assets/img/intro-video.jpg"
-              alt="Intro video"
-              class="w-full h-full aspect-video rounded-xl object-cover"
-            />
-            <a
-              href="javascript:void(0)"
-              class="video-popup w-[80px] h-[80px] rounded-full inline-flex items-center justify-center bg-primary text-primary-color text-[1.875rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-md hover:bg-primary-color hover:text-primary hover:shadow-xl focus:bg-primary-color focus:text-primary focus:shadow-xl"
-            >
-              <i class="lni lni-play"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
+     
    
     <!-- Call to action section -->
 <section
@@ -687,104 +558,67 @@
   </div>
 </section>
 
-
 <!-- FAQ section -->
 <section id="faq" class="section-area relative">
   <div class="container">
     <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-      <h6 class="mb-2 block text-lg font-semibold text-primary">FAQ</h6>
-      <h2 class="mb-6">Frequently Asked Questions About EVPay</h2>
+      <h2 class="mb-6">Why It’s Better</h2>
       <p>
-        Here are the most common questions about EVPay Tanzania — how it works,
-        payments, EV charging, and more.
+        Here are what you get when using Collection Service.
       </p>
     </div>
 
     <div class="grid gap-x-8 gap-y-12 grid-cols-1 lg:grid-cols-2">
-      
+
       <!-- FAQ 1 -->
       <div class="scroll-revealed flex">
         <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-primary-color text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
         >
-          <i class="lni lni-question-circle"></i>
+          <i class="lni lni-stats-up"></i>
         </div>
         <div class="w-full">
-          <h3
-            class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
-          >
-            What is EVPay Tanzania?
-          </h3>
-          <p class="text-body-light-11 dark:text-body-dark-11">
-            EVPay is a digital payment and charging management system by EVMAK,
-            designed for electric vehicle (EV) users in Tanzania. It allows
-            drivers to locate charging stations, pay for charging sessions, and
-            manage their EV energy usage through one platform.
-          </p>
+          <h3 class="mb-6 text-xl font-semibold">Higher conversion</h3>
+          <p>Multiple rails reduce friction at checkout and meet customers where they pay.</p>
         </div>
       </div>
 
       <!-- FAQ 2 -->
       <div class="scroll-revealed flex">
         <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-primary-color text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
         >
-          <i class="lni lni-question-circle"></i>
+          <i class="lni lni-support"></i>
         </div>
         <div class="w-full">
-          <h3
-            class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
-          >
-            How do I find nearby EV charging stations?
-          </h3>
-          <p class="text-body-light-11 dark:text-body-dark-11">
-            EVPay provides a real-time map showing all registered EVMAK charging
-            stations across Tanzania. The system displays distance, connector
-            type, availability status, and estimated charging time.
-          </p>
+          <h3 class="mb-6 text-xl font-semibold">Lower support load</h3>
+          <p>Precise error messages and built-in retry logic cut failed payments and tickets.</p>
         </div>
       </div>
 
       <!-- FAQ 3 -->
       <div class="scroll-revealed flex">
         <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-primary-color text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
         >
-          <i class="lni lni-question-circle"></i>
+          <i class="lni lni-bar-chart"></i>
         </div>
         <div class="w-full">
-          <h3
-            class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
-          >
-            What payment methods does EVPay support?
-          </h3>
-          <p class="text-body-light-11 dark:text-body-dark-11">
-            EVPay supports mobile money (M-Pesa, TigoPesa, Airtel Money),
-            Visa/MasterCard, and EVPay Wallet. Payments are instant and receipts
-            are automatically issued in your dashboard.
-          </p>
+          <h3 class="mb-6 text-xl font-semibold">Fewer spreadsheets</h3>
+          <p>Settlement views and exports save finance hours each week.</p>
         </div>
       </div>
 
       <!-- FAQ 4 -->
       <div class="scroll-revealed flex">
         <div
-          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-primary-color text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
         >
-          <i class="lni lni-question-circle"></i>
+          <i class="lni lni-shield"></i>
         </div>
         <div class="w-full">
-          <h3
-            class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
-          >
-            Can I monitor my charging usage and history?
-          </h3>
-          <p class="text-body-light-11 dark:text-body-dark-11">
-            Yes. EVPay gives you a full dashboard to track charging sessions,
-            energy consumed (kWh), costs, station details, and monthly usage
-            reports. This helps EV owners manage their energy expenses
-            efficiently.
-          </p>
+          <h3 class="mb-6 text-xl font-semibold">Built for compliance</h3>
+          <p>PSP-licensed with data hosted locally.</p>
         </div>
       </div>
 
@@ -1635,89 +1469,6 @@
       </section>
 
       
-<!-- Clients section -->
-<section id="clients" class="section-area">
-  <div class="container">
-    <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
-      <h6 class="mb-2 block text-lg font-semibold text-primary">
-        Partners
-      </h6>
-      <h2 class="mb-6">Our Awesome Partners</h2>
-      <p>
-        The following are some of our partners
-      </p>
-    </div>
-
-    <div class="">
-      <div class="row">
-        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
-          <img
-            src="https://3.bp.blogspot.com/-tg8voDxDXvw/YGHVQX-qDxI/AAAAAAAANGY/pYLuWgOA7WwNpg3Xe3F-AHAKr3XPNHhgQCK4BGAYYCw/s1280/CRDB-LOGO.png"
-            alt="Brand Logo Image"
-            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-
-        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
-          <img
-            src="https://tse1.mm.bing.net/th/id/OIP.Z48u3sQh3DDZxWDxyGhGIQHaEq?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Brand Logo Image"
-            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-
-        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
-          <img
-            src="https://download.logo.wine/logo/Vodacom/Vodacom-Logo.wine.png"
-            alt="Brand Logo Image"
-            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-
-        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
-          <img
-            src="https://images.seeklogo.com/logo-png/52/2/halotel-tanzania-logo-png_seeklogo-527224.png"
-            alt="Brand Logo Image"
-            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-
-        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
-          <img
-            src="https://images.seeklogo.com/logo-png/56/1/yas-tanzania-logo-png_seeklogo-566393.png?v=1957910121804436120"
-            alt="Brand Logo Image"
-            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-
-        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
-          <img
-            src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Symbol.png"
-            alt="Brand Logo Image"
-            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-
-        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
-          <img
-            src="https://4.bp.blogspot.com/-L1s5JuinyAw/TjKbwV2CNGI/AAAAAAAAAK4/1i1iKt5dlIU/s1600/airtel-logo_new.jpg"
-            alt="Brand Logo Image"
-            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-
-        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
-          <img
-            src="https://logos-world.net/wp-content/uploads/2020/09/Mastercard-Emblem.png"
-            alt="Brand Logo Image"
-            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
     <!-- Footer -->
     <footer class="bg-primary-dark-2 text-white">

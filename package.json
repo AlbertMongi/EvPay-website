@@ -22,6 +22,6 @@
   "description": "Tailwind CSS Company Landing Page Template by Ranyeh.",
   "devDependencies": {
     "tailwindcss": "^3.4.10",
-    "vite": "^6.3.4"
+    "vite": "^6.4.1"
   }
 }
