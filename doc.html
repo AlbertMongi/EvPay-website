@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EvMak Payment API Documentation</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <!-- Highlight.js for syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0c1118; }
+    pre, code { font-family: 'JetBrains Mono', monospace; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #2a2f36; padding: 10px; }
+    th { background:#1a1f25; text-align:left; }
+    a.active { 
+      background-color: #1f2937 !important; 
+      border-left: 4px solid #facc15 !important; 
+      color: white !important;
+    }
+    nav a:hover { background-color: #1f2937; }
+  </style>
+</head>
+<body class="text-gray-100">
+
+<div class="flex h-screen">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="w-80 bg-[#0f1620] border-r border-gray-800 overflow-y-auto">
+    <div class="p-6 border-b border-gray-800">
+      <div class="relative">
+        <input type="text" placeholder="Search…" class="w-full bg-gray-900 pl-11 pr-4 py-3 rounded-lg text-sm focus:outline-none text-gray-300">
+        <span class="absolute left-4 top-3 text-gray-500">Search</span>
+      </div>
+    </div>
+
+    <nav class="p-4 space-y-8 text-sm">
+      <!-- <div>
+        <h3 class="text-xs font-bold text-yellow-400 uppercase mb-3">Documentation</h3>
+        <a href="#introduction" class="flex items-center gap-3 py-2 px-3 rounded bg-gray-900 border-l-4 border-yellow-400 active">
+          <span class="text-blue-400">DOC</span>
+          <span>EvMak Guide</span>
+        </a>
+      </div> -->
+
+      <div>
+        <h3 class="text-xs font-bold text-blue-400 uppercase mb-3">Card Payments</h3>
+        <a href="#payment-request" class="flex items-center gap-3 py-2 px-3 rounded text-gray-400 hover:bg-gray-900">
+          <span class="text-blue-400">POST</span>
+          <span>Payment Request</span>
+        </a>
+        <a href="#error-codes" class="flex items-center gap-3 py-2 px-3 rounded text-gray-400 hover:bg-gray-900">
+          <span class="text-red-400">INFO</span>
+          <span>Error & Status Codes</span>
+        </a>
+        <a href="#callback" class="flex items-center gap-3 py-2 px-3 rounded text-gray-400 hover:bg-gray-900">
+          <span class="text-green-400">POST</span>
+          <span>Callback</span>
+        </a>
+        <a href="#reconciliation" class="flex items-center gap-3 py-2 px-3 rounded text-gray-400 hover:bg-gray-900">
+          <span class="text-yellow-400">POST</span>
+          <span>Reconciliation</span>
+        </a>
+      </div>
+
+      <!-- MOBILE MONEY (MNO) - NOW FULLY VISIBLE AND MATCHES PAYMENTS STYLE -->
+      <div>
+        <h3 class="text-xs font-bold text-blue-400 uppercase mb-3">Mobile Money (MNO)</h3>
+        <a href="#mno-payment-request" class="flex items-center gap-3 py-2 px-3 rounded text-gray-400 hover:bg-gray-900">
+          <span class="text-blue-400">POST</span>
+          <span>Payment Request</span>
+        </a>
+        <a href="#mno-callback" class="flex items-center gap-3 py-2 px-3 rounded text-gray-400 hover:bg-gray-900">
+          <span class="text-green-400">CALLBACK</span>
+          <span>Callback</span>
+        </a>
+        <a href="#mno-reconciliation" class="flex items-center gap-3 py-2 px-3 rounded text-gray-400 hover:bg-gray-900">
+          <span class="text-yellow-400">POST</span>
+          <span>Reconciliation</span>
+        </a>
+      </div>
+      <!-- 3. BANK TRANSFER / EFT -->
+      <div>
+        <h3 class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-4">Bank Transfer / EFT</h3>
+       <a href="#payment-request1" class="flex items-center gap-3 py-3 px-4 rounded-lg text-gray-400 hover:bg-gray-900">
+        <span class="text-purple-400 font-bold">POST</span> Payment Request
+      </a>
+      <a href="#error-codes1" class="flex items-center gap-3 py-3 px-4 rounded-lg text-gray-400 hover:bg-gray-900">
+        <span class="text-red-400">INFO</span> Error & Status Codes
+      </a>
+      <a href="#callback1" class="flex items-center gap-3 py-3 px-4 rounded-lg text-gray-400 hover:bg-gray-900">
+        <span class="text-green-400">CALLBACK</span> Callback
+      </a>
+      <a href="#reconciliation1" class="flex items-center gap-3 py-3 px-4 rounded-lg text-gray-400 hover:bg-gray-900">
+        <span class="text-yellow-400">POST</span> Reconciliation
+      </a>
+      </div>
+      <!-- mobile money (mno) integration -->
+       <div>
+        <h3 class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-4">Mobile Money (C2B)</h3>
+        <a href="#mno-c2b-guide" class="flex items-center gap-3 py-3 px-4 rounded-lg text-gray-400 hover:bg-gray-900">Customer Payment Steps</a>
+        <!-- <a href="#mno-payment-request" class="flex items-center gap-3 py-3 px-4 rounded-lg text-gray-400 hover:bg-gray-900">API Payment Request</a>
+        <a href="#mno-callback" class="flex items-center gap-3 py-3 px-4 rounded-lg text-gray-400 hover:bg-gray-900">Callback</a> -->
+      </div>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 overflow-y-auto p-12 space-y-12">
+
+    <!-- INTRODUCTION -->
+    <section id="introduction">
+      <h1 class="text-4xl font-bold mb-6 text-blue-400">EvMak Payment API – Technical Documentation</h1>
+      <h2 class="text-2xl font-semibold mb-3">1. Introduction</h2>
+      <p class="text-gray-300 leading-7">
+        The scope of this document is to illustrate the technical requirements for external systems to interface with EvMak payment services. 
+        All registered systems should follow these instructions to properly integrate with EvMak Payment Services API.
+      </p>
+    </section>
+
+    <!-- PAYMENT REQUEST MESSAGE -->
+    <section id="payment-request">
+      <h2 class="text-2xl font-semibold mb-4">2. Payment Request Message</h2>
+      <p class="text-gray-300 mb-2">
+        Interfacing clients should send a message in the following format:
+      </p>
+      <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-6">
+        <p><strong>URL:</strong> <code>/card/test/api/</code></p>
+        <p><strong>Method:</strong> <span class="text-blue-400">POST</span></p>
+        <p><strong>Content-Type:</strong> <code>application/json</code></p>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-3">Body Parameters</h3>
+      <table class="mb-8 text-gray-300">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+       <tbody>
+  <tr><td>referenceNumber</td><td> A unique identifier for 
+the transaction. This is 
+typically a string that 
+uniquely identifies the 
+transaction within your 
+system.
+ Example: "892606789tr0"</td><td style="color: green;">YES</td></tr>
+  <tr><td>amount</td><td> The amount of money to be 
+transacted. This is 
+usually a string to 
+accommodate different 
+currency formats and 
+precision.
+ Example: "1100.00"</td><td style="color: green;">YES</td></tr>
+  <tr><td>currency</td><td> The currency in which the 
+transaction is being made, 
+represented by its ISO 4217 
+code.
+ Example: "USD</td><td style="color: green;">YES</td></tr>
+  <tr><td>payTo</td><td> The recipient identifier 
+or code to whom the 
+payment is being made.
+ Example: "EvMak</td><td style="color: green;">YES</td></tr>
+  <tr><td>transactionDetails</td><td> A brief description or note 
+about the transaction.
+ Example: "Fee Payment</td><td style="color: green;">YES</td></tr>
+  <tr><td>firstName</td><td> The first name of 
+the individual 
+making the 
+transaction.
+ Example: "Albert"</td><td style="color: green;">YES</td></tr>
+  <tr><td>lastName</td><td> The last name of the 
+individual making the 
+transaction.
+ Example: "Mongi"</td><td style="color: green;">YES</td></tr>
+  <tr><td>email</td><td>The Email address of the individual making the transaction. Example: "albert@gmail.com"</td><td style="color: green;">YES</td></tr>
+  <tr><td>phoneNo</td><td> The phone number of the 
+individual making the 
+transaction, including the 
+country code.
+ Example: "255755****46"</td><td style="color: green;">YES</td></tr>
+  <tr><td>address</td><td>The physical address of the 
+individual making the 
+transaction.
+ Example: "Dar es Salaam 
+Tanzania"</td><td style="color: green;">YES</td></tr>
+  <tr><td>countryCode</td><td> The ISO 3166-1 alpha-2 
+country code represents 
+the country of the 
+individual making the 
+transaction.
+ Example: "TZ"</td><td style="color: green;">YES</td></tr>
+  <tr><td>postalCode</td><td> The postal code of the 
+individual's address. 
+Example: "1234"</td><td style="color: green;">YES</td></tr>
+  <tr><td>apiUser</td><td> The identifier for the 
+user or application making 
+the API request.
+ Example: "user"</td><td style="color: green;">YES</td></tr>
+  <tr><td>callbackUrl</td><td> The URL to which the 
+transaction status or 
+response should be sent 
+after processing.
+ Example: 
+"https://webhook.site/ac94
+ 903 d-8013-4169-a1bb
+959375ba569a "</td><td style="color: green;">YES</td></tr>
+  <tr><td>hash</td><td> A cryptographic hash used 
+to verify the integrity and
+ YES
+authenticity of the 
+request. The hash is 
+calculated using the MD5 
+algorithm with the format 
+MD5(username|date), where 
+username is the apiUser and 
+date is in the format
+ dd-MM-yyyy.
+ Example: 
+"8fcd87f18627be4e1217bce2d90
+ 4 2c0d"</td><td style="color: green;">YES</td></tr>
+</tbody>
+
+      </table>
+
+      <h3 class="text-xl font-semibold mb-3">Sample API Payload</h3>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
+  "referenceNumber": "892606789tr0",
+  "amount": "1100.00",
+  "currency": "USD",
+  "payTo": "EvMak",
+  "transactionDetails": "School Fee Payment",
+  "firstName": "Albert",
+  "lastName": "Mongi",
+  "email": "albert@gmail.com",
+  "phoneNo": "255755****46",
+  "address": "Dar es Salaam Tanzania",
+  "countryCode": "TZ",
+  "postalCode": "1234",
+  "apiUser": "webhost",
+  "callbackUrl": "https://webhook.site/ac94903d-8013-4169-a1bb-959375ba569a",
+  "returnUrl": "https://webhook.site/ac94903d-8013-4169-a1bb-959375ba569a",
+  "hash": "8fcd87f18627be4e1217bce2d9042c0d"
+}</code></pre>
+    </section>
+
+    <!-- ERROR AND STATUS CODES -->
+    <section id="error-codes">
+      <h2 class="text-2xl font-semibold mb-4">3. Error & Status Codes</h2>
+
+      <h3 class="text-xl font-semibold mb-3">Sample Responses with Explanations</h3>
+
+      <p class="text-gray-300"><strong>Missing Required Field</strong></p>
+      <p class="text-gray-400 mb-2">Description: One or more required fields are missing from the request payload.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Invalid input. Required fields are missing." }</code></pre>
+
+      <p class="text-gray-300"><strong>Hash Mismatch</strong></p>
+      <p class="text-gray-400 mb-2">Description: The computed hash does not match the provided hash, indicating possible tampering or an incorrect hash computation.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Hash mismatch." }</code></pre>
+
+      <p class="text-gray-300"><strong>Invalid Currency</strong></p>
+      <p class="text-gray-400 mb-2">Description: The provided currency is not supported. Allowed currencies are 'USD' and 'TZS'.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Invalid currency. Allowed currencies are USD and TZS." }</code></pre>
+
+      <p class="text-gray-300"><strong>Invalid Callback URL</strong></p>
+      <p class="text-gray-400 mb-2">Description: The provided callback URL is not a valid URL.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Invalid callback URL." }</code></pre>
+
+      <p class="text-gray-300"><strong>Invalid Amount</strong></p>
+      <p class="text-gray-400 mb-2">Description: The amount must be a positive number.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Invalid amount. Amount must be a positive number." }</code></pre>
+
+      <p class="text-gray-300"><strong>Invalid Reference Number Format</strong></p>
+      <p class="text-gray-400 mb-2">Description: The reference number should only contain letters and numbers.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Invalid reference number format. It should only contain letters and numbers." }</code></pre>
+
+      <p class="text-gray-300"><strong>Invalid Reference Number Length</strong></p>
+      <p class="text-gray-400 mb-2">Description: The reference number length must be between 5 and 20 characters.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Invalid reference number length. It must be between 5 and 20 characters." }</code></pre>
+
+      <p class="text-gray-300"><strong>Duplicate Reference Number</strong></p>
+      <p class="text-gray-400 mb-2">Description: The reference number has already been used.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Duplicate reference number. Please use a different reference number." }</code></pre>
+
+      <p class="text-gray-300"><strong>Invalid Email Address</strong></p>
+      <p class="text-gray-400 mb-2">Description: The provided email address is not valid.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Invalid email address." }</code></pre>
+
+      <p class="text-gray-300"><strong>Invalid Phone Number</strong></p>
+      <p class="text-gray-400 mb-2">Description: The provided phone number is not valid.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Invalid phone number." }</code></pre>
+
+      <p class="text-gray-300"><strong>Invalid Country Code</strong></p>
+      <p class="text-gray-400 mb-2">Description: The country code should be a 2-letter ISO country code.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Invalid country code." }</code></pre>
+
+      <p class="text-gray-300"><strong>Invalid Postal Code</strong></p>
+      <p class="text-gray-400 mb-2">Description: The postal code is not valid. It should only contain alphanumeric characters, spaces, and hyphens.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Invalid postal code." }</code></pre>
+
+      <p class="text-gray-300"><strong>405 Method Not Allowed</strong></p>
+      <p class="text-gray-400 mb-2">Description: The request method is not allowed. Only POST requests are accepted.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "error": "Method Not Allowed" }</code></pre>
+
+      <p class="text-gray-300"><strong>500 Internal Server Error</strong></p>
+      <p class="text-gray-400 mb-2">Description: An internal server error occurred while processing the request.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Unable to process the request. Please try again later." }</code></pre>
+
+      <p class="text-gray-300"><strong>200 Success</strong></p>
+      <p class="text-gray-400 mb-2">Description: The transaction was processed successfully.</p>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": true, "message": "Transaction recorded successfully.", "data": { "amount": "1100.00", "currency": "USD", "referenceNumber": "892606789tr0", "paymentUrl": "http://localhost/cybersource123/index.php?reference_number=892606789tr0&amp;amount=1100.00&amp;currency=USD&amp;pay_to=QBIEZ&amp;first_name=Ino&amp;last_name=Moses&amp;email=ino%40gmail.com&amp;phone_no=255755****46&amp;address=Dar+es+Salaam+Tanzania&amp;country_code=TZ&amp;zip_code=1234" } }</code></pre>
+    </section>
+
+    <!-- CALLBACK -->
+    <section id="callback">
+      <h2 class="text-2xl font-semibold mb-4">4. Callback</h2>
+      <p class="text-gray-300 mb-4">
+        EvMak sends callback notifications to the provided URL whenever the transaction status changes.
+        The receiving system must acknowledge the callback with a JSON response.
+      </p>
+      <h3 class="text-lg font-semibold mb-3">Example Request Payload</h3>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
+  "data": {
+    "referenceNumber": "45TREYRT4533",
+    "status": "PENDING",
+    "amount": "10.00",
+    "currency": "USD",
+    "transactionDetails": "Fee Payment",
+    "payTo": "EVMAK",
+    "message": "Transaction is pending",
+    "paymentTime": "2024-06-10 09:07:18"
+  }
+}</code></pre>
+      <h3 class="text-lg font-semibold mb-3">Acknowledgment Response</h3>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "status": "ok" }</code></pre>
+    </section>
+
+    <!-- RECONCILIATION -->
+    <section id="reconciliation">
+      <h2 class="text-2xl font-semibold mb-4">5. Reconciliation</h2>
+      <p class="text-gray-300 mb-4">
+        Reconciliation allows checking the status of a specific transaction.
+      </p>
+      <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-6">
+        <p><strong>URL:</strong> https://api.evmak.com/card/test/api/recon/</p>
+        <p><strong>Method:</strong> <span class="text-blue-400">POST</span></p>
+      </div>
+
+      <h3 class="text-lg font-semibold mb-3">Sample Request Payload</h3>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
+  "reference": "TER65754GBH544",
+  "user": "webhost",
+  "hash": "dafe68917f6cb27a815a811f982f56f1"
+}</code></pre>
+
+      <h3 class="text-lg font-semibold mb-3">Success Response</h3>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
+  "success": true,
+  "message": "Payment status retrieved successfully.",
+  "data": {
+    "referenceNumber": "TER65754GBH544",
+    "status": "ACCEPT",
+    "amount": "250.50",
+    "currency": "USD",
+    "transactionDetails": "Domain name registration and Hosting",
+    "payTo": "EVMAK",
+    "message": "Request was processed successfully.",
+    "paymentTime": "2024-06-10 13:22:06"
+  }
+}</code></pre>
+
+      <h3 class="text-lg font-semibold mb-3">Failed Response</h3>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Transaction not found." }</code></pre>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "success": false, "message": "Hash mismatch." }</code></pre>
+    </section>
+
+    <!-- MOBILE MONEY (MNO) SECTION - NOW WITH PROPER IDs FOR SIDEBAR LINKS -->
+    <section id="mno-integration" class="pt-20 -mt-20">
+      <h2 class="text-2xl font-semibold mb-4">6. Mobile Money (MNO) Integration</h2>
+      <p class="text-gray-300 mb-4">
+        This section describes how to integrate with EvMak Mobile Money API (MNO) for collection and disbursement of funds.
+      </p>
+
+      <!-- PAYMENT REQUEST -->
+      <section id="mno-payment-request" class="pt-16 -mt-16 scroll-mt-20">
+        <h3 class="text-xl font-semibold mb-3">6.1 Payment Request</h3>
+        <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-6">
+          <p><strong>URL:</strong> <code>/test/</code></p>
+          <p><strong>Method:</strong> POST</p>
+          <p><strong>Content-Type:</strong> application/json</p>
+        </div>
+
+        <h4 class="text-lg font-semibold mb-2">Body Parameters</h4>
+        <table class="mb-8 text-gray-300">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Description</th>
+              <th>Required</th>
+            </tr>
+          </thead>
+         <tbody>
+  <tr><td>api_source</td><td>Product or request name displayed on USSD and SMS</td><td style="color: green;">YES</td></tr>
+  <tr><td>api_to</td><td>Mobile money wallet destination (Mpesa, TigoPesa, AirtelMoney, HaloPesa)</td><td style="color: green;">YES</td></tr>
+  <tr><td>amount</td><td>Amount to be collected</td><td style="color: green;">YES</td></tr>
+  <tr><td>product</td><td>Product the client is paying for</td><td style="color: green;">YES</td></tr>
+  <tr><td>callback</td><td>Callback URL to send confirmation response from MNO</td><td style="color: green;">YES</td></tr>
+  <tr><td>hash</td><td>Request validation MD5(username|date), date format (DD-MM-YYYY)</td><td style="color: green;">YES</td></tr>
+  <tr><td>user</td><td>Client username</td><td style="color: green;">YES</td></tr>
+  <tr><td>mobileNo</td><td>End user mobile number</td><td style="color: green;">YES</td></tr>
+  <tr><td>reference</td><td>Third-party reference used for callback payload</td><td style="color: green;">YES</td></tr>
+  <tr><td>callbackStatus</td><td>Sample callbacks: Success, Expired, USSDCallbackCancel, Failed</td><td style="color: green;">YES</td></tr>
+</tbody>
+
+        </table>
+
+        <h4 class="text-lg font-semibold mb-3">Example Request</h4>
+        <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
+  "api_source": "WEBHOSTTZ",
+  "api_to": "TigoPesa",
+  "amount": 1000,
+  "product": "BulkSMS",
+  "callback": "http://evmak/vodacom/call",
+  "hash": "f11ffed9b4c594578ba078b5889",
+  "user": "webhost",
+  "mobileNo": "255686668866",
+  "reference": "EVM8724983153",
+  "callbackstatus": "Success"
+}</code></pre>
+
+        <h4 class="text-lg font-semibold mb-3">Response</h4>
+        <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
+  "order_id": "EVM8724983153",
+  "amount": 1000,
+  "response_code": 200,
+  "response_desc": "Request sent to the user",
+  "source": "197.250.230.51"
+}</code></pre>
+      </section>
+
+      <!-- CALLBACK -->
+      <section id="mno-callback" class="pt-16 -mt-16 scroll-mt-20">
+        <h3 class="text-xl font-semibold mb-3">6.2 Callback</h3>
+        <p class="text-gray-300 mb-4">Once the transaction is complete, the system will send a callback to your URL.</p>
+
+        <table class="mb-6 text-gray-300">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Description</th>
+              <th>Required</th>
+            </tr>
+          </thead>
+         <tbody>
+  <tr><td>ResultType</td><td>Indicates if transaction was successful</td><td style="color: green;">YES</td></tr>
+  <tr><td>TransactionStatus</td><td>Status of the transaction (e.g., Success)</td><td style="color: green;">YES</td></tr>
+  <tr><td>TransID</td><td>MNO Reference number</td><td style="color: green;">YES</td></tr>
+  <tr><td>Amount</td><td>Amount posted</td><td style="color: green;">YES</td></tr>
+  <tr><td>Hash</td><td>Hash posted with request</td><td style="color: green;">YES</td></tr>
+  <tr><td>ThirdPartyReference</td><td>Original third-party reference</td><td style="color: green;">YES</td></tr>
+</tbody>
+
+        </table>
+
+        <h4 class="text-lg font-semibold mb-3">Callback Example</h4>
+        <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
+  "ResultType": true,
+  "TransactionStatus": "Success",
+  "TransID": "98989909",
+  "Amount": "1000",
+  "Hash": "8bc225593d05203e524158f8ed93d03b",
+  "ThirdPartyReference": "9899741311"
+}</code></pre>
+
+        <h4 class="text-lg font-semibold mb-3">Acknowledgment Response</h4>
+        <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{ "Status": "Success" }</code></pre>
+      </section>
+
+      <!-- RECONCILIATION -->
+      <section id="mno-reconciliation" class="pt-16 -mt-16 scroll-mt-20">
+        <h3 class="text-xl font-semibold mb-3">6.3 Reconciliation</h3>
+        <p class="text-gray-300 mb-4">
+          Used for manual reconciliation of a specific transaction if discrepancies occur.
+        </p>
+
+        <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-6">
+          <p><strong>URL:</strong> <code>/recon/</code></p>
+          <p><strong>Method:</strong> POST</p>
+          <p><strong>Content-Type:</strong> application/json</p>
+        </div>
+
+        <h4 class="text-lg font-semibold mb-3">Sample Request</h4>
+        <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
+  "reference": "850143",
+  "user": "virtually",
+  "hash": "50f8435c8e7bf144bb83da59c274143b"
+}</code></pre>
+
+        <h4 class="text-lg font-semibold mb-3">Sample Response</h4>
+        <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
+  "mobileNo": "255692432983",
+  "TransactionStatus": "Success",
+  "TransID": "WBH252367-1768",
+  "amount": "25000",
+  "Hash": "6874ba257b16c10355cd0efa8ef5b",
+  "ThirdPartyReference": "MP216.1716.K65118"
+}</code></pre>
+      </section>
+    </section>
+<!-- INTRODUCTION -->
+    <section id="introduction">
+      <h1 class="text-5xl font-bold mb-8 text-purple-400">Bank Transfer / EFT</h1>
+      <p class="text-xl text-gray-300 leading-relaxed max-w-4xl">
+        The scope of this document is to illustrate the technical requirements required in order for external systems to interface with EvMak Bank Transfer and EFT payment services. 
+        This method generates a unique virtual account or payment reference for customers to pay via bank transfer, mobile banking apps, or branch deposits.
+      </p>
+      <p class="text-lg text-gray-400 mt-6">Supported Banks: CRDB, NMB, NBC, Stanbic, Equity, Exim, Azania, DCB, and more.</p>
+    </section>
+
+    <!-- PAYMENT REQUEST -->
+    <section id="payment-request1">
+      <h2 class="text-4xl font-bold mb-8 text-purple-400">Payment Request Message</h2>
+      <p class="text-lg text-gray-300 mb-8">Interfacing clients should send a POST request to initiate a bank transfer payment.</p>
+
+      <div class="bg-gray-900 border border-gray-700 rounded-2xl p-8 mb-10">
+        <p class="text-lg"><strong>URL:</strong> <code class="text-yellow-300 font-mono text-xl">POST https://api.evmak.com/bank/test/api/</code></p>
+        <p class="text-lg mt-4"><strong>Method:</strong> <span class="text-purple-400 font-bold text-xl">POST</span></p>
+        <p class="text-lg mt-4"><strong>Content-Type:</strong> <code class="text-gray-400">application/json</code></p>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-6">Request Body Parameters</h3>
+      <table class="mb-12">
+        <thead>
+          <tr><th>Parameter</th><th>Description</th><th>Required</th></tr>
+        </thead>
+       <tbody>
+  <tr><td><code>referenceNumber</code></td><td>Unique transaction identifier. Example: "BANK892606789"</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>amount</code></td><td>Amount to be paid. Example: "1100.00"</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>currency</code></td><td>ISO 4217 code. Supported: <code>TZS</code>, <code>USD</code></td><td style="color: green;">YES</td></tr>
+  <tr><td><code>payTo</code></td><td>Recipient code. Example: "EvMak"</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>transactionDetails</code></td><td>Description. Example: "School Fees - Term 3"</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>firstName</code></td><td>Payer's first name</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>lastName</code></td><td>Payer's last name</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>email</code></td><td>Payer's email address</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>phoneNo</code></td><td>Phone with country code. Example: "255755123456"</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>address</code></td><td>Physical address</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>countryCode</code></td><td>ISO 3166-1 alpha-2. Example: "TZ"</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>postalCode</code></td><td>Postal code</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>apiUser</code></td><td>Your assigned API username</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>callbackUrl</code></td><td>Webhook URL for status updates</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>hash</code></td><td>MD5(apiUser|dd-MM-yyyy)</td><td style="color: green;">YES</td></tr>
+</tbody>
+
+      </table>
+
+      <h3 class="text-2xl font-semibold mb-6">Sample Request Payload</h3>
+      <pre class="bg-gray-900 p-8 rounded-2xl border border-gray-700 text-sm overflow-x-auto"><code class="json">{
+  "referenceNumber": "BANK892606789",
+  "amount": "250000.00",
+  "currency": "TZS",
+  "payTo": "EvMak",
+  "transactionDetails": "University Tuition Fee",
+  "firstName": "Amina",
+  "lastName": "Salim",
+  "email": "amina@example.com",
+  "phoneNo": "255755123456",
+  "address": "Plot 123, Kinondoni, Dar es Salaam",
+  "countryCode": "TZ",
+  "postalCode": "14115",
+  "apiUser": "webhost",
+  "callbackUrl": "https://yoursite.com/evmak/bank/callback",
+  "hash": "a1b2c3d4e5f678901234567890abcdef"
+}</code></pre>
+
+      <h3 class="text-2xl font-semibold mb-6 mt-12 text-green-400">Success Response (200)</h3>
+      <pre class="bg-gray-900 p-8 rounded-2xl border border-green-700 text-sm"><code class="json">{
+  "success": true,
+  "message": "Bank transfer initiated successfully.",
+  "data": {
+    "referenceNumber": "BANK892606789",
+    "amount": "250000.00",
+    "currency": "TZS",
+    "virtualAccount": "888100123456789",
+    "bankName": "CRDB Bank",
+    "accountName": "EvMak Collections",
+    "paymentInstructions": "Pay exactly TZS 250,000.00 to CRDB Account 888100123456789. Use reference: BANK892606789",
+    "expiresAt": "2025-12-02 23:59:59"
+  }
+}</code></pre>
+    </section>
+
+    <!-- ERROR CODES -->
+    <section id="error-codes1">
+      <h2 class="text-4xl font-bold mb-8 text-red-400">Error & Status Codes</h2>
+      <div class="space-y-8">
+        <div>
+          <p class="font-bold text-gray-300">400 – Missing Required Field</p>
+          <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700"><code class="json">{ "success": false, "message": "Invalid input. Required fields are missing." }</code></pre>
+        </div>
+        <div>
+          <p class="font-bold text-gray-300">400 – Hash Mismatch</p>
+          <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700"><code class="json">{ "success": false, "message": "Hash mismatch." }</code></pre>
+        </div>
+        <div>
+          <p class="font-bold text-gray-300">400 – Invalid Currency</p>
+          <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700"><code class="json">{ "success": false, "message": "Invalid currency. Allowed currencies are TZS and USD." }</code></pre>
+        </div>
+        <div>
+          <p class="font-bold text-gray-300">400 – Duplicate Reference</p>
+          <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700"><code class="json">{ "success": false, "message": "Duplicate reference number. Please use a different reference number." }</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALLBACK -->
+    <section id="callback1">
+      <h2 class="text-4xl font-bold mb-8 text-green-400">Callback</h2>
+      <p class="text-lg text-gray-300 mb-8">
+        When payment is confirmed (usually within 1–24 hours), EvMak sends a POST callback to your <code>callbackUrl</code>.
+      </p>
+
+      <h3 class="text-xl font-semibold mb-6">Callback Payload</h3>
+      <pre class="bg-gray-900 p-8 rounded-2xl border border-gray-700 text-sm"><code class="json">{
+  "data": {
+    "referenceNumber": "BANK892606789",
+    "status": "PAID",
+    "amount": "250000.00",
+    "currency": "TZS",
+    "transactionDetails": "University Tuition Fee",
+    "payTo": "EvMak",
+    "message": "Payment received successfully",
+    "paymentTime": "2025-11-26 10:15:33",
+    "bankReference": "CRDB20251126X123456"
+  }
+}</code></pre>
+
+      <h3 class="text-xl font-semibold mt-8 mb-6">Acknowledgment Response</h3>
+      <pre class="bg-gray-900 p-6 rounded-xl border border-green-700 text-sm"><code class="json">{ "status": "ok" }</code></pre>
+    </section>
+   
+    </section>
+
+    <!-- MOBILE MONEY C2B USER GUIDE -->
+    <section id="mno-c2b-guide">
+      <h2 class="text-4xl font-bold mb-8 text-green-400">Mobile Money (C2B) – Customer Payment Guide</h2>
+      <p class="text-xl text-gray-300 mb-10">Customers can pay you instantly using any mobile money network in Tanzania.</p>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- YAS (Tigo) -->
+        <div class="step-box rounded-2xl p-8 border border-green-600">
+          <h3 class="text-2xl font-bold text-yellow-400 mb-6">YAS (Tigo Pesa)</h3>
+          <ol class="space-y-4 text-lg text-gray-200">
+            <li>1. Dial <code class="bg-gray-800 px-3 py-1 rounded">*150*01#</code></li>
+            <li>2. Choose <strong>Pay by Mixx</strong></li>
+            <li>3. Choose <strong>Pay Bill</strong></li>
+            <li>4. Enter Company Number: <strong class="text-yellow-400">686686</strong></li>
+            <li>5. Enter Reference: <code>EVM1234</code> (your prefix + number)</li>
+            <li>6. Enter Amount</li>
+            <li>7. Enter PIN → Confirm</li>
+          </ol>
+        </div>
+
+        <!-- Vodacom M-Pesa -->
+        <div class="step-box rounded-2xl p-8 border border-red-600">
+          <h3 class="text-2xl font-bold text-red-400 mb-6">Vodacom M-Pesa</h3>
+          <ol class="space-y-4 text-lg text-gray-200">
+            <li>1. Dial <code class="bg-gray-800 px-3 py-1 rounded">*150*00#</code></li>
+            <li>2. Choose <strong>Pay by M-Pesa</strong></li>
+            <li>3. Enter Company Number: <strong class="text-red-400">686686</strong></li>
+            <li>4. Enter Reference: <code>EVM1234</code></li>
+            <li>5. Enter Amount</li>
+            <li>6. Enter PIN → Confirm</li>
+          </ol>
+        </div>
+
+        <!-- Airtel Money -->
+        <div class="step-box rounded-2xl p-8 border border-red-500">
+          <h3 class="text-2xl font-bold text-red-500 mb-6">Airtel Money</h3>
+          <ol class="space-y-4 text-lg text-gray-200">
+            <li>1. Go to <strong>Airtel Money Menu</strong></li>
+            <li>2. Choose <strong>Pay Bill</strong></li>
+            <li>3. Choose <strong>Fintech Payment</strong></li>
+            <li>4. Select <strong>EvMak</strong></li>
+            <li>5. Enter Reference: <code>EVM1234</code></li>
+            <li>6. Enter Amount</li>
+            <li>7. Enter PIN → Confirm</li>
+          </ol>
+        </div>
+
+        <!-- Halotel -->
+        <div class="step-box rounded-2xl p-8 border border-orange-600">
+          <h3 class="text-2xl font-bold text-orange-400 mb-6">Halotel (Halo Pesa)</h3>
+          <ol class="space-y-4 text-lg text-gray-200">
+            <li>1. Dial <code class="bg-gray-800 px-3 py-1 rounded">*150*88#</code></li>
+            <li>2. Choose <strong>Pay by Halo Pesa</strong></li>
+            <li>3. Choose <strong>Pay Bill</strong></li>
+            <li>4. Enter Company Number: <strong class="text-orange-400">686686</strong></li>
+            <li>5. Enter Reference: <code>EVM1234</code></li>
+            <li>6. Enter Amount</li>
+            <li>7. Enter PIN → Confirm</li>
+          </ol>
+        </div>
+      </div>
+
+     
+    </section>
+  </main>
+</div>
+
+<script>
+  hljs.highlightAll();
+
+  // Active state highlighting on click
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function() {
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active', 'bg-gray-900', 'border-l-4', 'border-yellow-400'));
+      this.classList.add('active', 'bg-gray-900', 'border-l-4', 'border-yellow-400');
+    });
+  });
+
+  // Auto activate based on current section (optional improvement)
+  window.addEventListener('scroll', () => {
+    const sections = ['introduction', 'payment-request', 'error-codes', 'callback', 'reconciliation', 'mno-payment-request', 'mno-callback', 'mno-reconciliation'];
+    let current = '';
+    sections.forEach(id => {
+      const section = document.getElementById(id.replace('mno-', '').replace('-request', '').replace('-callback', '').replace('-reconciliation', ''));
+      if (section && section.getBoundingClientRect().top <= 100) {
+        current = id;
+      }
+    });
+    document.querySelectorAll('nav a').forEach(a => {
+      a.classList.remove('active', 'bg-gray-900', 'border-l-4', 'border-yellow-400');
+      if (a.getAttribute('href') === `#${current}` || 
+          (current.includes('mno') && a.getAttribute('href') === `#${current}`)) {
+        a.classList.add('active', 'bg-gray-900', 'border-l-4', 'border-yellow-400');
+      }
+    });
+  });
+</script>
+</body>
+</html>
