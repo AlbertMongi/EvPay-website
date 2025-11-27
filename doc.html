@@ -129,12 +129,12 @@
 
     <!-- PAYMENT REQUEST MESSAGE -->
     <section id="payment-request">
-      <h2 class="text-2xl font-semibold mb-4">2. Payment Request Message</h2>
+      <h2 class="text-2xl font-semibold mb-4">2. Card API Documentation</h2>
       <p class="text-gray-300 mb-2">
         Interfacing clients should send a message in the following format:
       </p>
       <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-6">
-        <p><strong>URL:</strong> <code>/card/test/api/</code></p>
+        <p><strong>URL:</strong> <code>{BASE_URL}/card/test/api/</code></p>
         <p><strong>Method:</strong> <span class="text-blue-400">POST</span></p>
         <p><strong>Content-Type:</strong> <code>application/json</code></p>
       </div>
@@ -155,7 +155,7 @@ typically a string that
 uniquely identifies the 
 transaction within your 
 system.
- Example: "892606789tr0"</td><td style="color: green;">YES</td></tr>
+ Example: "8926********"</td><td style="color: green;">YES</td></tr>
   <tr><td>amount</td><td> The amount of money to be 
 transacted. This is 
 usually a string to 
@@ -167,11 +167,11 @@ precision.
 transaction is being made, 
 represented by its ISO 4217 
 code.
- Example: "USD</td><td style="color: green;">YES</td></tr>
+ Example: "TZS"</td><td style="color: green;">YES</td></tr>
   <tr><td>payTo</td><td> The recipient identifier 
 or code to whom the 
 payment is being made.
- Example: "EvMak</td><td style="color: green;">YES</td></tr>
+ Example: "EvMak"</td><td style="color: green;">YES</td></tr>
   <tr><td>transactionDetails</td><td> A brief description or note 
 about the transaction.
  Example: "Fee Payment</td><td style="color: green;">YES</td></tr>
@@ -179,17 +179,17 @@ about the transaction.
 the individual 
 making the 
 transaction.
- Example: "Albert"</td><td style="color: green;">YES</td></tr>
+ Example: "John"</td><td style="color: green;">YES</td></tr>
   <tr><td>lastName</td><td> The last name of the 
 individual making the 
 transaction.
- Example: "Mongi"</td><td style="color: green;">YES</td></tr>
-  <tr><td>email</td><td>The Email address of the individual making the transaction. Example: "albert@gmail.com"</td><td style="color: green;">YES</td></tr>
+ Example: "Doe"</td><td style="color: green;">YES</td></tr>
+  <tr><td>email</td><td>The Email address of the individual making the transaction. Example: "example@gmail.com"</td><td style="color: green;">YES</td></tr>
   <tr><td>phoneNo</td><td> The phone number of the 
 individual making the 
 transaction, including the 
 country code.
- Example: "255755****46"</td><td style="color: green;">YES</td></tr>
+ Example: "255********"</td><td style="color: green;">YES</td></tr>
   <tr><td>address</td><td>The physical address of the 
 individual making the 
 transaction.
@@ -213,9 +213,7 @@ transaction status or
 response should be sent 
 after processing.
  Example: 
-"https://webhook.site/ac94
- 903 d-8013-4169-a1bb
-959375ba569a "</td><td style="color: green;">YES</td></tr>
+"https://webhook.site/9a76d8e5-71fd-4c5a-9c26-ebe1853a54d5"</td><td style="color: green;">YES</td></tr>
   <tr><td>hash</td><td> A cryptographic hash used 
 to verify the integrity and
  YES
@@ -236,21 +234,21 @@ date is in the format
 
       <h3 class="text-xl font-semibold mb-3">Sample API Payload</h3>
       <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
-  "referenceNumber": "892606789tr0",
+  "referenceNumber": "89260********",
   "amount": "1100.00",
-  "currency": "USD",
+  "currency": "TZS",
   "payTo": "EvMak",
-  "transactionDetails": "School Fee Payment",
-  "firstName": "Albert",
-  "lastName": "Mongi",
-  "email": "albert@gmail.com",
-  "phoneNo": "255755****46",
+  "transactionDetails": "Testing",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "example@gmail.com",
+  "phoneNo": "255********",
   "address": "Dar es Salaam Tanzania",
   "countryCode": "TZ",
   "postalCode": "1234",
-  "apiUser": "webhost",
-  "callbackUrl": "https://webhook.site/ac94903d-8013-4169-a1bb-959375ba569a",
-  "returnUrl": "https://webhook.site/ac94903d-8013-4169-a1bb-959375ba569a",
+  "apiUser": "User",
+  "callbackUrl": "https://webhook.site/9a76d8e5-71fd-4c5a-9c26-ebe1853a54d5",
+  "returnUrl": "https://webhook.site/9a76d8e5-71fd-4c5a-9c26-ebe1853a54d5",
   "hash": "8fcd87f18627be4e1217bce2d9042c0d"
 }</code></pre>
     </section>
@@ -332,14 +330,14 @@ date is in the format
       <h3 class="text-lg font-semibold mb-3">Example Request Payload</h3>
       <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
   "data": {
-    "referenceNumber": "45TREYRT4533",
+    "referenceNumber": "45TREYR****",
     "status": "PENDING",
-    "amount": "10.00",
-    "currency": "USD",
-    "transactionDetails": "Fee Payment",
-    "payTo": "EVMAK",
+    "amount": "1000.00",
+    "currency": "TZS",
+    "transactionDetails": "Testing",
+    "payTo": "user",
     "message": "Transaction is pending",
-    "paymentTime": "2024-06-10 09:07:18"
+    "paymentTime": "2025-11-1 09:07:18"
   }
 }</code></pre>
       <h3 class="text-lg font-semibold mb-3">Acknowledgment Response</h3>
@@ -353,14 +351,14 @@ date is in the format
         Reconciliation allows checking the status of a specific transaction.
       </p>
       <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-6">
-        <p><strong>URL:</strong> https://api.evmak.com/card/test/api/recon/</p>
+        <p><strong>URL:</strong>{BASE_URL}/card/test/api/recon/</p>
         <p><strong>Method:</strong> <span class="text-blue-400">POST</span></p>
       </div>
 
       <h3 class="text-lg font-semibold mb-3">Sample Request Payload</h3>
       <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
-  "reference": "TER65754GBH544",
-  "user": "webhost",
+  "reference": "TER6575******",
+  "user": "exampleUser",
   "hash": "dafe68917f6cb27a815a811f982f56f1"
 }</code></pre>
 
@@ -369,14 +367,14 @@ date is in the format
   "success": true,
   "message": "Payment status retrieved successfully.",
   "data": {
-    "referenceNumber": "TER65754GBH544",
+    "referenceNumber": "TER657********",
     "status": "ACCEPT",
-    "amount": "250.50",
-    "currency": "USD",
+    "amount": "1000.0",
+    "currency": "TZS",
     "transactionDetails": "Domain name registration and Hosting",
-    "payTo": "EVMAK",
+    "payTo": "User",
     "message": "Request was processed successfully.",
-    "paymentTime": "2024-06-10 13:22:06"
+    "paymentTime": "2025-11-1 13:22:06"
   }
 }</code></pre>
 
@@ -396,7 +394,7 @@ date is in the format
       <section id="mno-payment-request" class="pt-16 -mt-16 scroll-mt-20">
         <h3 class="text-xl font-semibold mb-3">6.1 Payment Request</h3>
         <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-6">
-          <p><strong>URL:</strong> <code>/test/</code></p>
+          <p><strong>URL:</strong> <code>{BASE_URL}/test/</code></p>
           <p><strong>Method:</strong> POST</p>
           <p><strong>Content-Type:</strong> application/json</p>
         </div>
@@ -427,21 +425,21 @@ date is in the format
 
         <h4 class="text-lg font-semibold mb-3">Example Request</h4>
         <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
-  "api_source": "WEBHOSTTZ",
+  "api_source": "exampleUser",
   "api_to": "TigoPesa",
   "amount": 1000,
-  "product": "BulkSMS",
-  "callback": "http://evmak/vodacom/call",
+  "product": "Testing",
+  "callback": "http://evmak/callback/test",
   "hash": "f11ffed9b4c594578ba078b5889",
-  "user": "webhost",
-  "mobileNo": "255686668866",
-  "reference": "EVM8724983153",
+  "user": "user",
+  "mobileNo": "255*******83",
+  "reference": "EVM87********",
   "callbackstatus": "Success"
 }</code></pre>
 
         <h4 class="text-lg font-semibold mb-3">Response</h4>
         <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
-  "order_id": "EVM8724983153",
+  "order_id": "EVM87********",
   "amount": 1000,
   "response_code": 200,
   "response_desc": "Request sent to the user",
@@ -477,10 +475,10 @@ date is in the format
         <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
   "ResultType": true,
   "TransactionStatus": "Success",
-  "TransID": "98989909",
+  "TransID": "98******",
   "Amount": "1000",
   "Hash": "8bc225593d05203e524158f8ed93d03b",
-  "ThirdPartyReference": "9899741311"
+  "ThirdPartyReference": "98******"
 }</code></pre>
 
         <h4 class="text-lg font-semibold mb-3">Acknowledgment Response</h4>
@@ -495,26 +493,26 @@ date is in the format
         </p>
 
         <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 mb-6">
-          <p><strong>URL:</strong> <code>/recon/</code></p>
+          <p><strong>URL:</strong> <code>{BASE_URL}/recon/</code></p>
           <p><strong>Method:</strong> POST</p>
           <p><strong>Content-Type:</strong> application/json</p>
         </div>
 
         <h4 class="text-lg font-semibold mb-3">Sample Request</h4>
         <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
-  "reference": "850143",
-  "user": "virtually",
+  "reference": "85014********",
+  "user": "exampleUser",
   "hash": "50f8435c8e7bf144bb83da59c274143b"
 }</code></pre>
 
         <h4 class="text-lg font-semibold mb-3">Sample Response</h4>
         <pre class="bg-gray-900 p-6 rounded-xl border border-gray-700 text-sm"><code class="json">{
-  "mobileNo": "255692432983",
+  "mobileNo": "255********",
   "TransactionStatus": "Success",
-  "TransID": "WBH252367-1768",
+  "TransID": "WBH2523******",
   "amount": "25000",
   "Hash": "6874ba257b16c10355cd0efa8ef5b",
-  "ThirdPartyReference": "MP216.1716.K65118"
+  "ThirdPartyReference": "MP216.171********"
 }</code></pre>
       </section>
     </section>
@@ -534,7 +532,7 @@ date is in the format
       <p class="text-lg text-gray-300 mb-8">Interfacing clients should send a POST request to initiate a bank transfer payment.</p>
 
       <div class="bg-gray-900 border border-gray-700 rounded-2xl p-8 mb-10">
-        <p class="text-lg"><strong>URL:</strong> <code class="text-yellow-300 font-mono text-xl">POST https://api.evmak.com/bank/test/api/</code></p>
+        <p class="text-lg"><strong>URL:</strong> <code class="text-yellow-300 font-mono text-xl">POST {BASE_URL}/bank/test/api/</code></p>
         <p class="text-lg mt-4"><strong>Method:</strong> <span class="text-purple-400 font-bold text-xl">POST</span></p>
         <p class="text-lg mt-4"><strong>Content-Type:</strong> <code class="text-gray-400">application/json</code></p>
       </div>
@@ -545,19 +543,19 @@ date is in the format
           <tr><th>Parameter</th><th>Description</th><th>Required</th></tr>
         </thead>
        <tbody>
-  <tr><td><code>referenceNumber</code></td><td>Unique transaction identifier. Example: "BANK892606789"</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>referenceNumber</code></td><td>Unique transaction identifier. Example: "BANK8926******"</td><td style="color: green;">YES</td></tr>
   <tr><td><code>amount</code></td><td>Amount to be paid. Example: "1100.00"</td><td style="color: green;">YES</td></tr>
   <tr><td><code>currency</code></td><td>ISO 4217 code. Supported: <code>TZS</code>, <code>USD</code></td><td style="color: green;">YES</td></tr>
   <tr><td><code>payTo</code></td><td>Recipient code. Example: "EvMak"</td><td style="color: green;">YES</td></tr>
-  <tr><td><code>transactionDetails</code></td><td>Description. Example: "School Fees - Term 3"</td><td style="color: green;">YES</td></tr>
-  <tr><td><code>firstName</code></td><td>Payer's first name</td><td style="color: green;">YES</td></tr>
-  <tr><td><code>lastName</code></td><td>Payer's last name</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>transactionDetails</code></td><td>Description. Example: "testing"</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>firstName</code></td><td>Payer's first name, example: John</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>lastName</code></td><td>Payer's last name, example: Doe</td><td style="color: green;">YES</td></tr>
   <tr><td><code>email</code></td><td>Payer's email address</td><td style="color: green;">YES</td></tr>
-  <tr><td><code>phoneNo</code></td><td>Phone with country code. Example: "255755123456"</td><td style="color: green;">YES</td></tr>
-  <tr><td><code>address</code></td><td>Physical address</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>phoneNo</code></td><td>Phone with country code. Example: "255*********"</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>address</code></td><td>Physical address, example: Dar es saalam, Tanzania</td><td style="color: green;">YES</td></tr>
   <tr><td><code>countryCode</code></td><td>ISO 3166-1 alpha-2. Example: "TZ"</td><td style="color: green;">YES</td></tr>
-  <tr><td><code>postalCode</code></td><td>Postal code</td><td style="color: green;">YES</td></tr>
-  <tr><td><code>apiUser</code></td><td>Your assigned API username</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>postalCode</code></td><td>Postal code, example: 1234</td><td style="color: green;">YES</td></tr>
+  <tr><td><code>apiUser</code></td><td>Your assigned API username, example: user</td><td style="color: green;">YES</td></tr>
   <tr><td><code>callbackUrl</code></td><td>Webhook URL for status updates</td><td style="color: green;">YES</td></tr>
   <tr><td><code>hash</code></td><td>MD5(apiUser|dd-MM-yyyy)</td><td style="color: green;">YES</td></tr>
 </tbody>
@@ -566,20 +564,20 @@ date is in the format
 
       <h3 class="text-2xl font-semibold mb-6">Sample Request Payload</h3>
       <pre class="bg-gray-900 p-8 rounded-2xl border border-gray-700 text-sm overflow-x-auto"><code class="json">{
-  "referenceNumber": "BANK892606789",
+  "referenceNumber": "BANK8********",
   "amount": "250000.00",
   "currency": "TZS",
   "payTo": "EvMak",
-  "transactionDetails": "University Tuition Fee",
-  "firstName": "Amina",
-  "lastName": "Salim",
-  "email": "amina@example.com",
-  "phoneNo": "255755123456",
-  "address": "Plot 123, Kinondoni, Dar es Salaam",
+  "transactionDetails": "testing",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "example@gmail.com",
+  "phoneNo": "255********",
+  "address": "Kinondoni, Dar es Salaam",
   "countryCode": "TZ",
-  "postalCode": "14115",
-  "apiUser": "webhost",
-  "callbackUrl": "https://yoursite.com/evmak/bank/callback",
+  "postalCode": "1234",
+  "apiUser": "user",
+  "callbackUrl": "https://yoursite.com/evmak/testing/yourcallback",
   "hash": "a1b2c3d4e5f678901234567890abcdef"
 }</code></pre>
 
@@ -588,14 +586,14 @@ date is in the format
   "success": true,
   "message": "Bank transfer initiated successfully.",
   "data": {
-    "referenceNumber": "BANK892606789",
+    "referenceNumber": "BANK8********",
     "amount": "250000.00",
     "currency": "TZS",
-    "virtualAccount": "888100123456789",
-    "bankName": "CRDB Bank",
+    "virtualAccount": "88810012******",
+    "bankName": "your bank name",
     "accountName": "EvMak Collections",
-    "paymentInstructions": "Pay exactly TZS 250,000.00 to CRDB Account 888100123456789. Use reference: BANK892606789",
-    "expiresAt": "2025-12-02 23:59:59"
+    "paymentInstructions": "Pay exactly TZS 250,000.00 to yourbank Account 88810012******. Use reference: BANK89*******,
+    "expiresAt": "2025-11-01 23:59:59"
   }
 }</code></pre>
     </section>
@@ -633,15 +631,15 @@ date is in the format
       <h3 class="text-xl font-semibold mb-6">Callback Payload</h3>
       <pre class="bg-gray-900 p-8 rounded-2xl border border-gray-700 text-sm"><code class="json">{
   "data": {
-    "referenceNumber": "BANK892606789",
+    "referenceNumber": "BANK892*******",
     "status": "PAID",
     "amount": "250000.00",
     "currency": "TZS",
-    "transactionDetails": "University Tuition Fee",
+    "transactionDetails": "testing",
     "payTo": "EvMak",
     "message": "Payment received successfully",
-    "paymentTime": "2025-11-26 10:15:33",
-    "bankReference": "CRDB20251126X123456"
+    "paymentTime": "2025-11-01 10:15:33",
+    "bankReference": "XYZ20251126X12****"
   }
 }</code></pre>
 
