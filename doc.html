@@ -32,16 +32,56 @@
 </head>
 <body class="text-gray-100">
 
+
+
+  <script>
+// Instant authentication check – runs before anything renders
+(function () {
+    const token = localStorage.getItem("token");
+
+    // No token → redirect to login immediately
+    if (!token) {
+        window.location.replace("login.html"); // Change to your login page URL
+        return;
+    }
+
+    // Optional: Validate JWT is not expired (if your token has "exp" claim)
+    try {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        if (payload.exp && Date.now() >= payload.exp * 1000) {
+            localStorage.removeItem("token");
+            alert("Session expired. Please log in again.");
+            window.location.replace("http://localhost:3000/login.html");
+            return;
+        }
+    } catch (e) {
+        // Invalid token → force re-login
+        localStorage.removeItem("token");
+        window.location.replace("http://localhost:3000/login.html");
+        return;
+    }
+})();
+</script>
+
+<!-- ADD THIS loading overlay just below the script above -->
+<div id="auth-check" class="fixed inset-0 bg-[#0c1118] flex items-center justify-center z-50">
+    <div class="text-center">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-yellow-400 mx-auto mb-4"></div>
+        <p class="text-gray-300 text-lg">Verifying session...</p>
+    </div>
+</div>
 <div class="flex h-screen">
 
   <!-- LEFT SIDEBAR -->
   <aside class="w-80 bg-[#0f1620] border-r border-gray-800 overflow-y-auto">
     <div class="p-6 border-b border-gray-800">
       <div class="relative">
+        <img src="./assets/favicon/logo_very-Big.png" alt="EvMak Logo" class="h-25 w-45 object-contain">
         <input type="text" placeholder="Search…" class="w-full bg-gray-900 pl-11 pr-4 py-3 rounded-lg text-sm focus:outline-none text-gray-300">
-        <span class="absolute left-4 top-3 text-gray-500">Search</span>
+        <span class="absolute left-4 top-3 text-gray-500"></span>
       </div>
     </div>
+    
 
     <nav class="p-4 space-y-8 text-sm">
       <!-- <div>
@@ -118,15 +158,23 @@
   <main class="flex-1 overflow-y-auto p-12 space-y-12">
 
     <!-- INTRODUCTION -->
-    <section id="introduction">
-      <h1 class="text-4xl font-bold mb-6 text-blue-400">EvMak Payment API – Technical Documentation</h1>
-      <h2 class="text-2xl font-semibold mb-3">1. Introduction</h2>
-      <p class="text-gray-300 leading-7">
-        The scope of this document is to illustrate the technical requirements for external systems to interface with EvMak payment services. 
-        All registered systems should follow these instructions to properly integrate with EvMak Payment Services API.
-      </p>
-    </section>
+ <section id="introduction" class="relative">
+  <!-- Logo + Logout Row -->
+  <div class="flex items-center justify-between mb-8 pb-6 ">
+    <div class="flex items-center gap-4">
+      <!-- Replace with your actual logo path or use base64 -->
+    
+      <h1 class="text-4xl font-bold text-blue-400">EvMak Payment API – Technical Documentation</h1>
+    </div>
 
+    <!-- Logout Button (aligned to the right) -->
+    <button onclick="logout()" class="flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 rounded-lg text-white font-medium transition shadow-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+      </svg>
+      Logout
+    </button>
+  </div>
     <!-- PAYMENT REQUEST MESSAGE -->
     <section id="payment-request">
       <h2 class="text-2xl font-semibold mb-4">2. Card API Documentation</h2>
@@ -519,11 +567,11 @@ date is in the format
 <!-- INTRODUCTION -->
     <section id="introduction">
       <h1 class="text-5xl font-bold mb-8 text-purple-400">Bank Transfer / EFT</h1>
-      <p class="text-xl text-gray-300 leading-relaxed max-w-4xl">
+      <!-- <p class="text-xl text-gray-300 leading-relaxed max-w-4xl">
         The scope of this document is to illustrate the technical requirements required in order for external systems to interface with EvMak Bank Transfer and EFT payment services. 
         This method generates a unique virtual account or payment reference for customers to pay via bank transfer, mobile banking apps, or branch deposits.
       </p>
-      <p class="text-lg text-gray-400 mt-6">Supported Banks: CRDB, NMB, NBC, Stanbic, Equity, Exim, Azania, DCB, and more.</p>
+      <p class="text-lg text-gray-400 mt-6">Supported Banks: CRDB, NMB, NBC, Stanbic, Equity, Exim, Azania, DCB, and more.</p> -->
     </section>
 
     <!-- PAYMENT REQUEST -->
@@ -745,6 +793,21 @@ date is in the format
       }
     });
   });
+</script>
+<!-- ADD THIS at the very end, just before </body> -->
+<script>
+// Remove loading screen once page is fully loaded and auth passed
+window.addEventListener("load", () => {
+    document.getElementById("auth-check")?.remove();
+});
+ function logout() {
+    // Remove token (adjust the key name if different)
+    localStorage.removeItem("token"); 
+    sessionStorage.removeItem("token");
+
+    // Redirect to login page
+    window.location.href = "login.html"; // change path if needed
+  }
 </script>
 </body>
 </html>

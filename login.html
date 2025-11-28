@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .bg-wave {
+      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #1e3a8a 100%);
+    }
+  </style>
+</head>
+<body class="bg-wave min-h-screen flex items-center justify-center px-4">
+    
+
+  <div class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-md p-10">
+    
+    <!-- LOGO REPLACES "Sign In" TEXT -->
+    <div class="flex justify-center mb-10">
+      <img src="./assets/favicon/logo_very-Big.png" 
+           alt="Logo" 
+           class="h-10 w-auto object-contain drop-shadow-lg">
+    </div>
+
+    <form onsubmit="loginUser(event)" class="space-y-6">
+      <!-- Username / Email Field -->
+      <div class="relative">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+          <i data-lucide="mail" class="w-5 h-5 text-blue-500"></i>
+        </div>
+        <input 
+          id="username"
+          type="text" 
+          required
+          placeholder="Username or email"
+          class="w-full pl-12 pr-4 py-4 bg-blue-50/70 border border-blue-200 rounded-full text-gray-800 placeholder-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition"
+        />
+      </div>
+
+      <!-- Password Field -->
+      <div class="relative">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+          <i data-lucide="lock" class="w-5 h-5 text-blue-500"></i>
+        </div>
+        <input 
+          id="password"
+          type="password" 
+          required
+          placeholder="Password"
+          class="w-full pl-12 pr-12 py-4 bg-blue-50/70 border border-blue-200 rounded-full text-gray-800 placeholder-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition"
+        />
+        <button type="button" onclick="togglePassword()" class="absolute inset-y-0 right-0 pr-4 flex items-center">
+          <i  class="w-5 h-5 text-blue-500"></i>
+        </button>
+      </div>
+
+      <!-- Forgot Password -->
+      <div class="text-center">
+        <a href="/contact.html" class="text-sm text-blue-600 hover:underline font-medium">Forgot your password?</a>
+      </div>
+
+      <!-- Sign In Button -->
+      <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-full hover:bg-blue-700 transform hover:scale-105 transition duration-200 shadow-lg">
+     Log In
+      </button>
+
+     
+      <!-- Error Message -->
+      <p id="msg" class="text-center text-red-600 font-medium mt-4"></p>
+    </form>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function togglePassword() {
+      const passwordField = document.getElementById("password");
+      const eyeIcon = document.getElementById("eye-icon");
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        eyeIcon.setAttribute("data-lucide", "eye-off");
+      } else {
+        passwordField.type = "password";
+        eyeIcon.setAttribute("data-lucide", "eye");
+      }
+      lucide.createIcons();
+    }
+
+    async function loginUser(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const msg = document.getElementById("msg");
+
+      if (!username || !password) {
+        msg.textContent = "Username/email and password are required";
+        return;
+      }
+
+      try {
+        const res = await fetch("http://localhost:3000/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, password })
+        });
+
+        if (!res.ok) {
+          const errorData = await res.json().catch(() => ({}));
+          msg.textContent = errorData.error || "Login failed";
+          return;
+        }
+
+        const data = await res.json();
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          window.location.href = "doc.html";
+        } else {
+          msg.textContent = data.error || "Login failed";
+        }
+      } catch (err) {
+        console.error(err);
+        msg.textContent = "Server error, try again later";
+      }
+    }
+
+    // Redirect if already logged in
+    document.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("token")) {
+        window.location.href = "doc.html";
+      }
+    });
+  </script>
+</body>
+</html>

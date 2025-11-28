@@ -173,12 +173,52 @@
      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
     Home
   </a>
-              <li class="group relative">
-                <a href="#services" class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">Services</a>
-              </li>
-              <li class="group relative">
-                <a href="#pricing" class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">API Docs</a>
-              </li>
+             <li class="group relative">
+  <a href="#services" class="ic-page-scroll mx-8 flex items-center py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
+    Services
+    <!-- Chevron Down Icon -->
+    <svg class="ml-2 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </a>
+
+  <!-- Dropdown Menu - Beautiful & Matches Header -->
+  <div class="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-56 
+                  bg-primary-light-1 dark:bg-primary-dark-1 
+                  border border-white/10 
+                  rounded-xl shadow-2xl overflow-hidden z-50
+                  opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                  transition-all duration-300 ease-out 
+                  before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 
+                  before:border-8 before:border-transparent 
+                  before:border-b-primary-light-1 dark:before:border-b-primary-dark-1">
+    
+    <ul class="py-4 text-sm font-medium">
+      <li>
+        <a href="/collection.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
+          Collection
+        </a>
+      </li>
+      <li>
+        <a href="/payout.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
+          Payout
+        </a>
+      </li>
+      <li>
+        <a href="/card.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
+          Card Payment
+        </a>
+      </li>
+    </ul>
+  </div>
+</li>
+<li class="group relative">
+  <a href="/login.html" 
+     onclick="window.location.href='/login.html'; return false;"
+     class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
+    API docs
+  </a>
+</li>
              <li class="group relative">
   <a href="/contact.html" 
      onclick="window.location.href='/contact.html'; return false;"
