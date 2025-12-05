@@ -428,51 +428,99 @@
         </div>
       </div>
 
-      <!-- Contact Form -->
-      <div class="col-12 xl:col-8">
-        <div class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 shadow-card-1 hover:shadow-lg">
-          <div class="text-center max-w-[550px] mx-auto mb-12">
-            <h6 class="mb-2 text-lg font-semibold text-primary">Get in Touch</h6>
-            <h2 class="mb-3">Ready to Get Started</h2>
-            <p>Please fill our form to contact us</p>
+     <!-- Contact Form -->
+<div class="col-12 xl:col-8">
+  <div class="scroll-revealed bg-body-light-1 dark:bg-primary-dark-2 rounded-xl py-8 sm:py-12 px-6 sm:px-10 shadow-card-1 hover:shadow-lg">
+    <div class="text-center max-w-[550px] mx-auto mb-12">
+      <h6 class="mb-2 text-lg font-semibold text-primary">Get in Touch</h6>
+      <h2 class="mb-3">Ready to Get Started</h2>
+      <p>Please fill our form to contact us</p>
+    </div>
+
+    <form id="contactForm" class="flex flex-col gap-6">
+      <div class="row gap-y-6">
+        <div class="col-12 md:col-6">
+          <input type="text" name="name" placeholder="Name" required
+            class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
+        </div>
+
+        <div class="col-12 md:col-6">
+          <input type="email" name="email" placeholder="Email" required
+            class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
+        </div>
+
+        <div class="col-12 md:col-6">
+          <input type="text" name="phone" placeholder="Phone" required
+            class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
+        </div>
+
+        <div class="col-12 md:col-6">
+          <input type="text" name="subject" placeholder="Subject" required
+            class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
+        </div>
+
+        <div class="col-12">
+          <textarea name="message" rows="5" placeholder="Type your message" required
+            class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"></textarea>
+        </div>
+
+        <div class="col-12">
+          <div class="text-center">
+            <button type="submit"
+              class="inline-block px-6 py-3 rounded-md bg-primary text-primary-color text-base hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10">
+              Send Message
+            </button>
           </div>
+        </div>
+      </div>
+    </form>
+    <div id="formMessage" class="mt-4 text-center text-green-600"></div>
+  </div>
+</div>
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault(); // Prevent default form submission
 
-          <form action="#" method="POST" class="flex flex-col gap-6">
-            <div class="row gap-y-6">
-              <div class="col-12 md:col-6">
-                <input type="text" name="name" placeholder="Name" required
-                  class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
-              </div>
+  const form = e.target;
 
-              <div class="col-12 md:col-6">
-                <input type="email" name="email" placeholder="Email" required
-                  class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
-              </div>
+  // Collect values explicitly
+  const data = {
+    name: form.name.value.trim(),
+    email: form.email.value.trim(),
+    phone: form.phone.value.trim(),
+    subject: form.subject.value.trim(),
+    message: form.message.value.trim()
+  };
 
-              <div class="col-12 md:col-6">
-                <input type="text" name="phone" placeholder="Phone" required
-                  class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
-              </div>
+  // Simple validation
+  if (!data.name || !data.email || !data.phone || !data.subject || !data.message) {
+    document.getElementById('formMessage').textContent = "Please fill all fields.";
+    return;
+  }
 
-              <div class="col-12 md:col-6">
-                <input type="text" name="subject" placeholder="Subject" required
-                  class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary" />
-              </div>
+  try {
+    const response = await fetch('http://localhost:3000/contact', { // use full backend URL
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
 
-              <div class="col-12">
-                <textarea name="message" rows="5" placeholder="Type your message" required
-                  class="block w-full px-5 py-3 rounded-md border border-solid border-alpha-light dark:border-alpha-dark text-inherit text-base focus:border-primary"></textarea>
-              </div>
+    const result = await response.json();
 
-              <div class="col-12">
-                <div class="text-center">
-                  <button type="submit"
-                    class="inline-block px-6 py-3 rounded-md bg-primary text-primary-color text-base hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10">
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </div>
+    if (response.ok) {
+      document.getElementById('formMessage').textContent = result.message || "Message sent successfully!";
+      form.reset();
+    } else {
+      document.getElementById('formMessage').textContent = result.error || "Failed to send message.";
+    }
+  } catch (error) {
+    console.error("Contact form error:", error);
+    document.getElementById('formMessage').textContent = "Error sending message. Check console.";
+  }
+});
+</script>
+
+
           </form>
         </div>
       </div>

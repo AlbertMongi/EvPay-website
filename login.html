@@ -15,11 +15,9 @@
   </style>
 </head>
 <body class="bg-wave min-h-screen flex items-center justify-center px-4">
-    
 
   <div class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-md p-10">
     
-    <!-- LOGO REPLACES "Sign In" TEXT -->
     <div class="flex justify-center mb-10">
       <img src="./assets/img/EvPay Colored.svg" 
            alt="Logo" 
@@ -27,16 +25,16 @@
     </div>
 
     <form onsubmit="loginUser(event)" class="space-y-6">
-      <!-- Username / Email Field -->
+      <!-- Email Field -->
       <div class="relative">
         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
           <i data-lucide="mail" class="w-5 h-5 text-blue-500"></i>
         </div>
         <input 
-          id="username"
-          type="text" 
+          id="email"
+          type="email" 
           required
-          placeholder="Username or email"
+          placeholder="Email"
           class="w-full pl-12 pr-4 py-4 bg-blue-50/70 border border-blue-200 rounded-full text-gray-800 placeholder-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition"
         />
       </div>
@@ -54,22 +52,18 @@
           class="w-full pl-12 pr-12 py-4 bg-blue-50/70 border border-blue-200 rounded-full text-gray-800 placeholder-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:border-blue-500 transition"
         />
         <button type="button" onclick="togglePassword()" class="absolute inset-y-0 right-0 pr-4 flex items-center">
-          <i  class="w-5 h-5 text-blue-500"></i>
+          <i id="eye-icon" data-lucide="eye" class="w-5 h-5 text-blue-500"></i>
         </button>
       </div>
 
-      <!-- Forgot Password -->
       <div class="text-center">
-        <a href="/registration.html" class="text-sm text-blue-600 hover:underline font-medium">Forgot your password?</a>
+        <a href="/contact.html" class="text-sm text-blue-600 hover:underline font-medium">Forgot your password?</a>
       </div>
 
-      <!-- Sign In Button -->
       <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-full hover:bg-blue-700 transform hover:scale-105 transition duration-200 shadow-lg">
-     Log In
+        Log In
       </button>
 
-     
-      <!-- Error Message -->
       <p id="msg" class="text-center text-red-600 font-medium mt-4"></p>
     </form>
   </div>
@@ -92,12 +86,12 @@
 
     async function loginUser(e) {
       e.preventDefault();
-      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value.trim();
       const msg = document.getElementById("msg");
 
-      if (!username || !password) {
-        msg.textContent = "Username/email and password are required";
+      if (!email || !password) {
+        msg.textContent = "Email and password are required";
         return;
       }
 
@@ -105,7 +99,7 @@
         const res = await fetch("http://localhost:3000/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ username, password })
+          body: JSON.stringify({ email, password }) // send correct keys
         });
 
         if (!res.ok) {
@@ -127,7 +121,6 @@
       }
     }
 
-    // Redirect if already logged in
     document.addEventListener("DOMContentLoaded", () => {
       if (localStorage.getItem("token")) {
         window.location.href = "doc.html";
