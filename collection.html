@@ -12,25 +12,23 @@
     <meta name="application-name" content="Inazuma" />
     <meta
       name="description"
-      content="EvPay website the payment gateway."
+      content="Tailwind CSS Company Landing Page Template by Ranyeh."
     />
     <meta name="keywords" content="company" />
     <meta
       name="twitter:title"
-      content="EvPay website the payment gateway"
+      content="EvPay website"
     />
     <meta
       name="twitter:description"
-      content="EvPAy your payment gateway"
+      content="Tailwind CSS Company Landing Page Template by Ranyeh."
     />
     <meta name="twitter:image" content="./assets/img/inazuma-cover.png" />
-    <meta
-      content="EvPay website the payment gateway"
-      property="og:title"
-    />
+    <meta name="twitter:card" content="summary_large_image" />
+     
     <meta content="Inazuma" property="og:site_name" />
     <meta
-      content="EvPAy your payment gateway"
+      content="Tailwind CSS Company Landing Page Template by Ranyeh."
       property="og:description"
     />
     <meta content="./assets/img/inazuma-cover.png" property="og:image" />
@@ -49,6 +47,7 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="https://ranyeh24.github.io/inazuma-tailwind" />
+ <link rel="canonical" href="https://ranyeh24.github.io/inazuma-tailwind" />
 <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
@@ -102,6 +101,77 @@
 
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
+  
+ <script>
+  // Preload both logos as soon as possible
+  const defaultLogo = './assets/img/EvPay White.svg';
+  const scrolledLogo = './assets/img/EvPay Colored.svg';
+
+  const imgPreload1 = new Image();
+  imgPreload1.src = defaultLogo;
+  const imgPreload2 = new Image();
+  imgPreload2.src = scrolledLogo;
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const logo = document.getElementById('navbar-logo');
+    if (!logo) return;
+
+    const scrollThreshold = 50; // change if you want
+
+    let isScrolled = false;
+
+    // Reusable function – no opacity fade needed anymore
+    const updateLogo = () => {
+      const shouldBeScrolled = window.scrollY > scrollThreshold;
+
+      if (shouldBeScrolled !== isScrolled) {
+        isScrolled = shouldBeScrolled;
+        logo.src = isScrolled ? scrolledLogo : defaultLogo;
+        // Optional: add a very subtle class for extra effects
+        logo.classList.toggle('scrolled', isScrolled);
+      }
+    };
+
+    // Throttle scroll for better performance
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateLogo();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Initial check in case page loads already scrolled
+    updateLogo();
+  });
+</script>
+
+<style>
+  /* Completely smooth and blink-free */
+  #navbar-logo {
+    height: 46px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+
+    /* Optional: tiny entrance fade only on page load */
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+  }
+
+  /* Only runs once when the page loads */
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  /* Optional: subtle style difference when scrolled (e.g. drop shadow) */
+  #navbar-logo.scrolled {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  }
+</style>
   <body>
     <!-- Page loading -->
     <div
@@ -133,24 +203,17 @@
   <div class="container">
     <div class="ic-navbar-container relative -mx-5 flex items-center justify-between">
       
-      <!-- LOGO SECTION – Evpay with image + text -->
-      <div class="w-60 lg:w-56 max-w-full px-5">
-        <a href="." class="ic-navbar-logo inline-flex items-center w-full py-5 space-x-3">
-          <!-- Logo Image (from your project) -->
-          <img 
-            src="./assets/favicon/logo_very-Big.png" 
-            alt="Evpay Logo" 
-            class="h-9 w-auto object-contain"
-            onerror="this.style.display='none'" 
-          />
-
-          <!-- Text Logo: Evpay (appears next to image) -->
-          <!-- <span class="text-2xl font-black tracking-tight text-primary-color">
-            Evpay
-          </span> -->
-        </a>
-      </div>
-      <!-- END LOGO -->
+    <!-- YOUR NAVBAR LOGO - JUST REPLACE YOUR OLD ONE WITH THIS -->
+  <div class="w-60 lg:w-56 max-w-full px-5">
+    <a href="." class="ic-navbar-logo inline-flex items-center w-full py-5 space-x-3">
+      <img 
+        id="navbar-logo"
+        src="./assets/img/EvPay White.svg"
+        alt="Evpay Logo"
+      />
+    </a>
+  </div>
+  <!-- END LOGO -->
 
       <div class="flex w-full items-center justify-between px-5">
         <div>
@@ -170,15 +233,15 @@
             class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
           >
             <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
-               <li class="group relative">
-  <a href="/index.html" 
+              <li class="group relative">
+                <a href="/index.html" 
      onclick="window.location.href='/index.html'; return false;"
      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
     Home
   </a>
-</li>
+              </li>
              <li class="group relative">
-  <a href="#services" class="ic-page-scroll mx-8 flex items-center py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
+  <a href="/index.html" class="ic-page-scroll mx-8 flex items-center py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
     Services
     <!-- Chevron Down Icon -->
     <svg class="ml-2 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -216,7 +279,7 @@
     </ul>
   </div>
 </li>
-             <li class="group relative">
+ <li class="group relative">
   <a href="/login.html" 
      onclick="window.location.href='/login.html'; return false;"
      class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
@@ -244,7 +307,7 @@
           ></button>
           <div class="hidden sm:flex">
             <a
-              href="javascript:void(0)"
+              href="doc.html"
               class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
               role="button"
             >Get Started</a>
@@ -1489,7 +1552,7 @@
                   viewBox="0 0 500 118.11"
                 >
                 <img 
-  src="./assets/favicon/logo_very-Big.png" 
+  src="./assets/img/EvPay White.svg" 
   alt="Evpay Logo" 
   class="h-8 w-auto max-h-10 object-contain"
   style="max-height:60px;" 

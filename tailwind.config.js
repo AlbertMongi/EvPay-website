@@ -13,7 +13,7 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: "#3d63dd",
+          DEFAULT: "#0054C7",
           color: "#fff",
           light: {
             1: "#fdfdfe",
@@ -25,7 +25,7 @@ module.exports = {
             7: "#a6bff9",
             8: "#87a5ef",
             9: "#3d63dd",
-            10: "#3657c3",
+            10: "#0054C7",
             11: "#395bc7",
             12: "#1d2e5c",
           },
@@ -39,7 +39,7 @@ module.exports = {
             7: "#3e58a0",
             8: "#4664b8",
             9: "#3d63dd",
-            10: "#3154cd",
+            10: "#0054C7",
             11: "#94b5ff",
             12: "#d5e2ff",
           },
