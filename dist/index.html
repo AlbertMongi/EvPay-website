@@ -1,0 +1,2107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Copyright" content="Inazuma" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ranyeh" />
+    <meta name="rating" content="general" />
+    <meta name="language" content="English" />
+    <meta name="application-name" content="Inazuma" />
+    <meta
+      name="description"
+      content="Tailwind CSS Company Landing Page Template by Ranyeh."
+    />
+    <meta name="keywords" content="company" />
+    <meta
+      name="twitter:title"
+      content="EvPay website"
+    />
+    <meta
+      name="twitter:description"
+      content="Tailwind CSS Company Landing Page Template by Ranyeh."
+    />
+    <meta name="twitter:image" content="./assets/img/inazuma-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+     
+    <meta content="Inazuma" property="og:site_name" />
+    <meta
+      content="Tailwind CSS Company Landing Page Template by Ranyeh."
+      property="og:description"
+    />
+    <meta content="./assets/img/inazuma-cover.png" property="og:image" />
+    <meta content="https://ranyeh24.github.io/inazuma-tailwind" property="og:url" />
+    <meta content="website" property="og:type" />
+
+    <meta name="msapplication-TileColor" content="#3d63dd" />
+    <meta
+      name="msapplication-TileImage"
+      content="data:image/png;base64,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"
+    />
+    <meta name="theme-color" content="#3d63dd" />
+
+    <!-- Page title -->
+    <title>Evpay | Payment Gateway</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://ranyeh24.github.io/inazuma-tailwind" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/logo_very-Big-CNQULJEf.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/logo_very-Big-CNQULJEf.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="194x194"
+      href="/assets/logo_very-Big-CNQULJEf.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/logo_very-Big-CNQULJEf.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/logo_very-Big-CNQULJEf.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest-Da67syPF.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/safari-pinned-tab-2--tc9X-.svg"
+      color="#3d63dd"
+    />
+
+    <!-- CSS Plugins -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+
+    <link rel="stylesheet" crossorigin href="/assets/index-B2hsADk6.css">
+  </head>
+  
+ <script>
+  // Preload both logos as soon as possible
+  const defaultLogo = './assets/img/EvPay White.svg';
+  const scrolledLogo = './assets/img/EvPay Colored.svg';
+
+  const imgPreload1 = new Image();
+  imgPreload1.src = defaultLogo;
+  const imgPreload2 = new Image();
+  imgPreload2.src = scrolledLogo;
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const logo = document.getElementById('navbar-logo');
+    if (!logo) return;
+
+    const scrollThreshold = 50; // change if you want
+
+    let isScrolled = false;
+
+    // Reusable function – no opacity fade needed anymore
+    const updateLogo = () => {
+      const shouldBeScrolled = window.scrollY > scrollThreshold;
+
+      if (shouldBeScrolled !== isScrolled) {
+        isScrolled = shouldBeScrolled;
+        logo.src = isScrolled ? scrolledLogo : defaultLogo;
+        // Optional: add a very subtle class for extra effects
+        logo.classList.toggle('scrolled', isScrolled);
+      }
+    };
+
+    // Throttle scroll for better performance
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateLogo();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Initial check in case page loads already scrolled
+    updateLogo();
+  });
+</script>
+
+<style>
+  /* Completely smooth and blink-free */
+  #navbar-logo {
+    height: 46px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+
+    /* Optional: tiny entrance fade only on page load */
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+  }
+
+  /* Only runs once when the page loads */
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  /* Optional: subtle style difference when scrolled (e.g. drop shadow) */
+  #navbar-logo.scrolled {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  }
+</style>
+  <body>
+    <!-- Page loading -->
+    <div
+      class="page-loading fixed top-0 bottom-0 left-0 right-0 z-[99999] flex items-center justify-center bg-primary-light-1 dark:bg-primary-dark-1 opacity-100 visible pointer-events-auto"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      aria-label="Loading..."
+    >
+      <div class="grid-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+   <!-- Navbar -->
+<header
+  class="ic-navbar absolute left-0 top-0 z-40 flex w-full items-center bg-transparent"
+  role="banner"
+  aria-label="Navigation bar"
+>
+  <div class="container">
+    <div class="ic-navbar-container relative -mx-5 flex items-center justify-between">
+      
+    <!-- YOUR NAVBAR LOGO - JUST REPLACE YOUR OLD ONE WITH THIS -->
+  <div class="w-60 lg:w-56 max-w-full px-5">
+    <a href="." class="ic-navbar-logo inline-flex items-center w-full py-5 space-x-3">
+      <img 
+        id="navbar-logo"
+        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDM1MzIgMTMwOSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjI7Ij4KICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsLTE2ODQ3LC0yMzg5KSI+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoOC44NjY4LDAsMCw4Ljg2NjgsLTUzMTMwLC0yMTQyOC4yKSI+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNDE1MjEyLDAsLTAuMDc3MjQ4NywwLjQxNTIxMiw0OTcwLjQyLDE3OTguNCkiPgogICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMjU1LjQxNSwwLDAsMjU1LjQxNSw3ODUwLjYxLDIzODMuNjgpIj4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDx0ZXh0IHg9Ijc1NTUuODZweCIgeT0iMjM4My42OHB4IiBzdHlsZT0iZm9udC1mYW1pbHk6J0V4bzItQmxhY2snLCAnRXhvIDInO2ZvbnQtd2VpZ2h0OjkwMDtmb250LXNpemU6MjU1LjQxNXB4O2ZpbGw6d2hpdGU7Ij5lPHRzcGFuIHg9Ijc2OTcuMTFweCAiIHk9IjIzODMuNjhweCAiPnY8L3RzcGFuPjwvdGV4dD4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjM0MjU4LDAsLTAuMDYzNzM1OCwwLjM0MjU4LDU2NTguMjQsMTk3MS41MykiPgogICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMjU1LjQxNSwwLDAsMjU1LjQxNSw4MDA2LjY3LDIzODMuNjgpIj4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDx0ZXh0IHg9Ijc1NTUuODZweCIgeT0iMjM4My42OHB4IiBzdHlsZT0iZm9udC1mYW1pbHk6J0V4bzItQmxhY2snLCAnRXhvIDInO2ZvbnQtd2VpZ2h0OjkwMDtmb250LXNpemU6MjU1LjQxNXB4O2ZpbGw6d2hpdGU7Ij5QPHRzcGFuIHg9Ijc3MTEuOTJweCA3ODUyLjkxcHggIiB5PSIyMzgzLjY4cHggMjM4My42OHB4ICI+YXk8L3RzcGFuPjwvdGV4dD4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjY2MTg5NiwwLC0wLjEyMzE0MywwLjY2MTg5NiwzMzI3LjMyLDEwNzIuOTEpIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik03NTcwLjM2LDI2MzUuMDlDNzYwNS42MiwyNjM1LjA5IDc2MzEuMTksMjYwOS45NSA3NjMxLjE5LDI1NzUuMjlMNzYzMS4xOSwyNTIzLjRDNzYzMS4xOSwyNDczLjU2IDc2NjcuOTYsMjQzNy40MSA3NzE4LjY2LDI0MzcuNDFMNzg2MS44MSwyNDM3LjQxQzc4ODguNDksMjQzNy40MSA3OTE1Ljk5LDI0NDkuMjggNzkzNi44NiwyNDY5LjhDNzk1Ny43MywyNDkwLjMxIDc5NjkuODEsMjUxNy4zNiA3OTY5LjgxLDI1NDMuNThMNzk2OS44MSwyNTg2LjkzQzc5NjkuODEsMjYyOS40NSA3OTM4LjQ1LDI2NjAuMjcgNzg5NS4yMSwyNjYwLjI3TDc0ODEuMSwyNjYwLjI3Qzc0NTQuNDIsMjY2MC4yNyA3NDI2LjkyLDI2NDguNDEgNzQwNi4wNSwyNjI3Ljg5QzczODUuMTgsMjYwNy4zNyA3MzczLjExLDI1ODAuMzMgNzM3My4xMSwyNTU0LjFMNzM3My4xMSwyNTEwLjc1QzczNzMuMTEsMjQ2OC4yNCA3NDA0LjQ3LDI0MzcuNDEgNzQ0Ny43LDI0MzcuNDFMNzYwNC44OCwyNDM3LjQxQzc2MTEuODMsMjQzNy40MSA3NjE4LjUyLDI0NDMuMDUgNzYxOS44MSwyNDUwQzc2MjEuMSwyNDU2Ljk1IDc2MTYuNTEsMjQ2Mi41OSA3NjA5LjU2LDI0NjIuNTlMNzQ1Mi4zOSwyNDYyLjU5Qzc0MjEuMjgsMjQ2Mi41OSA3Mzk4LjcyLDI0ODQuNzcgNzM5OC43MiwyNTE1LjM2TDczOTguNzIsMjU1OC43MUM3Mzk4LjcyLDI1NzcuNTggNzQwNy40LDI1OTcuMDMgNzQyMi40MiwyNjExLjc5Qzc0MzcuNDQsMjYyNi41NSA3NDU3LjIyLDI2MzUuMDkgNzQ3Ni40MiwyNjM1LjA5TDc1NzAuMzYsMjYzNS4wOVpNNzYzNi4wOSwyNjM1LjA5TDc4OTAuNTIsMjYzNS4wOUM3OTIxLjYzLDI2MzUuMDkgNzk0NC4xOSwyNjEyLjkxIDc5NDQuMTksMjU4Mi4zM0w3OTQ0LjE5LDI1MzguOThDNzk0NC4xOSwyNTIwLjExIDc5MzUuNTEsMjUwMC42NSA3OTIwLjQ5LDI0ODUuODlDNzkwNS40OCwyNDcxLjEzIDc4ODUuNjksMjQ2Mi41OSA3ODY2LjQ5LDI0NjIuNTlMNzcyMy4zNCwyNDYyLjU5Qzc2ODQuNzgsMjQ2Mi41OSA3NjU2LjgxLDI0OTAuMDkgNzY1Ni44MSwyNTI4LjAxTDc2NTYuODEsMjU3OS45Qzc2NTYuODEsMjYwMS44OCA3NjQ5LjE1LDI2MjEuMDEgNzYzNi4wOSwyNjM1LjA5WiIgc3R5bGU9ImZpbGw6d2hpdGU7Ii8+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
+        alt="Evpay Logo"
+      />
+    </a>
+  </div>
+  <!-- END LOGO -->
+
+      <div class="flex w-full items-center justify-between px-5">
+        <div>
+          <button
+            type="button"
+            class="ic-navbar-toggler absolute right-4 top-1/2 block -translate-y-1/2 rounded-md px-3 py-[6px] text-[22px]/none text-primary-color ring-primary focus:ring-2 lg:hidden"
+            data-web-toggle="navbar-collapse"
+            data-web-target="navbarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+          >
+            <i class="lni lni-menu"></i>
+          </button>
+
+          <nav
+            id="navbarMenu"
+            class="ic-navbar-collapse absolute right-4 top-[80px] w-full max-w-[250px] rounded-lg hidden bg-primary-light-1 py-5 shadow-lg dark:bg-primary-dark-1 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
+          >
+            <ul class="block lg:flex" role="menu" aria-label="Navigation menu">
+              <li class="group relative">
+                <a href="#home" class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 active">Home</a>
+              </li>
+             <li class="group relative">
+  <a href="#services" class="ic-page-scroll mx-8 flex items-center py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
+    Services
+    <!-- Chevron Down Icon -->
+    <svg class="ml-2 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </a>
+
+  <!-- Dropdown Menu - Beautiful & Matches Header -->
+  <div class="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-56 
+                  bg-primary-light-1 dark:bg-primary-dark-1 
+                  border border-white/10 
+                  rounded-xl shadow-2xl overflow-hidden z-50
+                  opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                  transition-all duration-300 ease-out 
+                  before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 
+                  before:border-8 before:border-transparent 
+                  before:border-b-primary-light-1 dark:before:border-b-primary-dark-1">
+    
+    <ul class="py-4 text-sm font-medium">
+      <li>
+        <a href="/collection.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
+          Collection
+        </a>
+      </li>
+      <li>
+        <a href="/payout.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
+          Payout
+        </a>
+      </li>
+      <li>
+        <a href="/card.html" class="flex items-center px-6 py-3 text-gray-700 dark:text-gray-200 hover:bg-white/10 dark:hover:bg-black/20 transition">
+          Card Payment
+        </a>
+      </li>
+    </ul>
+  </div>
+</li>
+ <li class="group relative">
+  <a href="/login.html" 
+     onclick="window.location.href='/login.html'; return false;"
+     class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
+    API docs
+  </a>
+</li>
+             <li class="group relative">
+  <a href="/contact.html" 
+     onclick="window.location.href='/contact.html'; return false;"
+     class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary dark:text-body-dark-12 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:dark:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70">
+    Contact
+  </a>
+</li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex items-center justify-end pr-[52px] lg:pr-0">
+          <button
+            type="button"
+            class="inline-flex items-center text-primary-color text-[24px]/none"
+            aria-label="Switch theme"
+            data-web-trigger="web-theme"
+          ></button>
+          <div class="hidden sm:flex">
+            <a
+              href="doc.html"
+              class="btn-navbar ml-5 px-6 py-3 rounded-md bg-primary-color bg-opacity-20 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
+              role="button"
+            >Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+      <!-- Hero section -->
+      <section
+        id="home"
+        class="relative overflow-hidden bg-primary text-primary-color pt-[120px] md:pt-[130px] lg:pt-[160px]"
+      >
+        <div class="container">
+          <div class="-mx-5 flex flex-wrap items-center">
+            <div class="w-full px-5">
+              <div class="scroll-revealed mx-auto max-w-[780px] text-center">
+                <h1
+                  class="mb-6 text-3xl font-bold leading-snug text-primary-color sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight"
+                >
+                 Payment gateway and financial solution for your business
+                </h1>
+
+                <p
+                  class="mx-auto mb-9 max-w-[600px] text-base text-primary-color sm:text-lg sm:leading-normal"
+                >
+                Payment platform  that helps businesses receive and send money easily. It allows companies to accept payments from mobile money, banks, cards, and QR codes using just one simple API or dashboard.
+                </p>
+
+                <ul
+                  class="mb-10 flex flex-wrap items-center justify-center gap-4 md:gap-5"
+                >
+                  <li>
+                    <a
+                      href="login.html"
+                      class="inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]"
+                      role="button"
+                      >Get Started</a
+                    >
+                  </li>
+<li>
+  <a
+    href="tel:0716400001"
+    class="inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]"
+    role="button"
+  >
+    Talk to sales
+  </a>
+</li>
+
+<li> 
+  <a
+    href="https://www.youtube.com/embed/CwTyE3osZbU?rel=0"
+    target="_blank"
+    class="inline-flex items-center justify-center rounded-md bg-primary-color text-primary px-5 py-3 text-center text-base font-medium shadow-md hover:bg-primary-light-5 md:px-7 md:py-[14px]"
+    role="button"
+  >
+    <i class="lni lni-play text-lg/none"></i> Watch Intro
+  </a>
+</li>
+
+                </ul>
+
+                <div>
+                  <!-- <p class="mb-4 text-center text-primary-color">Powered by</p> -->
+
+                  <div
+                    class="scroll-revealed flex items-center justify-center gap-4 text-center"
+                  >
+                    <a
+                      href="https://evmak.com/"
+                      target="_blank"
+                      class="text-primary-color/60 hover:text-primary-color"
+                    >
+                      <svg
+                        class="fill-current"
+                        height="26"
+                        viewBox=".16 .18 799.8 98.72"
+                        xmlns="./assets/img/hero.png"
+                      >
+                 
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full px-5">
+              <div class="scroll-revealed relative z-10 mx-auto max-w-[845px]">
+                <figure class="mt-16">
+                  <img
+                    src="/assets/hero-p06YOm9U.png"
+                    alt="Hero image"
+                    class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
+                  />
+                </figure>
+
+                <div class="absolute -left-9 bottom-0 z-[-1]">
+                  <img
+                    src="/assets/dots--Mmlo4A-.svg"
+                    alt
+                    class="w-[120px] opacity-75"
+                  />
+                </div>
+
+                <div class="absolute -right-6 -top-6 z-[-1]">
+                  <img
+                    src="/assets/dots--Mmlo4A-.svg"
+                    alt
+                    class="w-[120px] opacity-75"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- About section -->
+<section id="about" class="section-area">
+  <div class="container">
+    <div class="grid grid-cols-1 gap-14 lg:grid-cols-2">
+      <div class="w-full">
+        <figure class="scroll-revealed max-w-[480px] mx-auto">
+          <img
+            src="/assets/about-img-CX4ID5bx.jpg"
+            alt="About EvPay by EvMak"
+            class="rounded-xl"
+          />
+        </figure>
+      </div>
+
+      <div class="w-full">
+        <div class="scroll-revealed">
+          <h6 class="mb-2 block text-lg font-semibold text-primary">
+            About EvPay
+          </h6>
+          <h2 class="mb-6">
+            Powering Digital Payments & Business Growth in Tanzania
+          </h2>
+        </div>
+
+        <div class="tabs scroll-revealed">
+          <nav
+            class="tabs-nav flex flex-wrap gap-4 my-8"
+            role="tablist"
+            aria-label="About us tabs"
+          >
+            <button
+              type="button"
+              class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
+              data-web-toggle="tabs"
+              data-web-target="tabs-panel-profile"
+              id="tabs-list-profile"
+              role="tab"
+              aria-controls="tabs-panel-profile"
+            >
+              Our Mission
+            </button>
+
+            <button
+              type="button"
+              class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
+              data-web-toggle="tabs"
+              data-web-target="tabs-panel-vision"
+              id="tabs-list-vision"
+              role="tab"
+              aria-controls="tabs-panel-vision"
+            >
+              Our Vision
+            </button>
+
+            <button
+              type="button"
+              class="tabs-link inline-block py-2 px-4 rounded-md text-body-light-12 dark:text-body-dark-12 bg-body-light-12/10 dark:bg-body-dark-12/10 text-inherit font-medium hover:bg-primary hover:text-primary-color focus:bg-primary focus:text-primary-color"
+              data-web-toggle="tabs"
+              data-web-target="tabs-panel-history"
+              id="tabs-list-history"
+              role="tab"
+              aria-controls="tabs-panel-history"
+            >
+              Our Purpose
+            </button>
+          </nav>
+
+          <!-- PROFILE TAB -->
+          <div
+            class="tabs-content mt-4"
+            id="tabs-panel-profile"
+            tabindex="-1"
+            role="tabpanel"
+            aria-labelledby="tabs-list-profile"
+          >
+            <p>
+              Our mission is to empower African enterpreneurs and SMEs with digital solutions that drive financial inclusion, operational efficiency, and sustainable growth.
+            </p>
+           
+          </div>
+
+          <!-- VISION TAB -->
+          <div
+            class="tabs-content mt-4"
+            id="tabs-panel-vision"
+            tabindex="-1"
+            role="tabpanel"
+            aria-labelledby="tabs-list-vision"
+          >
+            <p>
+              To unlock Africa's economic potential by building inclusive, accessible and innovative solutions for businesses of all sizes. 
+            </p>
+            <!-- <p>
+              We believe that every business, from startups to large enterprises, 
+              should have access to fast, secure, and affordable financial technology 
+              that fuels innovation and economic growth.
+            </p> -->
+          </div>
+
+          <!-- HISTORY TAB -->
+          <div
+            class="tabs-content mt-4"
+            id="tabs-panel-history"
+            tabindex="-1"
+            role="tabpanel"
+            aria-labelledby="tabs-list-history"
+          >
+            <p>
+             To empower every business in Africa to archive more.
+            </p>
+            <!-- <p>
+              Over the years, EvMak has grown into a recognized fintech provider, 
+              working with SMEs, corporates, financial institutions, and government 
+              partners. EvPay continues to evolve with new features, increased 
+              integrations, and a strong commitment to reliability and innovation.
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Lineicons CDN (REQUIRED for icons to show) -->
+<link
+  rel="stylesheet"
+  href="https://cdn.lineicons.com/4.0/lineicons.css"
+/>
+
+<!-- Services section -->
+<section id="services" class="section-area">
+  <div class="container">
+    <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
+      <!-- <h6 class="mb-2 block text-lg font-semibold text-primary">
+        Services
+      </h6> -->
+      <h2 class="mb-6">Why you should choose Evpay</h2>
+      <p>
+        EvPay by EvMak provides a complete suite of digital payment solutions 
+        designed for businesses in Tanzania — enabling fast, secure, and flexible 
+        payment collection across mobile money, banks, cards, and more.
+      </p>
+    </div>
+
+    <div class="row">
+
+      <!-- Mobile Money Payments -->
+      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+        <div class="group hover:-translate-y-1">
+          <div
+            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
+                   text-[37px] bg-primary text-white"
+          >
+            <i class="lni lni-mobile"></i>
+          </div>
+          <div class="w-full">
+            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
+              Mobile Money Payments
+            </h4>
+            <p>
+              Accept fast and secure payments from all major mobile money 
+              platforms including M-Pesa, Tigo Pesa, Airtel Money, and Halopesa.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bank Transfer Payments -->
+      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+        <div class="group hover:-translate-y-1">
+          <div
+            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
+                   text-[37px] bg-primary text-white"
+          >
+            <i class="lni-bar-chart"></i>
+          </div>
+          <div class="w-full">
+            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
+              Bank Transfer Payments
+            </h4>
+            <p>
+              Seamless bank integrations allowing customers to pay directly
+              from over 30 supported Tanzanian banks.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Payments -->
+      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+        <div class="group hover:-translate-y-1">
+          <div
+            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
+                   text-[37px] bg-primary text-white"
+          >
+            <i class="lni lni-credit-cards"></i>
+          </div>
+          <div class="w-full">
+            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
+              Card Payments
+            </h4>
+            <p>
+              Accept Visa, Mastercard, and other major cards with secure 
+              3D authentication and real-time confirmation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- QR Code Payments -->
+      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+        <div class="group hover:-translate-y-1">
+          <div
+            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
+                   text-[37px] bg-primary text-white"
+          >
+            <i class="lni lni-shield"></i>
+          </div>
+          <div class="w-full">
+            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
+              QR Code Payments
+            </h4>
+            <p>
+              Generate dynamic or static QR codes to allow quick, 
+              app-based payments at physical or digital points of sale.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- USSD Push Payments -->
+      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+        <div class="group hover:-translate-y-1">
+          <div
+            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
+                   text-[37px] bg-primary text-white"
+          >
+            <i class="lni lni-network"></i>
+          </div>
+          <div class="w-full">
+            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
+              USSD Push Payments
+            </h4>
+            <p>
+              Enable customers to pay instantly using USSD on any mobile 
+              phone — no internet required, making payments accessible to all.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- API & System Integration -->
+      <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
+        <div class="group hover:-translate-y-1">
+          <div
+            class="w-[70px] h-[70px] rounded-2xl mb-6 flex items-center justify-center 
+                   text-[37px] bg-primary text-white"
+          >
+            <i class="lni lni-code-alt"></i>
+          </div>
+          <div class="w-full">
+            <h4 class="text-[1.25rem]/tight font-semibold mb-5">
+              API & System Integration
+            </h4>
+            <p>
+              Developer-friendly APIs and plugins for integrating payments 
+              into mobile apps, websites, POS systems, and ERP platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Intro video section -->
+<section id="intro" class="section-area">
+  <div class="container">
+    <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
+      <h6 class="mb-2 block text-lg font-semibold text-primary">
+        Intro Video
+      </h6>
+
+      <p>
+        Listen to our videos to get to know more about EvPay and how it can help your business grow with seamless digital payments.
+      </p>
+    </div>
+
+    <!-- Clean YouTube Embed -->
+    <div class="scroll-revealed relative max-w-[900px] mx-auto">
+      <div class="relative w-full aspect-video rounded-xl overflow-hidden">
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/CwTyE3osZbU?rel=0"
+          title="EvPay Intro Video"
+          frameborder="0"
+          style="border:0;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Call to action section -->
+<section
+  id="call-action"
+  class="section-area !bg-primary !text-primary-color"
+>
+  <div class="container">
+    <div class="scroll-revealed text-center max-w-[550px] mx-auto">
+      <h2 class="mb-8 text-inherit">
+        Empower Your Business with EvPay Solutions
+      </h2>
+      <p>
+        EVPAY provides innovative and reliable solutions tailored to help your business thrive in the modern digital landscape. From seamless integrations to intelligent automation, we ensure your operations are efficient, secure, and future-ready.
+      </p>
+      <a
+        href="/login.html"
+        class="inline-block px-6 py-3 rounded-md mt-11 bg-green-400 text-white hover:bg-green-500 hover:text-white focus:bg-green-500 focus:text-white transition-colors duration-300"
+        role="button"
+      >
+        Get Started with EVPAY
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ section -->
+<section id="faq" class="section-area relative">
+  <div class="container">
+    <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
+      <h6 class="mb-2 block text-lg font-semibold text-primary">FAQ</h6>
+      <h2 class="mb-6">Frequently Asked Questions About EVPay</h2>
+      <p>
+        Here are the most common questions about EVPay Tanzania — how it works,
+        payments, EV charging, and more.
+      </p>
+    </div>
+
+    <div class="grid gap-x-8 gap-y-12 grid-cols-1 lg:grid-cols-2">
+      
+      <!-- FAQ 1 -->
+      <div class="scroll-revealed flex">
+        <div
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-primary-color text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
+        >
+          <i class="lni lni-question-circle"></i>
+        </div>
+        <div class="w-full">
+          <h3
+            class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+          >
+          Can I start without a developer? 
+          </h3>
+          <p class="text-body-light-11 dark:text-body-dark-11">
+           Yes. Use Payment Links and digital Invoices to go live today.
+How fast do I see funds? Based on channel SLAs. You’ll see real-time status and settlement views in your dashboard.
+
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="scroll-revealed flex">
+        <div
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-primary-color text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
+        >
+          <i class="lni lni-question-circle"></i>
+        </div>
+        <div class="w-full">
+          <h3
+            class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+          >
+           How do you handle returns? 
+          </h3>
+          <p class="text-body-light-11 dark:text-body-dark-11">
+            We provide return codes and webhook events so you can trigger retries or alternative routes.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="scroll-revealed flex">
+        <div
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-primary-color text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
+        >
+          <i class="lni lni-question-circle"></i>
+        </div>
+        <div class="w-full">
+          <h3
+            class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+          >
+         Can we test before going live? 
+          </h3>
+          <p class="text-body-light-11 dark:text-body-dark-11">
+          Yes. Sandbox accounts, sample batches, and simulated return codes. Before accepting real payments, you can use a sandbox environment to simulate transactions. This allows your team to test payment flows, batch processing, and handling of return codes safely without affecting real funds.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="scroll-revealed flex">
+        <div
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-primary-color text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
+        >
+          <i class="lni lni-question-circle"></i>
+        </div>
+        <div class="w-full">
+          <h3
+            class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+          >
+           Is Tap to Phone live today? 
+          </h3>
+          <p class="text-body-light-11 dark:text-body-dark-11">
+            On the roadmap. We run pilots and can enable cohorts by request.
+Can we combine cards with other rails at checkout? Yes. Hosted checkout presents multiple rails to your customer.
+
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="scroll-revealed flex">
+        <div
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-primary-color text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
+        >
+          <i class="lni lni-question-circle"></i>
+        </div>
+        <div class="w-full">
+          <h3
+            class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+          >
+        How do you handle returns? 
+          </h3>
+          <p class="text-body-light-11 dark:text-body-dark-11">
+          We provide return codes and webhook events so you can trigger retries or alternative routes. failed or returned payments are communicated to your system via return codes. Webhooks allow automatic handling, ensuring minimal disruption and faster resolution for your customers.
+
+          </p>
+        </div>
+      </div>
+
+      
+      <!-- FAQ 6 -->
+      <div class="scroll-revealed flex">
+        <div
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-primary-color text-[28px] sm:mr-6 sm:h-[60px] sm:max-w-[60px] sm:text-[32px]"
+        >
+          <i class="lni lni-question-circle"></i>
+        </div>
+        <div class="w-full">
+          <h3
+            class="mb-6 text-xl font-semibold text-body-light-12 dark:text-body-dark-12 sm:text-2xl lg:text-xl xl:text-2xl"
+          >
+  Do you support approvals for large batches? 
+          </h3>
+          <p class="text-body-light-11 dark:text-body-dark-11">
+            Yes. Multi-step approvals with thresholds and alerts.  For large transactions or batch payments, EVPay allows multiple approval steps to ensure security. You can set thresholds that require additional approvals and receive alerts if an action is needed, reducing risk of errors or fraud.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <div>
+          <span class="absolute left-5 top-5 -z-[1]">
+            <svg
+              class="w-20 h-auto fill-teal-500"
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1280.000000pt"
+              height="1280.000000pt"
+              viewBox="0 0 1280.000000 1280.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g
+                transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                stroke="none"
+              >
+                <path
+                  d="M550 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 12465 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 254
+-255 194 -41 395 142 375 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217
+16z"
+                />
+                <path
+                  d="M3110 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 12465 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
+-319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M12070 12465 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
+-319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M550 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 11185 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 254
+-255 194 -41 395 142 375 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217
+16z"
+                />
+                <path
+                  d="M3110 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 11185 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
+-319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M12070 11185 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
+-319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M550 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 4785 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M4390 4785 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M5670 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 3505 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M4390 3505 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M5670 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 2225 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M4390 2225 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M5670 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+              </g>
+            </svg>
+          </span>
+          <span class="absolute right-5 bottom-5 -z-[1]">
+            <svg
+              class="w-20 h-auto fill-indigo-500"
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1280.000000pt"
+              height="1280.000000pt"
+              viewBox="0 0 1280.000000 1280.000000"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g
+                transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                stroke="none"
+              >
+                <path
+                  d="M550 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 12465 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 254
+-255 194 -41 395 142 375 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217
+16z"
+                />
+                <path
+                  d="M3110 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 12465 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 12465 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
+-319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M12070 12465 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
+-319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M550 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 11185 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 254
+-255 194 -41 395 142 375 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217
+16z"
+                />
+                <path
+                  d="M3110 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 11185 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 11185 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
+-319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M12070 11185 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142
+-319 107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M550 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 9905 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 8625 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 7345 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 6065 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 4785 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M4390 4785 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M5670 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 4785 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 4785 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 3505 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M4390 3505 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M5670 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 3505 c-151 -50 -253 -216 -222 -362 25 -119 136 -230 255 -255
+193 -41 394 142 374 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 3505 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 2225 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M4390 2225 c-105 -35 -200 -141 -222 -248 -25 -117 32 -244 142 -319
+107 -74 229 -75 337 -3 177 118 201 338 53 485 -85 86 -207 119 -310 85z"
+                />
+                <path
+                  d="M5670 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 2225 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M550 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M1830 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M3110 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M4390 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M5670 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M6950 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M8230 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M9510 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369 -369
+155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M10790 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+                <path
+                  d="M12070 945 c-105 -35 -200 -141 -222 -248 -43 -206 163 -412 369
+-369 155 32 275 190 260 339 -11 105 -90 213 -190 262 -61 29 -155 36 -217 16z"
+                />
+              </g>
+            </svg>
+          </span>
+        </div>
+      </section>
+
+      
+<!-- Clients section -->
+<section id="clients" class="section-area">
+  <div class="container">
+    <div class="scroll-revealed text-center max-w-[550px] mx-auto mb-12">
+      <h6 class="mb-2 block text-lg font-semibold text-primary">
+        Partners
+      </h6>
+      <h2 class="mb-6">Our Awesome Partners</h2>
+      <p>
+        The following are some of our partners
+      </p>
+    </div>
+
+    <div class="">
+      <div class="row">
+        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
+          <img
+            src="https://3.bp.blogspot.com/-tg8voDxDXvw/YGHVQX-qDxI/AAAAAAAANGY/pYLuWgOA7WwNpg3Xe3F-AHAKr3XPNHhgQCK4BGAYYCw/s1280/CRDB-LOGO.png"
+            alt="Brand Logo Image"
+            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
+          />
+        </div>
+
+        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
+          <img
+            src="https://tse1.mm.bing.net/th/id/OIP.Z48u3sQh3DDZxWDxyGhGIQHaEq?rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Brand Logo Image"
+            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
+          />
+        </div>
+
+        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
+          <img
+            src="https://download.logo.wine/logo/Vodacom/Vodacom-Logo.wine.png"
+            alt="Brand Logo Image"
+            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
+          />
+        </div>
+
+        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
+          <img
+            src="https://images.seeklogo.com/logo-png/52/2/halotel-tanzania-logo-png_seeklogo-527224.png"
+            alt="Brand Logo Image"
+            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
+          />
+        </div>
+
+        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
+          <img
+            src="https://images.seeklogo.com/logo-png/56/1/yas-tanzania-logo-png_seeklogo-566393.png?v=1957910121804436120"
+            alt="Brand Logo Image"
+            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
+          />
+        </div>
+
+        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
+          <img
+            src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Symbol.png"
+            alt="Brand Logo Image"
+            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
+          />
+        </div>
+
+        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
+          <img
+            src="https://4.bp.blogspot.com/-L1s5JuinyAw/TjKbwV2CNGI/AAAAAAAAAK4/1i1iKt5dlIU/s1600/airtel-logo_new.jpg"
+            alt="Brand Logo Image"
+            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
+          />
+        </div>
+
+        <div class="scroll-revealed text-center p-4 col-12 sm:col-6 md:col-4 lg:col-3">
+          <img
+            src="https://logos-world.net/wp-content/uploads/2020/09/Mastercard-Emblem.png"
+            alt="Brand Logo Image"
+            class="h-[80px] inline-block opacity-70 dark:opacity-90 hover:opacity-100 transition-opacity"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark-2 text-white">
+      <div class="container py-20 lg:py-[100px]">
+        <div class="row">
+          <div class="col-12 order-first lg:col-4">
+            <div class="w-full">
+              <a href="." class="inline-block mb-5">
+                <svg
+                  id="FooterBrand"
+                  class="h-[40px]"
+                  data-name="FooterBrand"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 500 118.11"
+                >
+                <img 
+  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDM1MzIgMTMwOSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjI7Ij4KICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsLTE2ODQ3LC0yMzg5KSI+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoOC44NjY4LDAsMCw4Ljg2NjgsLTUzMTMwLC0yMTQyOC4yKSI+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNDE1MjEyLDAsLTAuMDc3MjQ4NywwLjQxNTIxMiw0OTcwLjQyLDE3OTguNCkiPgogICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMjU1LjQxNSwwLDAsMjU1LjQxNSw3ODUwLjYxLDIzODMuNjgpIj4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDx0ZXh0IHg9Ijc1NTUuODZweCIgeT0iMjM4My42OHB4IiBzdHlsZT0iZm9udC1mYW1pbHk6J0V4bzItQmxhY2snLCAnRXhvIDInO2ZvbnQtd2VpZ2h0OjkwMDtmb250LXNpemU6MjU1LjQxNXB4O2ZpbGw6d2hpdGU7Ij5lPHRzcGFuIHg9Ijc2OTcuMTFweCAiIHk9IjIzODMuNjhweCAiPnY8L3RzcGFuPjwvdGV4dD4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjM0MjU4LDAsLTAuMDYzNzM1OCwwLjM0MjU4LDU2NTguMjQsMTk3MS41MykiPgogICAgICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMjU1LjQxNSwwLDAsMjU1LjQxNSw4MDA2LjY3LDIzODMuNjgpIj4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDx0ZXh0IHg9Ijc1NTUuODZweCIgeT0iMjM4My42OHB4IiBzdHlsZT0iZm9udC1mYW1pbHk6J0V4bzItQmxhY2snLCAnRXhvIDInO2ZvbnQtd2VpZ2h0OjkwMDtmb250LXNpemU6MjU1LjQxNXB4O2ZpbGw6d2hpdGU7Ij5QPHRzcGFuIHg9Ijc3MTEuOTJweCA3ODUyLjkxcHggIiB5PSIyMzgzLjY4cHggMjM4My42OHB4ICI+YXk8L3RzcGFuPjwvdGV4dD4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjY2MTg5NiwwLC0wLjEyMzE0MywwLjY2MTg5NiwzMzI3LjMyLDEwNzIuOTEpIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik03NTcwLjM2LDI2MzUuMDlDNzYwNS42MiwyNjM1LjA5IDc2MzEuMTksMjYwOS45NSA3NjMxLjE5LDI1NzUuMjlMNzYzMS4xOSwyNTIzLjRDNzYzMS4xOSwyNDczLjU2IDc2NjcuOTYsMjQzNy40MSA3NzE4LjY2LDI0MzcuNDFMNzg2MS44MSwyNDM3LjQxQzc4ODguNDksMjQzNy40MSA3OTE1Ljk5LDI0NDkuMjggNzkzNi44NiwyNDY5LjhDNzk1Ny43MywyNDkwLjMxIDc5NjkuODEsMjUxNy4zNiA3OTY5LjgxLDI1NDMuNThMNzk2OS44MSwyNTg2LjkzQzc5NjkuODEsMjYyOS40NSA3OTM4LjQ1LDI2NjAuMjcgNzg5NS4yMSwyNjYwLjI3TDc0ODEuMSwyNjYwLjI3Qzc0NTQuNDIsMjY2MC4yNyA3NDI2LjkyLDI2NDguNDEgNzQwNi4wNSwyNjI3Ljg5QzczODUuMTgsMjYwNy4zNyA3MzczLjExLDI1ODAuMzMgNzM3My4xMSwyNTU0LjFMNzM3My4xMSwyNTEwLjc1QzczNzMuMTEsMjQ2OC4yNCA3NDA0LjQ3LDI0MzcuNDEgNzQ0Ny43LDI0MzcuNDFMNzYwNC44OCwyNDM3LjQxQzc2MTEuODMsMjQzNy40MSA3NjE4LjUyLDI0NDMuMDUgNzYxOS44MSwyNDUwQzc2MjEuMSwyNDU2Ljk1IDc2MTYuNTEsMjQ2Mi41OSA3NjA5LjU2LDI0NjIuNTlMNzQ1Mi4zOSwyNDYyLjU5Qzc0MjEuMjgsMjQ2Mi41OSA3Mzk4LjcyLDI0ODQuNzcgNzM5OC43MiwyNTE1LjM2TDczOTguNzIsMjU1OC43MUM3Mzk4LjcyLDI1NzcuNTggNzQwNy40LDI1OTcuMDMgNzQyMi40MiwyNjExLjc5Qzc0MzcuNDQsMjYyNi41NSA3NDU3LjIyLDI2MzUuMDkgNzQ3Ni40MiwyNjM1LjA5TDc1NzAuMzYsMjYzNS4wOVpNNzYzNi4wOSwyNjM1LjA5TDc4OTAuNTIsMjYzNS4wOUM3OTIxLjYzLDI2MzUuMDkgNzk0NC4xOSwyNjEyLjkxIDc5NDQuMTksMjU4Mi4zM0w3OTQ0LjE5LDI1MzguOThDNzk0NC4xOSwyNTIwLjExIDc5MzUuNTEsMjUwMC42NSA3OTIwLjQ5LDI0ODUuODlDNzkwNS40OCwyNDcxLjEzIDc4ODUuNjksMjQ2Mi41OSA3ODY2LjQ5LDI0NjIuNTlMNzcyMy4zNCwyNDYyLjU5Qzc2ODQuNzgsMjQ2Mi41OSA3NjU2LjgxLDI0OTAuMDkgNzY1Ni44MSwyNTI4LjAxTDc2NTYuODEsMjU3OS45Qzc2NTYuODEsMjYwMS44OCA3NjQ5LjE1LDI2MjEuMDEgNzYzNi4wOSwyNjM1LjA5WiIgc3R5bGU9ImZpbGw6d2hpdGU7Ii8+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo=" 
+  alt="Evpay Logo" 
+  class="h-8 w-auto max-h-10 object-contain"
+  style="max-height:60px;" 
+  onerror="this.style.display='none'" 
+/>
+
+
+                  <!-- <path
+                    d="M272.26,29.77h14.86V58q0,8.24,1.13,11.44a10,10,0,0,0,3.64,5,10.44,10.44,0,0,0,6.18,1.77,10.75,10.75,0,0,0,6.23-1.75,10.26,10.26,0,0,0,3.81-5.14q.92-2.52.91-10.82V29.77h14.7V54.59q0,15.33-2.42,21a23,23,0,0,1-8.72,10.58q-5.76,3.68-14.64,3.68-9.65,0-15.59-4.3a22.79,22.79,0,0,1-8.37-12q-1.73-5.32-1.72-19.37Z"
+                    style="fill: #eeeef0"
+                  />
+                  <path
+                    d="M338.36,29.77h14.69V36.5a25.29,25.29,0,0,1,8.38-6.19,24.53,24.53,0,0,1,10.05-2A18.63,18.63,0,0,1,381.39,31a19.46,19.46,0,0,1,7.11,7.86A23.64,23.64,0,0,1,397.09,31a23.34,23.34,0,0,1,11.12-2.69,20.65,20.65,0,0,1,11,2.9A16.79,16.79,0,0,1,426,38.76q2.08,4.68,2.08,15.24V88.34h-14.8V58.62q0-9.94-2.48-13.48t-7.43-3.52a11.22,11.22,0,0,0-6.75,2.15,12.66,12.66,0,0,0-4.44,5.95q-1.45,3.8-1.46,12.19V88.34h-14.8V60q0-7.86-1.16-11.38a10.27,10.27,0,0,0-3.48-5.25,9.15,9.15,0,0,0-5.61-1.72A11,11,0,0,0,359,43.8a13,13,0,0,0-4.48,6.1q-1.49,3.93-1.49,12.38V88.34H338.36Z"
+                    style="fill: #eeeef0"
+                  />
+                  <path
+                    d="M485.31,29.77H500V88.34H485.31V82.15A29,29,0,0,1,476.68,88a24.24,24.24,0,0,1-9.39,1.8q-11.34,0-19.62-8.8t-8.28-21.88q0-13.56,8-22.23a25.55,25.55,0,0,1,19.47-8.66,24.72,24.72,0,0,1,9.89,2,27.17,27.17,0,0,1,8.55,6ZM469.86,41.83a14.85,14.85,0,0,0-11.32,4.82A17.33,17.33,0,0,0,454,59a17.55,17.55,0,0,0,4.59,12.49,14.85,14.85,0,0,0,11.29,4.9,15.15,15.15,0,0,0,11.48-4.82Q486,66.76,486,59q0-7.65-4.56-12.38A15.31,15.31,0,0,0,469.86,41.83Z"
+                    style="fill: #eeeef0"
+                  />
+                  <path
+                    d="M28,29.77h14.7v6a35.37,35.37,0,0,1,9-5.87,22.09,22.09,0,0,1,8.31-1.64,20.09,20.09,0,0,1,14.78,6.08Q80,39.51,80,49.64v38.7H65.45V62.69q0-10.48-.94-13.92a9.57,9.57,0,0,0-3.27-5.25,9.18,9.18,0,0,0-5.78-1.8,10.82,10.82,0,0,0-7.65,3A16,16,0,0,0,43.38,53q-.65,2.74-.64,11.88v23.5H28Z"
+                    style="fill: #eeeef0"
+                  />
+                  <path
+                    d="M137.42,29.77h14.69V88.34H137.42V82.15A29,29,0,0,1,128.79,88a24.19,24.19,0,0,1-9.38,1.8q-11.34,0-19.63-8.8T91.5,59.16q0-13.56,8-22.23A25.53,25.53,0,0,1,119,28.27a24.69,24.69,0,0,1,9.89,2,27.17,27.17,0,0,1,8.55,6ZM122,41.83a14.87,14.87,0,0,0-11.32,4.82A17.37,17.37,0,0,0,106.15,59a17.54,17.54,0,0,0,4.58,12.49A14.85,14.85,0,0,0,122,76.39a15.12,15.12,0,0,0,11.48-4.82q4.56-4.81,4.56-12.62,0-7.65-4.56-12.38A15.3,15.3,0,0,0,122,41.83Z"
+                    style="fill: #eeeef0"
+                  />
+                  <rect
+                    y="29.77"
+                    width="14.69"
+                    height="58.56"
+                    style="fill: #eeeef0"
+                  />
+                  <polygon
+                    points="226.39 62.27 232.8 68.67 282.23 118.11 163.48 89.2 196.84 55.84 190.43 49.44 140.99 0 259.75 28.91 226.39 62.27"
+                    style="fill: #3d63dd"
+                  /> -->
+                </svg>
+              </a>
+
+              <p class="mb-8 text-body-dark-11">
+                We create digital experiences for brands and companies by using
+                technology.
+              </p>
+
+              <div class="-mx-3 flex items-center">
+                <a
+                  href="https://www.facebook.com/evmak"
+                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
+                  target="_blank"
+                >
+                  <i class="lni lni-facebook-fill"></i>
+                </a>
+
+                <a
+                  href="javascript:void(0)"
+                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
+                >
+                  <i class="lni lni-twitter-original"></i>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/evmakco/?igsh=MmF6MWkyeW00b2kx#"
+                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
+                  target="_blank"
+                >
+                  <i class="lni lni-instagram-original"></i>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/evmak-tanzania-ltd/"
+                  class="px-3 text-body-dark-11 hover:text-primary text-[22px] leading-none"
+                  target="_blank"
+                >
+                  <i class="lni lni-linkedin-original"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 lg:col-2">
+            <div class="w-full">
+              <h4 class="mb-9 text-lg font-semibold text-inherit">Services</h4>
+              <ul>
+                <li>
+                  <a
+                    href="/collection.html"
+                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
+                    >Collection</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/payout.html"
+                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
+                    >Payout</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/card.html"
+                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
+                    >Card Payment</a
+                  >
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 lg:col-2">
+            <div class="w-full">
+              <h4 class="mb-9 text-lg font-semibold text-inherit">Support</h4>
+              <ul>
+               
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
+                    >Documentation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
+                    >Guides</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="mb-3 inline-block text-body-dark-11 hover:text-primary"
+                    >API Document</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 -order-3 lg:col-4 lg:order-1">
+            <div class="w-full">
+              <h4 class="mb-9 text-lg font-semibold text-inherit">Subscribe</h4>
+
+              <p class="text-body-dark-11">
+                Subscribe to our newsletter for the latest updates
+              </p>
+
+              <form action="#" method="POST" target="_blank" class="mt-8 flex">
+                <input
+                  type="email"
+                  name="email"
+                  class="inline-block flex-grow px-5 py-3 rounded-md rounded-e-none border border-solid border-alpha-dark text-inherit text-base focus:border-primary"
+                  placeholder="Email address"
+                  required
+                />
+
+                <button
+                  type="submit"
+                  class="inline-block py-3 w-[50px] rounded-md rounded-s-none text-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10"
+                >
+                  <i class="lni lni-envelope"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full border-t border-solid border-alpha-dark"></div>
+      <div class="container py-8">
+        <div class="flex flex-wrap">
+          <div class="w-full md:w-1/2">
+            <div class="my-1">
+              <div
+                class="flex flex-wrap justify-center gap-x-3 md:justify-start"
+              >
+                <a
+                  href="javascript:void(0)"
+                  class="text-body-dark-11 hover:text-body-dark-12"
+                  >Privacy Policy</a
+                >
+                <a
+                  href="javascript:void(0)"
+                  class="text-body-dark-11 hover:text-body-dark-12"
+                  >Legal Notice</a
+                >
+                <a
+                  href="javascript:void(0)"
+                  class="text-body-dark-11 hover:text-body-dark-12"
+                  >Terms of Service</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2">
+            <div class="my-1 flex justify-center md:justify-end">
+              <p class="text-body-dark-11">
+                &#169; 2025 EvMak Tanzania. All rights reserved. Distributed by <a href="https://evmak.com" target="_blank">EvMak</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      type="button"
+      class="inline-flex w-12 h-12 rounded-md items-center justify-center text-lg/none bg-primary text-primary-color hover:bg-primary-light-10 dark:hover:bg-primary-dark-10 focus:bg-primary-light-10 dark:focus:bg-primary-dark-10 fixed bottom-[117px] right-[20px] hover:-translate-y-1 opacity-100 visible z-50 is-hided"
+      data-web-trigger="scroll-top"
+      aria-label="Scroll to top"
+    >
+      <i class="lni lni-chevron-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+    <script>
+      // Scroll Reveal
+      const sr = ScrollReveal({
+        origin: "bottom",
+        distance: "16px",
+        duration: 1000,
+        reset: false,
+      });
+
+      sr.reveal(`.scroll-revealed`, {
+        cleanup: true,
+      });
+
+      // GLightBox
+      GLightbox({
+        selector: ".video-popup",
+        href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
+        type: "video",
+        source: "youtube",
+        width: 900,
+        autoplayVideos: true,
+      });
+
+      const myGallery3 = GLightbox({
+        selector: ".portfolio-box",
+        type: "image",
+        width: 900,
+      });
+
+      // Testimonial
+      const testimonialSwiper = new Swiper(".testimonial-carousel", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
