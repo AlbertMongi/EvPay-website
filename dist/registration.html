@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register for API Access - EvPay</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .bg-wave { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #1e3a8a 100%); }
+  </style>
+</head>
+<body class="bg-wave min-h-screen flex items-center justify-center px-4 py-12">
+
+  <div class="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-2xl p-10">
+    <div class="flex justify-center mb-8">
+      <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDM1MzIgMTMwOSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxuczpzZXJpZj0iaHR0cDovL3d3dy5zZXJpZi5jb20vIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjI7Ij4KICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsLTE2ODQ3LC04MTEpIj4KICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCg4Ljg2NjgsMCwwLDguODY2OCwtNTMxMzAsLTIzMDA2LjYpIj4KICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMC40MTUyMTIsMCwtMC4wNzcyNDg3LDAuNDE1MjEyLDQ5NzAuNDIsMTc5OC40KSI+CiAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgyNTUuNDE1LDAsMCwyNTUuNDE1LDc4NTAuNjEsMjM4My42OCkiPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPHRleHQgeD0iNzU1NS44NnB4IiB5PSIyMzgzLjY4cHgiIHN0eWxlPSJmb250LWZhbWlseTonRXhvMi1CbGFjaycsICdFeG8gMic7Zm9udC13ZWlnaHQ6OTAwO2ZvbnQtc2l6ZToyNTUuNDE1cHg7ZmlsbDp1cmwoI19SYWRpYWwxKTsiPmU8dHNwYW4geD0iNzY5Ny4xMXB4ICIgeT0iMjM4My42OHB4ICI+djwvdHNwYW4+PC90ZXh0PgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDAuMzQyNTgsMCwtMC4wNjM3MzU4LDAuMzQyNTgsNTY1OC4yNCwxOTcxLjUzKSI+CiAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgyNTUuNDE1LDAsMCwyNTUuNDE1LDgwMDYuNjcsMjM4My42OCkiPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPHRleHQgeD0iNzU1NS44NnB4IiB5PSIyMzgzLjY4cHgiIHN0eWxlPSJmb250LWZhbWlseTonRXhvMi1CbGFjaycsICdFeG8gMic7Zm9udC13ZWlnaHQ6OTAwO2ZvbnQtc2l6ZToyNTUuNDE1cHg7ZmlsbDp1cmwoI19SYWRpYWwyKTsiPlA8dHNwYW4geD0iNzcxMS45MnB4IDc4NTIuOTFweCAiIHk9IjIzODMuNjhweCAyMzgzLjY4cHggIj5heTwvdHNwYW4+PC90ZXh0PgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNjYxODk2LDAsLTAuMTIzMTQzLDAuNjYxODk2LDMzMjcuMzIsMTA3Mi45MSkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTc1NzAuMzYsMjYzNS4wOUM3NjA1LjYyLDI2MzUuMDkgNzYzMS4xOSwyNjA5Ljk1IDc2MzEuMTksMjU3NS4yOUw3NjMxLjE5LDI1MjMuNEM3NjMxLjE5LDI0NzMuNTYgNzY2Ny45NiwyNDM3LjQxIDc3MTguNjYsMjQzNy40MUw3ODYxLjgxLDI0MzcuNDFDNzg4OC40OSwyNDM3LjQxIDc5MTUuOTksMjQ0OS4yOCA3OTM2Ljg2LDI0NjkuOEM3OTU3LjczLDI0OTAuMzEgNzk2OS44MSwyNTE3LjM2IDc5NjkuODEsMjU0My41OEw3OTY5LjgxLDI1ODYuOTNDNzk2OS44MSwyNjI5LjQ1IDc5MzguNDUsMjY2MC4yNyA3ODk1LjIxLDI2NjAuMjdMNzQ4MS4xLDI2NjAuMjdDNzQ1NC40MiwyNjYwLjI3IDc0MjYuOTIsMjY0OC40MSA3NDA2LjA1LDI2MjcuODlDNzM4NS4xOCwyNjA3LjM3IDczNzMuMTEsMjU4MC4zMyA3MzczLjExLDI1NTQuMUw3MzczLjExLDI1MTAuNzVDNzM3My4xMSwyNDY4LjI0IDc0MDQuNDcsMjQzNy40MSA3NDQ3LjcsMjQzNy40MUw3NjA0Ljg4LDI0MzcuNDFDNzYxMS44MywyNDM3LjQxIDc2MTguNTIsMjQ0My4wNSA3NjE5LjgxLDI0NTBDNzYyMS4xLDI0NTYuOTUgNzYxNi41MSwyNDYyLjU5IDc2MDkuNTYsMjQ2Mi41OUw3NDUyLjM5LDI0NjIuNTlDNzQyMS4yOCwyNDYyLjU5IDczOTguNzIsMjQ4NC43NyA3Mzk4LjcyLDI1MTUuMzZMNzM5OC43MiwyNTU4LjcxQzczOTguNzIsMjU3Ny41OCA3NDA3LjQsMjU5Ny4wMyA3NDIyLjQyLDI2MTEuNzlDNzQzNy40NCwyNjI2LjU1IDc0NTcuMjIsMjYzNS4wOSA3NDc2LjQyLDI2MzUuMDlMNzU3MC4zNiwyNjM1LjA5Wk03NjM2LjA5LDI2MzUuMDlMNzg5MC41MiwyNjM1LjA5Qzc5MjEuNjMsMjYzNS4wOSA3OTQ0LjE5LDI2MTIuOTEgNzk0NC4xOSwyNTgyLjMzTDc5NDQuMTksMjUzOC45OEM3OTQ0LjE5LDI1MjAuMTEgNzkzNS41MSwyNTAwLjY1IDc5MjAuNDksMjQ4NS44OUM3OTA1LjQ4LDI0NzEuMTMgNzg4NS42OSwyNDYyLjU5IDc4NjYuNDksMjQ2Mi41OUw3NzIzLjM0LDI0NjIuNTlDNzY4NC43OCwyNDYyLjU5IDc2NTYuODEsMjQ5MC4wOSA3NjU2LjgxLDI1MjguMDFMNzY1Ni44MSwyNTc5LjlDNzY1Ni44MSwyNjAxLjg4IDc2NDkuMTUsMjYyMS4wMSA3NjM2LjA5LDI2MzUuMDlaIiBzdHlsZT0iZmlsbDp1cmwoI19SYWRpYWwzKTsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KICAgIDxkZWZzPgogICAgICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iX1JhZGlhbDEiIGN4PSIwIiBjeT0iMCIgcj0iMSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoNDg3LjI3NCw1NjguNjY5LC00OTcuNjk3LDM4MS40NzUsNzg0MS4wNywxNzQ3LjE5KSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoNjMsMjAzLDI1NSk7c3RvcC1vcGFjaXR5OjEiLz48c3RvcCBvZmZzZXQ9IjAuNSIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDQ3LDE3MywyNDEpO3N0b3Atb3BhY2l0eToxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMCw4NCwxOTkpO3N0b3Atb3BhY2l0eToxIi8+PC9yYWRpYWxHcmFkaWVudD4KICAgICAgICA8cmFkaWFsR3JhZGllbnQgaWQ9Il9SYWRpYWwyIiBjeD0iMCIgY3k9IjAiIHI9IjEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDU5MC41ODIsNjg5LjIzNSwtNjAzLjIxNiw0NjIuMzUzLDc0MDEuNzEsMTYxMi4yNSkiPjxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDYzLDIwMywyNTUpO3N0b3Atb3BhY2l0eToxIi8+PHN0b3Agb2Zmc2V0PSIwLjUiIHN0eWxlPSJzdG9wLWNvbG9yOnJnYig0NywxNzMsMjQxKTtzdG9wLW9wYWNpdHk6MSIvPjxzdG9wIG9mZnNldD0iMSIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDAsODQsMTk5KTtzdG9wLW9wYWNpdHk6MSIvPjwvcmFkaWFsR3JhZGllbnQ+CiAgICAgICAgPHJhZGlhbEdyYWRpZW50IGlkPSJfUmFkaWFsMyIgY3g9IjAiIGN5PSIwIiByPSIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgzMDUuNjcsMzU2LjczLC0zMTIuMjA5LDIzOS4zMDIsNzYwNS4wOSwyMTkyLjExKSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoNjMsMjAzLDI1NSk7c3RvcC1vcGFjaXR5OjEiLz48c3RvcCBvZmZzZXQ9IjAuNSIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDQ3LDE3MywyNDEpO3N0b3Atb3BhY2l0eToxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMCw4NCwxOTkpO3N0b3Atb3BhY2l0eToxIi8+PC9yYWRpYWxHcmFkaWVudD4KICAgIDwvZGVmcz4KPC9zdmc+Cg==" alt="EvPay Logo" class="h-14 drop-shadow-lg">
+    </div>
+
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Request API Access</h2>
+    <p class="text-center text-gray-600 mb-8">Fill in your company details to get started with EvPay API</p>
+
+    <form id="registerForm" class="space-y-6">
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Company Name <span class="text-red-500">*</span></label>
+        <input type="text" id="company_name" required placeholder="TechFlow Ltd"
+               class="w-full px-5 py-4 bg-blue-50/70 border border-blue-200 rounded-full focus:outline-none focus:ring-4 focus:ring-blue-300">
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name <span class="text-red-500">*</span></label>
+        <input type="text" id="full_name" required placeholder="John Doe"
+               class="w-full px-5 py-4 bg-blue-50/70 border border-blue-200 rounded-full focus:outline-none focus:ring-4 focus:ring-blue-300">
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Business Email <span class="text-red-500">*</span></label>
+        <div class="relative">
+          <i data-lucide="mail" class="w-5 h-5 text-blue-600 absolute left-5 top-1/2 -translate-y-1/2"></i>
+          <input type="email" id="email" required placeholder="john@company.com"
+                 class="w-full pl-14 pr-5 py-4 bg-blue-50/70 border border-blue-200 rounded-full focus:outline-none focus:ring-4 focus:ring-blue-300">
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number <span class="text-red-500">*</span></label>
+        <div class="relative">
+          <i data-lucide="phone" class="w-5 h-5 text-blue-600 absolute left-5 top-1/2 -translate-y-1/2"></i>
+          <input type="tel" id="phone" required placeholder="+255 700 000 000"
+                 class="w-full pl-14 pr-5 py-4 bg-blue-50/70 border border-blue-200 rounded-full focus:outline-none focus:ring-4 focus:ring-blue-300">
+        </div>
+      </div>
+
+      <button type="submit" id="submitBtn"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-full shadow-xl text-lg transition transform hover:scale-105">
+        Submit Application
+      </button>
+
+      <p id="msg" class="text-center font-medium mt-6 text-lg"></p>
+    </form>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    document.getElementById("registerForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const msg = document.getElementById("msg");
+      const btn = document.getElementById("submitBtn");
+      msg.textContent = "";
+      btn.disabled = true;
+      btn.textContent = "Submitting...";
+
+      const data = {
+        full_name: document.getElementById("full_name").value.trim(),
+        company_name: document.getElementById("company_name").value.trim(),
+        email: document.getElementById("email").value.trim().toLowerCase(),
+        phone: document.getElementById("phone").value.trim(),
+      };
+
+      try {
+        const res = await fetch("http://localhost:3000/api/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          msg.textContent = "Thank you! We'll review your application soon.";
+          msg.className = "text-center font-medium mt-6 text-lg text-green-600";
+          e.target.reset();
+        } else {
+          msg.textContent = result.error || "Something went wrong";
+          msg.className = "text-center font-medium mt-6 text-lg text-red-600";
+        }
+      } catch (err) {
+        msg.textContent = "Network error. Is your backend running?";
+        msg.className = "text-center font-medium mt-6 text-lg text-red-600";
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Submit Application";
+      }
+    });
+  </script>
+</body>
+</html>
