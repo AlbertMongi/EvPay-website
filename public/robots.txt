@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Block dev/internal paths if they exist
-Disallow: /node_modules/
-Disallow: /scripts/
-Disallow: /.netlify/
-
 Sitemap: https://evpay.co.tz/sitemap.xml

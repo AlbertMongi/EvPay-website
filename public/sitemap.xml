@@ -7,11 +7,11 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://evpay.co.tz/assets/img/HERO%20SECTION.jpg</image:loc>
+      <image:loc>https://evpay.co.tz/assets/img/responsive/hero-section-1280.jpg</image:loc>
       <image:title>EvPay payment gateway hero</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://evpay.co.tz/assets/img/WHY%20EVPAY.jpg</image:loc>
+      <image:loc>https://evpay.co.tz/assets/img/responsive/why-evpay-800.jpg</image:loc>
       <image:title>Why choose EvPay</image:title>
     </image:image>
   </url>
