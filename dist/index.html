@@ -269,14 +269,22 @@
     }
 
     /* ===== HAMBURGER (ElementsKit icon style) ===== */
+    /* Hidden by default — only shown on phone view via the media query below.
+       Without this, the inline .hamburger rule overrides Tailwind's md:hidden
+       (same specificity, and this <style> block loads after main.min.css),
+       leaving the three lines visible on desktop. */
     .hamburger {
         width: 40px; height: 40px;
-        display: flex; align-items: center; justify-content: center;
+        display: none; align-items: center; justify-content: center;
         cursor: pointer;
         font-size: 22px;
         color: #1f1f1f;
         background: transparent;
         border: none;
+    }
+
+    @media (max-width: 767px) {
+        .hamburger { display: flex; }
     }
 
     /* ===== DRAWER (ElementsKit offcanvas — slides from LEFT) ===== */
@@ -693,7 +701,7 @@
         .hero-text-block { max-width: 70%; }
     }
 </style>
-  <link rel="stylesheet" crossorigin href="/assets/index-C3WMw9d8.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-BlkAjD1p.css">
 </head>
 <body>
 
@@ -847,8 +855,9 @@
            onclick="loadYouTube(this)"
            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();loadYouTube(this);}">
         <picture>
-          <source srcset="/assets/intro-video-C8jhKUh_.webp" type="image/webp">
-          <img src="/assets/intro-video-DDbezARf.jpg"
+          <source srcset="https://i.ytimg.com/vi_webp/CwTyE3osZbU/maxresdefault.webp" type="image/webp">
+          <img src="https://i.ytimg.com/vi/CwTyE3osZbU/maxresdefault.jpg"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/CwTyE3osZbU/hqdefault.jpg';"
                alt="EvPay intro video — how the payment platform works in Tanzania"
                width="1280" height="720"
                loading="lazy" decoding="async"
