@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Terms &amp; Conditions — EvPay by EvMak Tanzania</title>
+    <meta name="description" content="The Terms and Conditions governing the use of EvPay payment gateway, merchant and customer portals, applications, and APIs operated by EvMak Tanzania Limited.">
+    <meta name="author" content="EvMak Tanzania">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="TZ">
+    <meta name="geo.placename" content="Dar es Salaam, Tanzania">
+    <link rel="canonical" href="https://evpay.co.tz/terms">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EvPay">
+    <meta property="og:url" content="https://evpay.co.tz/terms">
+    <meta property="og:title" content="Terms &amp; Conditions — EvPay by EvMak Tanzania">
+    <meta property="og:description" content="The Terms and Conditions governing the use of EvPay services operated by EvMak Tanzania Limited.">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Theme & icons -->
+    <meta name="theme-color" content="#3d63dd">
+    <meta name="msapplication-TileColor" content="#3d63dd">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/assets/EvPay%20Colored-8i7p7Jjn.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/assets/EvPay%20Colored-8i7p7Jjn.svg">
+    <link rel="shortcut icon" href="/assets/EvPay%20Colored-8i7p7Jjn.svg">
+    <link rel="mask-icon" href="/assets/safari-pinned-tab-CD-ZJPKC.svg" color="#3d63dd">
+    <link rel="manifest" href="/assets/site.webmanifest-i1RSfpes.json">
+
+    <!-- Performance: preconnect to third-party origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Tailwind (self-hosted, built locally) -->
+
+    <!-- Fonts: Hanken Grotesk (primary), Work Sans — non-blocking via preload + onload swap -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap"></noscript>
+
+<style>
+    :root { --evpay-blue: #3d63dd; }
+
+    body {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 400;
+        color: #000000;
+        line-height: 1.7;
+        background: #ffffff;
+    }
+
+    h1, h2, h3, h4 { font-family: "Hanken Grotesk", sans-serif; color: #000000; line-height: 1.2; margin: 0; }
+    p, li, span, a, div { color: #000000; }
+
+    /* ===== NAVBAR ===== */
+    .nav-height { height: 92px; background: #ffffff; }
+    .nav-logo { height: 40px; width: auto; }
+
+    .desktop-menu a {
+        font-family: "Work Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 6px 0;
+        transition: color 0.25s ease;
+    }
+    .desktop-menu a:hover { color: var(--evpay-blue); }
+
+    .lets-talk-btn {
+        font-family: "Work Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 12px 28px;
+        border: 2px solid #1f1f1f;
+        transition: all 0.3s ease;
+    }
+    .lets-talk-btn:hover {
+        background: #1f1f1f;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* ===== DRAWER ===== */
+    .drawer {
+        position: fixed; top: 0; right: 0; height: 100%;
+        width: 320px; max-width: 85vw; background: #ffffff;
+        box-shadow: -10px 0 40px rgba(0,0,0,0.12);
+        transform: translateX(100%);
+        transition: transform 0.35s ease; z-index: 60;
+        display: flex; flex-direction: column; padding: 28px 24px;
+    }
+    .drawer.active { transform: translateX(0); }
+    .drawer-identity { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
+    .drawer-identity img { height: 32px; width: auto; }
+    .drawer-close {
+        width: 38px; height: 38px; border-radius: 50%;
+        display: inline-flex; align-items: center; justify-content: center;
+        background: #f0f2f5; color: #1f1f1f; transition: all 0.3s ease; border: none; cursor: pointer;
+    }
+    .drawer-close:hover { background: #000000; color: #ffffff; }
+    .drawer-nav { display: flex; flex-direction: column; gap: 4px; }
+    .drawer-nav a {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px;
+        color: #1f1f1f; font-size: 14px; padding: 14px 8px;
+        border-bottom: 1px solid #eef0f3; transition: all 0.25s ease;
+    }
+    .drawer-nav a:hover { color: var(--evpay-blue); padding-left: 14px; }
+
+    .overlay {
+        position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+        opacity: 0; visibility: hidden; transition: all 0.35s ease; z-index: 55;
+    }
+    .overlay.active { opacity: 1; visibility: visible; }
+    body.drawer-open { overflow: hidden; }
+
+    .elementor-btn {
+        font-family: "Work Sans", sans-serif;
+        font-size: 13px; font-weight: 600; letter-spacing: 1px;
+        text-transform: uppercase; padding: 14px 32px; cursor: pointer;
+        border: 2px solid var(--evpay-blue); background: var(--evpay-blue); color: #ffffff;
+        transition: all 0.3s ease;
+    }
+    .elementor-btn:hover { background: #2f4fc0; border-color: #2f4fc0; }
+
+    /* ===== ANIMATIONS (match home page) ===== */
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translate3d(0, -30px, 0); }
+        to   { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translate3d(0, 40px, 0); }
+        to   { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+    .animate-fadeInDown { animation: fadeInDown 1s ease both; }
+    .wow { opacity: 0; visibility: hidden; }
+    .wow.visible { animation: fadeInUp 1.2s ease both; visibility: visible; }
+
+    /* ===== HERO (matches home page) ===== */
+    .hero-title {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -1px;
+        color: #ffffff;
+    }
+    .hero-subtext {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #ffffff;
+    }
+    .hero-img-bg { object-position: 80% center; }
+    @media (max-width: 767px) {
+        .hero-title { font-size: 36px !important; }
+        .hero-img-bg { object-position: 78% center; }
+        .hero-overlay {
+            background-image: linear-gradient(
+                to right,
+                rgba(0,0,0,0.85) 0%,
+                rgba(0,0,0,0.65) 55%,
+                rgba(0,0,0,0.30) 100%
+            );
+        }
+        .hero-text-block { max-width: 80%; }
+    }
+
+    /* ===== LEGAL PAGE ===== */
+
+    .legal-content { font-size: 16px; line-height: 1.8; }
+    .legal-content h2 {
+        font-size: 22px; font-weight: 700; margin: 44px 0 14px;
+        padding-bottom: 10px; border-bottom: 2px solid #eef0f3; letter-spacing: -0.3px;
+    }
+    .legal-content h2:first-of-type { margin-top: 0; }
+    .legal-content h3 { font-size: 17px; font-weight: 700; margin: 26px 0 10px; }
+    .legal-content p { margin: 0 0 16px; color: #1a1a1a; }
+    .legal-content ul { list-style: none; margin: 0 0 18px; padding: 0; }
+    .legal-content ul li {
+        position: relative; padding-left: 26px; margin-bottom: 10px; color: #1a1a1a;
+    }
+    .legal-content ul li::before {
+        content: ""; position: absolute; left: 6px; top: 11px;
+        width: 7px; height: 7px; border-radius: 50%; background: var(--evpay-blue);
+    }
+    .legal-content a { color: var(--evpay-blue); text-decoration: underline; }
+    .legal-content strong { font-weight: 700; }
+
+    .legal-card {
+        background: #f6f8ff; border: 1px solid #e3e9ff;
+        border-radius: 14px; padding: 26px 28px; margin-top: 8px;
+    }
+    .legal-card p { margin-bottom: 4px; }
+
+    .toc {
+        background: #fafbff; border: 1px solid #eef0f3; border-radius: 14px;
+        padding: 24px 28px; margin-bottom: 48px;
+    }
+    .toc h4 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .toc ol { list-style: decimal; padding-left: 20px; columns: 2; column-gap: 32px; }
+    .toc li { margin-bottom: 8px; font-size: 14px; }
+    .toc a { color: #1a1a1a; text-decoration: none; }
+    .toc a:hover { color: var(--evpay-blue); }
+    @media (max-width: 640px) {
+        .toc ol { columns: 1; }
+        .legal-hero h1 { font-size: 30px; }
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer { background: #ffffff; padding: 40px 0 30px; }
+    .footer-heading {
+        font-family: "Hanken Grotesk", sans-serif; font-size: 15px; font-weight: 700;
+        color: #000000; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 24px;
+    }
+    .footer-links li {
+        font-family: "Hanken Grotesk", sans-serif; font-size: 15px; color: #000000;
+        margin-bottom: 14px; transition: color 0.25s ease, padding-left 0.25s ease; cursor: pointer;
+    }
+    .footer-links li:hover { color: #555555; padding-left: 4px; }
+    .footer-about { font-family: "Hanken Grotesk", sans-serif; font-size: 15px; color: #000000; line-height: 1.75; }
+    .footer-social {
+        width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;
+        background: #f0f2f5; border-radius: 50%; color: #1f1f1f; transition: all 0.3s ease; font-size: 15px;
+    }
+    .footer-social:hover { background: #000000; color: #ffffff; transform: translateY(-3px); }
+    .footer-bottom {
+        font-family: "Hanken Grotesk", sans-serif; font-size: 14px; color: #000000;
+        border-top: 1px solid #eef0f3; padding-top: 24px; margin-top: 60px;
+    }
+    .footer-bottom a:hover { color: #555555; }
+</style>
+  <link rel="stylesheet" crossorigin href="/assets/main-BlkAjD1p.css">
+</head>
+<body>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<!-- Drawer -->
+<div id="drawer" class="drawer">
+    <div class="drawer-identity">
+        <a href="/"><img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="EvMak Tanzania logo" width="160" height="32" decoding="async"></a>
+        <button class="drawer-close" onclick="toggleMenu()" aria-label="Close">
+            <svg class="icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2 L14 14 M14 2 L2 14"/></svg>
+        </button>
+    </div>
+
+    <nav class="drawer-nav">
+        <a href="https://evmak.com/">HOME</a>
+        <a href="https://evmak.com/about-us/">ABOUT US</a>
+        <a href="https://evmak.com/">PRODUCTS</a>
+        <a href="https://evmak.com/career/">CAREER</a>
+        <a href="https://evmak.com/contact-us/">REACH US</a>
+    </nav>
+
+    <button onclick="window.location.href='/'" class="elementor-btn mt-6">BACK TO HOME</button>
+</div>
+
+<!-- Navbar -->
+<nav class="nav-height flex items-center animate-fadeInDown">
+    <div class="max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
+        <div class="flex items-center">
+            <a href="/"><img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" class="nav-logo" alt="EvMak Tanzania logo" width="200" height="40" decoding="async"></a>
+        </div>
+
+        <div class="desktop-menu hidden md:flex gap-10 items-center">
+            <a href="https://evmak.com/">HOME</a>
+            <a href="https://evmak.com/about-us/">ABOUT US</a>
+            <a href="https://evmak.com/">PRODUCTS</a>
+            <a href="https://evmak.com/career/">CAREER</a>
+            <a href="https://evmak.com/contact-us/">REACH US</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <a href="https://docs.evpay.co.tz/introduction" target="_blank" rel="noopener noreferrer" class="lets-talk-btn hidden md:block">API DOCS</a>
+            <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section (matches home page) -->
+<section class="px-6 md:px-16 pt-4 pb-10">
+  <div class="relative max-w-7xl mx-auto rounded-2xl overflow-hidden min-h-[460px] flex items-center">
+    <picture>
+      <source type="image/webp"
+              srcset="/assets/hero-section-480-C4I9f0QU.webp 480w, /assets/hero-section-800-o1x3roYw.webp 800w, /assets/hero-section-1280-Ba4iy31W.webp 1280w"
+              sizes="(min-width: 1280px) 1280px, 100vw">
+      <img src="/assets/hero-section-1280-DG85QasG.jpg"
+           srcset="/assets/hero-section-480-BTEQShjD.jpg 480w, /assets/hero-section-800-y2jV08xW.jpg 800w, /assets/hero-section-1280-DG85QasG.jpg 1280w"
+           sizes="(min-width: 1280px) 1280px, 100vw"
+           alt="EvPay payment gateway terms and conditions"
+           width="1280" height="715"
+           fetchpriority="high" decoding="async"
+           class="hero-img-bg absolute inset-0 w-full h-full object-cover">
+    </picture>
+    <div class="hero-overlay absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent"></div>
+
+    <div class="hero-text-block relative z-10 px-10 md:px-16 max-w-2xl wow">
+      <h1 class="hero-title text-5xl md:text-6xl">
+        Terms &amp;<br>Conditions
+      </h1>
+
+      <p class="mt-8 text-lg md:text-xl hero-subtext">
+        The terms governing your access to and use of EvPay payment services.
+      </p>
+
+      <p class="mt-6 hero-subtext text-sm md:text-base" style="opacity:0.85;">
+        Effective Date: May 1, 2026 &nbsp;·&nbsp; Last Updated: June 1, 2026
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Content -->
+<main class="max-w-7xl mx-auto px-6 md:px-16 py-16 legal-content">
+
+    <!-- Table of contents -->
+    <div class="toc">
+        <h4>Contents</h4>
+        <ol>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#definitions">Definitions</a></li>
+            <li><a href="#acceptance">Acceptance of Terms</a></li>
+            <li><a href="#eligibility">Eligibility &amp; Accounts</a></li>
+            <li><a href="#services">Description of Services</a></li>
+            <li><a href="#kyc">Verification (KYC/KYB)</a></li>
+            <li><a href="#obligations">Your Obligations</a></li>
+            <li><a href="#prohibited">Prohibited &amp; Restricted Use</a></li>
+            <li><a href="#fees">Fees &amp; Charges</a></li>
+            <li><a href="#settlement">Transactions &amp; Settlement</a></li>
+            <li><a href="#refunds">Refunds, Reversals &amp; Disputes</a></li>
+            <li><a href="#compliance">AML &amp; Financial Crime</a></li>
+            <li><a href="#privacy">Data Protection &amp; Privacy</a></li>
+            <li><a href="#ip">Intellectual Property</a></li>
+            <li><a href="#thirdparty">Third-Party Services</a></li>
+            <li><a href="#availability">Service Availability</a></li>
+            <li><a href="#liability">Limitation of Liability</a></li>
+            <li><a href="#indemnity">Indemnification</a></li>
+            <li><a href="#suspension">Suspension &amp; Termination</a></li>
+            <li><a href="#forcemajeure">Force Majeure</a></li>
+            <li><a href="#changes">Changes to these Terms</a></li>
+            <li><a href="#law">Governing Law &amp; Disputes</a></li>
+            <li><a href="#general">General</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ol>
+    </div>
+
+    <h2 id="intro">1. Introduction</h2>
+    <p>EvPay is a digital payments platform operated by EvMak Tanzania Limited (“EvMak”, “EvPay”, “we”, “our”, or “us”). These Terms and Conditions (the “Terms”) govern your access to and use of EvPay’s websites, applications, merchant and customer portals, APIs, developer services, payment gateway, and any related products or services offered by EvMak (collectively, the “Services”).</p>
+    <p>As a licensed payment service provider, EvPay operates in accordance with applicable laws, regulations, and industry standards governing payment processing and financial services in the United Republic of Tanzania. These Terms form a legally binding agreement between you and EvMak Tanzania Limited.</p>
+
+    <h2 id="definitions">2. Definitions</h2>
+    <ul>
+        <li><strong>“Account”</strong> means a registered user, customer, or merchant account on the EvPay platform.</li>
+        <li><strong>“Merchant”</strong> means a business or individual that uses EvPay to accept, collect, or process payments.</li>
+        <li><strong>“Customer”</strong> means an end user who makes a payment to a Merchant through EvPay.</li>
+        <li><strong>“Transaction”</strong> means any payment, collection, settlement, refund, or reversal processed through the Services.</li>
+        <li><strong>“Settlement”</strong> means the transfer of collected funds to a Merchant’s designated settlement account, less applicable fees.</li>
+        <li><strong>“KYC / KYB”</strong> means Know Your Customer and Know Your Business identity and ownership verification procedures.</li>
+        <li><strong>“Payment Channel”</strong> means a method of payment supported by EvPay, including mobile money, bank transfer, card, QR, and USSD.</li>
+    </ul>
+
+    <h2 id="acceptance">3. Acceptance of Terms</h2>
+    <p>By accessing, registering for, or using the Services, you acknowledge that you have read, understood, and agreed to be bound by these Terms and by our <a href="/privacy">Privacy Policy</a>, which is incorporated into these Terms by reference. If you are using the Services on behalf of an organisation, you represent that you are authorised to bind that organisation to these Terms.</p>
+    <p>If you do not agree to these Terms, you must not access or use the Services.</p>
+
+    <h2 id="eligibility">4. Eligibility &amp; Accounts</h2>
+    <p>To use the Services you must be at least 18 years of age (or the age of legal majority in your jurisdiction) and capable of forming a legally binding contract. Merchants must be lawfully registered or licensed to carry on their business where required.</p>
+    <ul>
+        <li>You must provide accurate, current, and complete information during registration and keep it up to date.</li>
+        <li>You are responsible for maintaining the confidentiality of your login credentials, API keys, and security information.</li>
+        <li>You are responsible for all activity that occurs under your Account, whether or not authorised by you.</li>
+        <li>You must notify us immediately of any unauthorised access or suspected security breach.</li>
+    </ul>
+
+    <h2 id="services">5. Description of Services</h2>
+    <p>EvPay provides payment acceptance, collection, processing, and settlement services that enable Merchants to accept payments across multiple Payment Channels through a single API and dashboard. The Services may include payment links, digital invoices, a sandbox testing environment, webhooks, reporting tools, and related developer resources.</p>
+    <p>We may add, modify, suspend, or discontinue any feature of the Services at any time. Certain features may depend on third parties (such as banks, card schemes, and mobile network operators) and are subject to their availability and rules.</p>
+
+    <h2 id="kyc">6. Verification (KYC / KYB)</h2>
+    <p>Before activating or while providing the Services, we are required to verify the identity of customers and the ownership of businesses. You agree to provide, and to keep current, the information and documentation we request, which may include:</p>
+    <ul>
+        <li>Personal identification and contact details;</li>
+        <li>Business registration documents, Tax Identification Number (TIN), VAT details, licences, and permits;</li>
+        <li>Beneficial ownership and authorised representative information;</li>
+        <li>Bank, settlement, and mobile money account details.</li>
+    </ul>
+    <p>Failure to provide requested information, or providing false or misleading information, may result in delayed activation, limited access, suspension, or termination of your Account.</p>
+
+    <h2 id="obligations">7. Your Obligations</h2>
+    <ul>
+        <li>Use the Services only for lawful purposes and in compliance with all applicable laws and regulations.</li>
+        <li>Ensure that all Transactions you submit are genuine, authorised, and supported by an underlying lawful sale of goods or services.</li>
+        <li>Not use the Services to process payments on behalf of any other party without our prior written consent.</li>
+        <li>Maintain reasonable security over your systems, devices, and integrations connected to EvPay.</li>
+        <li>Provide your own customers with clear information, fair terms, and appropriate support, including refund and dispute handling.</li>
+        <li>Cooperate with any audit, investigation, or information request reasonably made by us or a regulator.</li>
+    </ul>
+
+    <h2 id="prohibited">8. Prohibited &amp; Restricted Use</h2>
+    <p>You must not use the Services to engage in or facilitate any of the following:</p>
+    <ul>
+        <li>Fraud, money laundering, terrorism financing, or any other financial crime;</li>
+        <li>Sale of illegal goods or services, or any activity prohibited under Tanzanian law;</li>
+        <li>Transactions involving sanctioned persons, entities, or jurisdictions;</li>
+        <li>Unlicensed financial, gambling, or investment activities where a licence is required;</li>
+        <li>Infringement of intellectual property or other third-party rights;</li>
+        <li>Transmission of malware, attempts to gain unauthorised access, or interference with the integrity or performance of the Services;</li>
+        <li>Any deceptive, abusive, or high-risk activity that may expose EvPay, financial institutions, or the payment ecosystem to undue risk.</li>
+    </ul>
+    <p>We may decline, hold, reverse, or restrict Transactions and may suspend or terminate Accounts that breach this section.</p>
+
+    <h2 id="fees">9. Fees &amp; Charges</h2>
+    <p>Your use of the Services may be subject to fees, which will be communicated to you through your agreement, pricing schedule, or the platform. Unless stated otherwise:</p>
+    <ul>
+        <li>Fees may be deducted from amounts collected before Settlement;</li>
+        <li>Fees are exclusive of any applicable taxes, levies, or charges imposed by Payment Channels, which you remain responsible for;</li>
+        <li>We may revise fees with reasonable prior notice; continued use after the effective date constitutes acceptance of the revised fees.</li>
+    </ul>
+
+    <h2 id="settlement">10. Transactions &amp; Settlement</h2>
+    <p>EvPay facilitates the processing of Transactions and the Settlement of collected funds to your designated account. Settlement timing depends on the Payment Channel used, applicable clearing cycles, and successful completion of verification and risk checks.</p>
+    <ul>
+        <li>We may delay, withhold, or set aside funds where required for risk management, suspected fraud, disputes, chargebacks, regulatory requirements, or to satisfy your obligations under these Terms.</li>
+        <li>You are responsible for ensuring that your settlement account details are accurate; EvPay is not liable for funds sent to an account you provided incorrectly.</li>
+        <li>Failed or returned payments are communicated through return codes and webhook notifications.</li>
+    </ul>
+
+    <h2 id="refunds">11. Refunds, Reversals &amp; Disputes</h2>
+    <p>As a Merchant, you are responsible for your own refund and cancellation policy and for resolving disputes with your customers. Refunds and reversals processed through EvPay must comply with the rules of the relevant Payment Channel.</p>
+    <ul>
+        <li>You authorise us to debit, withhold, or recover from your Account amounts relating to refunds, reversals, chargebacks, and associated fees;</li>
+        <li>Where a dispute or chargeback arises, you agree to provide supporting information promptly to assist in its resolution;</li>
+        <li>EvPay does not act as an arbiter of the underlying goods or services and is not responsible for the quality, delivery, or fitness of what a Merchant sells.</li>
+    </ul>
+
+    <h2 id="compliance">12. AML &amp; Financial Crime Compliance</h2>
+    <p>EvPay maintains a risk management framework designed to protect customers, merchants, financial institutions, and the broader payment ecosystem. In providing the Services, we may:</p>
+    <ul>
+        <li>Verify identities and business ownership and conduct sanctions screening;</li>
+        <li>Monitor transactions for suspicious or unusual activity and perform fraud and risk assessments;</li>
+        <li>Restrict, suspend, or terminate accounts where fraud or misuse is suspected;</li>
+        <li>Report suspicious transactions to relevant authorities where required by law.</li>
+    </ul>
+    <p>You agree to comply with all applicable anti-money-laundering, counter-terrorism-financing, and sanctions laws.</p>
+
+    <h2 id="privacy">13. Data Protection &amp; Privacy</h2>
+    <p>Our collection, use, storage, and protection of personal information is described in our <a href="/privacy">Privacy Policy</a>. By using the Services, you acknowledge that you have read and understood the Privacy Policy. Where you provide us with personal data relating to your own customers, you confirm that you have a lawful basis to do so and that you will comply with applicable data protection requirements.</p>
+
+    <h2 id="ip">14. Intellectual Property</h2>
+    <p>All intellectual property rights in the Services — including the EvPay and EvMak names, logos, software, APIs, documentation, and content — are owned by or licensed to EvMak Tanzania Limited. Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable licence to access and use the Services for their intended purpose. You may not copy, modify, reverse-engineer, resell, or create derivative works from the Services except as expressly permitted.</p>
+
+    <h2 id="thirdparty">15. Third-Party Services</h2>
+    <p>The Services rely on, and may integrate with, third parties such as banks, acquiring institutions, card schemes, payment processors, mobile network operators, and technology providers. Your use of those services may be subject to their own terms, and EvPay is not responsible for their acts, omissions, availability, or rules.</p>
+
+    <h2 id="availability">16. Service Availability</h2>
+    <p>We aim to provide reliable Services but do not warrant that the Services will be uninterrupted, error-free, or completely secure. The Services are provided on an “as is” and “as available” basis. We may perform maintenance, updates, or changes that temporarily affect availability.</p>
+
+    <h2 id="liability">17. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, EvMak Tanzania Limited, its directors, employees, and partners shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of profits, revenue, data, or goodwill, arising out of or relating to your use of (or inability to use) the Services.</p>
+    <p>Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable law.</p>
+
+    <h2 id="indemnity">18. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless EvMak Tanzania Limited and its affiliates, officers, employees, and partners from and against any claims, losses, liabilities, damages, costs, and expenses (including reasonable legal fees) arising out of or related to your breach of these Terms, your misuse of the Services, your violation of any law, or any dispute between you and your customers.</p>
+
+    <h2 id="suspension">19. Suspension &amp; Termination</h2>
+    <p>We may suspend, restrict, or terminate your access to the Services, in whole or in part, with or without notice, where:</p>
+    <ul>
+        <li>You breach these Terms or any applicable law;</li>
+        <li>We detect or reasonably suspect fraud, financial crime, or undue risk;</li>
+        <li>We are required to do so by a regulator, court, or financial institution;</li>
+        <li>You fail to provide requested verification information.</li>
+    </ul>
+    <p>You may close your Account at any time, subject to settling any outstanding obligations. Provisions that by their nature should survive termination (including fees owed, liability, indemnity, and governing law) will continue to apply.</p>
+
+    <h2 id="forcemajeure">20. Force Majeure</h2>
+    <p>EvPay shall not be liable for any failure or delay in performance caused by events beyond its reasonable control, including acts of God, natural disasters, power or telecommunications failures, network or banking-system outages, cyber-attacks, governmental action, or civil disturbance.</p>
+
+    <h2 id="changes">21. Changes to these Terms</h2>
+    <p>We may amend these Terms from time to time to reflect changes in legal requirements, technology, products, or business practices. Updated versions will be published on our website and platforms. Your continued use of the Services following publication constitutes acceptance of the revised Terms.</p>
+
+    <h2 id="law">22. Governing Law &amp; Dispute Resolution</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of the United Republic of Tanzania. The courts of Tanzania shall have jurisdiction over any dispute arising out of or relating to these Terms or the Services. Where appropriate, the parties will first seek to resolve disputes amicably through good-faith discussions.</p>
+
+    <h2 id="general">23. General</h2>
+    <ul>
+        <li><strong>Entire agreement:</strong> these Terms, together with the Privacy Policy and any pricing or service agreement, constitute the entire agreement between you and EvPay regarding the Services.</li>
+        <li><strong>Severability:</strong> if any provision is held to be invalid or unenforceable, the remaining provisions will continue in full force.</li>
+        <li><strong>No waiver:</strong> our failure to enforce any right or provision is not a waiver of that right or provision.</li>
+        <li><strong>Assignment:</strong> you may not assign or transfer your rights under these Terms without our prior written consent; we may assign our rights and obligations to an affiliate or successor.</li>
+    </ul>
+
+    <h2 id="contact">24. Contact Information</h2>
+    <p>For questions, requests, or concerns regarding these Terms, please contact:</p>
+    <div class="legal-card">
+        <p><strong>EvMak Tanzania Limited</strong></p>
+        <p>Plot No. 235, Oysterbay, Mtwara Crescent / Off Guba Road</p>
+        <p>P.O. Box 71485</p>
+        <p>Dar es Salaam, Tanzania</p>
+        <p>Email: <a href="mailto:info@evmak.com">info@evmak.com</a></p>
+    </div>
+    <p style="margin-top:24px;">By accessing or using EvPay services, you acknowledge that you have read, understood, and agreed to these Terms and Conditions.</p>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="max-w-7xl mx-auto px-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-16 items-start">
+
+            <div class="max-w-xs">
+                <div class="flex items-center mb-6">
+                    <img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="EvMak Tanzania logo" width="160" height="32" loading="lazy" decoding="async" class="h-8 w-auto">
+                </div>
+                <p class="footer-about">
+                    Your technology partner for innovative and impactful digital solutions.
+                    Follow us on social media for updates.
+                </p>
+                <div class="flex gap-3 mt-6">
+                    <a href="https://www.linkedin.com/company/evmak-tanzania-ltd" target="_blank" rel="noopener noreferrer" aria-label="EvMak on LinkedIn" class="footer-social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43c-1.14 0-2.07-.93-2.07-2.07 0-1.14.93-2.07 2.07-2.07 1.14 0 2.07.93 2.07 2.07 0 1.14-.93 2.07-2.07 2.07zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+                    <a href="https://www.instagram.com/evmakco/" target="_blank" rel="noopener noreferrer" aria-label="EvMak on Instagram" class="footer-social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13a5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+                    <a href="https://web.facebook.com/evmak/?_rdc=1&amp;_rdr" target="_blank" rel="noopener noreferrer" aria-label="EvMak on Facebook" class="footer-social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.1 24V13.06H5.46V8.86H9.1V5.74C9.1 2.13 11.31 0 14.54 0c1.55 0 2.88.12 3.27.17v3.79h-2.25c-1.76 0-2.1.84-2.1 2.07v2.83h4.2l-.55 4.2H13.46V24"/></svg></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">SERVICES</h4>
+                <ul class="footer-links">
+                    <li>Tech Consult</li>
+                    <li>Develop</li>
+                    <li>Implement</li>
+                    <li>Assessment</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">COMPANY</h4>
+                <ul class="footer-links">
+                    <li>About</li>
+                    <li>Partnership</li>
+                    <li>Products</li>
+                    <li>Career</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">LINKS</h4>
+                <ul class="footer-links">
+                    <li>Contact</li>
+                    <li>Help Center</li>
+                    <li>Let us Have coffee</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom flex flex-col md:flex-row justify-between items-center">
+            <p>Copyright @ EvMak Tanzania.</p>
+            <div class="flex items-center gap-4 mt-4 md:mt-0">
+                <a href="/privacy">Privacy Policy</a>
+                <span class="text-gray-400">|</span>
+                <a href="/terms">Our Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const drawer = document.getElementById("drawer");
+        const overlay = document.getElementById("overlay");
+        drawer.classList.toggle("active");
+        overlay.classList.toggle("active");
+        document.body.classList.toggle("drawer-open");
+    }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && document.getElementById('drawer').classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+
+    // Elementor-style scroll animations (IntersectionObserver) — matches home page
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.wow').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
