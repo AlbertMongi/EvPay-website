@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://evpay.co.tz/sitemap.xml

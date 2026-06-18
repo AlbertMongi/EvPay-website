@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Privacy Policy — EvPay by EvMak Tanzania</title>
+    <meta name="description" content="How EvPay (EvMak Tanzania Limited) collects, uses, stores, shares, and protects personal information across its payment gateway, portals, applications, and APIs.">
+    <meta name="author" content="EvMak Tanzania">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="TZ">
+    <meta name="geo.placename" content="Dar es Salaam, Tanzania">
+    <link rel="canonical" href="https://evpay.co.tz/privacy">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EvPay">
+    <meta property="og:url" content="https://evpay.co.tz/privacy">
+    <meta property="og:title" content="Privacy Policy — EvPay by EvMak Tanzania">
+    <meta property="og:description" content="How EvPay collects, uses, stores, shares, and protects personal information.">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Theme & icons -->
+    <meta name="theme-color" content="#3d63dd">
+    <meta name="msapplication-TileColor" content="#3d63dd">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="./assets/favicon/EvPay Colored.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="./assets/favicon/EvPay Colored.svg">
+    <link rel="shortcut icon" href="./assets/favicon/EvPay Colored.svg">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#3d63dd">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest.json">
+
+    <!-- Performance: preconnect to third-party origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Tailwind (self-hosted, built locally) -->
+    <link rel="stylesheet" href="./assets/css/main.min.css">
+
+    <!-- Fonts: Hanken Grotesk (primary), Work Sans — non-blocking via preload + onload swap -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap"></noscript>
+
+<style>
+    :root { --evpay-blue: #3d63dd; }
+
+    body {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 400;
+        color: #000000;
+        line-height: 1.7;
+        background: #ffffff;
+    }
+
+    h1, h2, h3, h4 { font-family: "Hanken Grotesk", sans-serif; color: #000000; line-height: 1.2; margin: 0; }
+    p, li, span, a, div { color: #000000; }
+
+    /* ===== NAVBAR ===== */
+    .nav-height { height: 92px; background: #ffffff; }
+    .nav-logo { height: 40px; width: auto; }
+
+    .desktop-menu a {
+        font-family: "Work Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 6px 0;
+        transition: color 0.25s ease;
+    }
+    .desktop-menu a:hover { color: var(--evpay-blue); }
+
+    .lets-talk-btn {
+        font-family: "Work Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 12px 28px;
+        border: 2px solid #1f1f1f;
+        transition: all 0.3s ease;
+    }
+    .lets-talk-btn:hover {
+        background: #1f1f1f;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* ===== DRAWER ===== */
+    .drawer {
+        position: fixed; top: 0; right: 0; height: 100%;
+        width: 320px; max-width: 85vw; background: #ffffff;
+        box-shadow: -10px 0 40px rgba(0,0,0,0.12);
+        transform: translateX(100%);
+        transition: transform 0.35s ease; z-index: 60;
+        display: flex; flex-direction: column; padding: 28px 24px;
+    }
+    .drawer.active { transform: translateX(0); }
+    .drawer-identity { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
+    .drawer-identity img { height: 32px; width: auto; }
+    .drawer-close {
+        width: 38px; height: 38px; border-radius: 50%;
+        display: inline-flex; align-items: center; justify-content: center;
+        background: #f0f2f5; color: #1f1f1f; transition: all 0.3s ease; border: none; cursor: pointer;
+    }
+    .drawer-close:hover { background: #000000; color: #ffffff; }
+    .drawer-nav { display: flex; flex-direction: column; gap: 4px; }
+    .drawer-nav a {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500; text-transform: uppercase; letter-spacing: 0.8px;
+        color: #1f1f1f; font-size: 14px; padding: 14px 8px;
+        border-bottom: 1px solid #eef0f3; transition: all 0.25s ease;
+    }
+    .drawer-nav a:hover { color: var(--evpay-blue); padding-left: 14px; }
+
+    .overlay {
+        position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+        opacity: 0; visibility: hidden; transition: all 0.35s ease; z-index: 55;
+    }
+    .overlay.active { opacity: 1; visibility: visible; }
+    body.drawer-open { overflow: hidden; }
+
+    .elementor-btn {
+        font-family: "Work Sans", sans-serif;
+        font-size: 13px; font-weight: 600; letter-spacing: 1px;
+        text-transform: uppercase; padding: 14px 32px; cursor: pointer;
+        border: 2px solid var(--evpay-blue); background: var(--evpay-blue); color: #ffffff;
+        transition: all 0.3s ease;
+    }
+    .elementor-btn:hover { background: #2f4fc0; border-color: #2f4fc0; }
+
+    /* ===== ANIMATIONS (match home page) ===== */
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translate3d(0, -30px, 0); }
+        to   { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translate3d(0, 40px, 0); }
+        to   { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+    .animate-fadeInDown { animation: fadeInDown 1s ease both; }
+    .wow { opacity: 0; visibility: hidden; }
+    .wow.visible { animation: fadeInUp 1.2s ease both; visibility: visible; }
+
+    /* ===== HERO (matches home page) ===== */
+    .hero-title {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -1px;
+        color: #ffffff;
+    }
+    .hero-subtext {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #ffffff;
+    }
+    .hero-img-bg { object-position: 80% center; }
+    @media (max-width: 767px) {
+        .hero-title { font-size: 36px !important; }
+        .hero-img-bg { object-position: 78% center; }
+        .hero-overlay {
+            background-image: linear-gradient(
+                to right,
+                rgba(0,0,0,0.85) 0%,
+                rgba(0,0,0,0.65) 55%,
+                rgba(0,0,0,0.30) 100%
+            );
+        }
+        .hero-text-block { max-width: 80%; }
+    }
+
+    /* ===== LEGAL PAGE ===== */
+
+    .legal-content { font-size: 16px; line-height: 1.8; }
+    .legal-content h2 {
+        font-size: 22px; font-weight: 700; margin: 44px 0 14px;
+        padding-bottom: 10px; border-bottom: 2px solid #eef0f3; letter-spacing: -0.3px;
+    }
+    .legal-content h2:first-of-type { margin-top: 0; }
+    .legal-content h3 { font-size: 17px; font-weight: 700; margin: 26px 0 10px; }
+    .legal-content p { margin: 0 0 16px; color: #1a1a1a; }
+    .legal-content ul { list-style: none; margin: 0 0 18px; padding: 0; }
+    .legal-content ul li {
+        position: relative; padding-left: 26px; margin-bottom: 10px; color: #1a1a1a;
+    }
+    .legal-content ul li::before {
+        content: ""; position: absolute; left: 6px; top: 11px;
+        width: 7px; height: 7px; border-radius: 50%; background: var(--evpay-blue);
+    }
+    .legal-content a { color: var(--evpay-blue); text-decoration: underline; }
+    .legal-content strong { font-weight: 700; }
+
+    .legal-card {
+        background: #f6f8ff; border: 1px solid #e3e9ff;
+        border-radius: 14px; padding: 26px 28px; margin-top: 8px;
+    }
+    .legal-card p { margin-bottom: 4px; }
+
+    .toc {
+        background: #fafbff; border: 1px solid #eef0f3; border-radius: 14px;
+        padding: 24px 28px; margin-bottom: 48px;
+    }
+    .toc h4 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .toc ol { list-style: decimal; padding-left: 20px; columns: 2; column-gap: 32px; }
+    .toc li { margin-bottom: 8px; font-size: 14px; }
+    .toc a { color: #1a1a1a; text-decoration: none; }
+    .toc a:hover { color: var(--evpay-blue); }
+    @media (max-width: 640px) {
+        .toc ol { columns: 1; }
+        .legal-hero h1 { font-size: 30px; }
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer { background: #ffffff; padding: 40px 0 30px; }
+    .footer-heading {
+        font-family: "Hanken Grotesk", sans-serif; font-size: 15px; font-weight: 700;
+        color: #000000; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 24px;
+    }
+    .footer-links li {
+        font-family: "Hanken Grotesk", sans-serif; font-size: 15px; color: #000000;
+        margin-bottom: 14px; transition: color 0.25s ease, padding-left 0.25s ease; cursor: pointer;
+    }
+    .footer-links li:hover { color: #555555; padding-left: 4px; }
+    .footer-about { font-family: "Hanken Grotesk", sans-serif; font-size: 15px; color: #000000; line-height: 1.75; }
+    .footer-social {
+        width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;
+        background: #f0f2f5; border-radius: 50%; color: #1f1f1f; transition: all 0.3s ease; font-size: 15px;
+    }
+    .footer-social:hover { background: #000000; color: #ffffff; transform: translateY(-3px); }
+    .footer-bottom {
+        font-family: "Hanken Grotesk", sans-serif; font-size: 14px; color: #000000;
+        border-top: 1px solid #eef0f3; padding-top: 24px; margin-top: 60px;
+    }
+    .footer-bottom a:hover { color: #555555; }
+</style>
+</head>
+<body>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<!-- Drawer -->
+<div id="drawer" class="drawer">
+    <div class="drawer-identity">
+        <a href="/"><img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="EvMak Tanzania logo" width="160" height="32" decoding="async"></a>
+        <button class="drawer-close" onclick="toggleMenu()" aria-label="Close">
+            <svg class="icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2 L14 14 M14 2 L2 14"/></svg>
+        </button>
+    </div>
+
+    <nav class="drawer-nav">
+        <a href="https://evmak.com/">HOME</a>
+        <a href="https://evmak.com/about-us/">ABOUT US</a>
+        <a href="https://evmak.com/">PRODUCTS</a>
+        <a href="https://evmak.com/career/">CAREER</a>
+        <a href="https://evmak.com/contact-us/">REACH US</a>
+    </nav>
+
+    <button onclick="window.location.href='/'" class="elementor-btn mt-6">BACK TO HOME</button>
+</div>
+
+<!-- Navbar -->
+<nav class="nav-height flex items-center animate-fadeInDown">
+    <div class="max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
+        <div class="flex items-center">
+            <a href="/"><img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" class="nav-logo" alt="EvMak Tanzania logo" width="200" height="40" decoding="async"></a>
+        </div>
+
+        <div class="desktop-menu hidden md:flex gap-10 items-center">
+            <a href="https://evmak.com/">HOME</a>
+            <a href="https://evmak.com/about-us/">ABOUT US</a>
+            <a href="https://evmak.com/">PRODUCTS</a>
+            <a href="https://evmak.com/career/">CAREER</a>
+            <a href="https://evmak.com/contact-us/">REACH US</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <a href="https://docs.evpay.co.tz/introduction" target="_blank" rel="noopener noreferrer" class="lets-talk-btn hidden md:block">API DOCS</a>
+            <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section (matches home page) -->
+<section class="px-6 md:px-16 pt-4 pb-10">
+  <div class="relative max-w-7xl mx-auto rounded-2xl overflow-hidden min-h-[460px] flex items-center">
+    <picture>
+      <source type="image/webp"
+              srcset="./assets/img/responsive/payout-480.webp 480w,
+                      ./assets/img/responsive/payout-800.webp 800w"
+              sizes="(min-width: 1280px) 1280px, 100vw">
+      <img src="./assets/img/responsive/payout-800.jpg"
+           srcset="./assets/img/responsive/payout-480.jpg 480w,
+                   ./assets/img/responsive/payout-800.jpg 800w"
+           sizes="(min-width: 1280px) 1280px, 100vw"
+           alt="EvPay payment gateway privacy policy"
+           width="1280" height="715"
+           fetchpriority="high" decoding="async"
+           class="hero-img-bg absolute inset-0 w-full h-full object-cover">
+    </picture>
+    <div class="hero-overlay absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent"></div>
+
+    <div class="hero-text-block relative z-10 px-10 md:px-16 max-w-2xl wow">
+      <h1 class="hero-title text-5xl md:text-6xl">
+        Privacy<br>Policy
+      </h1>
+
+      <p class="mt-8 text-lg md:text-xl hero-subtext">
+        How we collect, use, protect, and share your personal information.
+      </p>
+
+      <p class="mt-6 hero-subtext text-sm md:text-base" style="opacity:0.85;">
+        Effective Date: May 1, 2026 &nbsp;·&nbsp; Last Updated: June 1, 2026
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Content -->
+<main class="max-w-7xl mx-auto px-6 md:px-16 py-16 legal-content">
+
+    <!-- Table of contents -->
+    <div class="toc wow">
+        <h4>Contents</h4>
+        <ol>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#scope">Scope of this Policy</a></li>
+            <li><a href="#collect">Information We Collect</a></li>
+            <li><a href="#use">How We Use Your Information</a></li>
+            <li><a href="#legal-basis">Legal Basis for Processing</a></li>
+            <li><a href="#sharing">Information Sharing &amp; Disclosure</a></li>
+            <li><a href="#fraud">Fraud Prevention &amp; Compliance</a></li>
+            <li><a href="#security">Data Security</a></li>
+            <li><a href="#retention">Data Retention</a></li>
+            <li><a href="#transfers">International Data Transfers</a></li>
+            <li><a href="#rights">Your Rights</a></li>
+            <li><a href="#cookies">Cookies &amp; Similar Technologies</a></li>
+            <li><a href="#changes">Changes to this Policy</a></li>
+            <li><a href="#contact">Contact Information</a></li>
+        </ol>
+    </div>
+
+    <h2 class="wow" id="intro">1. Introduction</h2>
+    <p>EvPay is a digital payments platform operated by EvMak Tanzania Limited (“EvMak”, “EvPay”, “we”, “our”, or “us”). We are committed to protecting the privacy, confidentiality, and security of the personal information entrusted to us by our customers, merchants, partners, website visitors, and users of our products and services.</p>
+    <p>As a licensed payment service provider, we recognize the importance of maintaining the trust of our users and complying with applicable laws, regulations, and industry standards governing data protection, financial services, and payment processing. This Privacy Policy explains how we collect, use, store, share, protect, and process personal information when you access or use EvPay’s websites, applications, merchant portals, APIs, payment services, and any related products offered by EvMak.</p>
+    <p>By accessing or using our services, you acknowledge that you have read, understood, and agreed to the practices described in this Privacy Policy.</p>
+
+    <h2 class="wow" id="scope">2. Scope of this Policy</h2>
+    <p>This Privacy Policy applies to:</p>
+    <ul>
+        <li>EvPay payment gateway services.</li>
+        <li>EvPay merchant and customer portals.</li>
+        <li>EvPay mobile and web applications.</li>
+        <li>APIs and developer services.</li>
+        <li>Payment collection and settlement services.</li>
+        <li>Customer support interactions.</li>
+        <li>Any website, platform, or service operated by EvMak Tanzania Limited that references this Privacy Policy.</li>
+    </ul>
+
+    <h2 class="wow" id="collect">3. Information We Collect</h2>
+    <p>To provide our services safely and effectively, we may collect the following categories of information:</p>
+
+    <h3>3.1 Personal Information</h3>
+    <ul>
+        <li>Full name</li>
+        <li>Date of birth</li>
+        <li>National identification information</li>
+        <li>Passport information (where applicable)</li>
+        <li>Email address</li>
+        <li>Mobile phone number</li>
+        <li>Physical address</li>
+        <li>Postal address</li>
+    </ul>
+
+    <h3>3.2 Business Information</h3>
+    <p>For merchants and corporate customers:</p>
+    <ul>
+        <li>Business name</li>
+        <li>Company registration documents</li>
+        <li>Tax Identification Number (TIN)</li>
+        <li>VAT information</li>
+        <li>Beneficial ownership information</li>
+        <li>Business licenses and permits</li>
+        <li>Authorized representative information</li>
+    </ul>
+
+    <h3>3.3 Financial Information</h3>
+    <ul>
+        <li>Bank account details</li>
+        <li>Settlement account information</li>
+        <li>Mobile money account details</li>
+        <li>Payment card information (processed securely through approved partners)</li>
+        <li>Transaction history</li>
+        <li>Payment preferences</li>
+    </ul>
+
+    <h3>3.4 Technical and Usage Information</h3>
+    <ul>
+        <li>IP address</li>
+        <li>Device information</li>
+        <li>Browser type</li>
+        <li>Operating system</li>
+        <li>Login activity</li>
+        <li>Session information</li>
+        <li>Platform usage statistics</li>
+        <li>Cookies and similar technologies</li>
+    </ul>
+
+    <h2 class="wow" id="use">4. How We Use Your Information</h2>
+    <p>We use personal information only where necessary to operate our business, provide services, and comply with legal obligations. Your information may be used to:</p>
+    <ul>
+        <li>Create and manage user accounts.</li>
+        <li>Process payments and settlements.</li>
+        <li>Verify customer and business identities.</li>
+        <li>Perform KYC and KYB procedures.</li>
+        <li>Prevent fraud, money laundering, and financial crime.</li>
+        <li>Monitor transaction activity.</li>
+        <li>Respond to customer inquiries and support requests.</li>
+        <li>Improve platform functionality and user experience.</li>
+        <li>Communicate important service updates.</li>
+        <li>Generate operational and analytical reports.</li>
+        <li>Comply with legal, regulatory, and contractual obligations.</li>
+    </ul>
+
+    <h2 class="wow" id="legal-basis">5. Legal Basis for Processing</h2>
+    <p>EvPay processes personal information based on one or more of the following grounds:</p>
+    <ul>
+        <li>Performance of a contract.</li>
+        <li>Compliance with legal and regulatory obligations.</li>
+        <li>Legitimate business interests.</li>
+        <li>Protection against fraud and financial crime.</li>
+        <li>User consent where required by law.</li>
+    </ul>
+
+    <h2 class="wow" id="sharing">6. Information Sharing and Disclosure</h2>
+    <p>EvPay does not sell, rent, or trade personal information to third parties. We may share information only when necessary with:</p>
+    <h3>Financial Institutions</h3>
+    <p>Banks, acquiring institutions, card schemes, payment processors, and mobile network operators involved in transaction processing and settlement.</p>
+    <h3>Regulatory Authorities</h3>
+    <p>Government agencies, law enforcement authorities, financial regulators, courts, and supervisory bodies where disclosure is required by law.</p>
+    <h3>Service Providers</h3>
+    <p>Technology vendors, cloud service providers, cybersecurity providers, and professional advisors supporting our operations.</p>
+    <h3>Business Partners</h3>
+    <p>Strategic partners that help deliver services to customers, subject to appropriate confidentiality obligations.</p>
+    <p>All third parties receiving information are required to maintain appropriate safeguards and use the information only for authorized purposes.</p>
+
+    <h2 class="wow" id="fraud">7. Fraud Prevention and Financial Crime Compliance</h2>
+    <p>EvPay maintains a comprehensive risk management framework designed to protect customers, merchants, financial institutions, and the broader payment ecosystem. We may:</p>
+    <ul>
+        <li>Verify identities and business ownership.</li>
+        <li>Monitor transactions for suspicious activity.</li>
+        <li>Conduct sanctions screening.</li>
+        <li>Perform fraud detection and risk assessments.</li>
+        <li>Investigate unusual transactions.</li>
+        <li>Restrict, suspend, or terminate accounts where fraud or misuse is suspected.</li>
+        <li>Report suspicious transactions to relevant authorities where required by law.</li>
+    </ul>
+    <p>Failure to provide requested information may result in limited access to certain services.</p>
+
+    <h2 class="wow" id="security">8. Data Security</h2>
+    <p>Protecting customer information is one of EvPay’s highest priorities. We employ appropriate technical, organizational, and administrative safeguards, including:</p>
+    <ul>
+        <li>End-to-end encrypted communications.</li>
+        <li>SSL/TLS encryption.</li>
+        <li>Secure API authentication mechanisms.</li>
+        <li>Multi-layer access controls.</li>
+        <li>Firewalls and intrusion prevention systems.</li>
+        <li>Transaction monitoring tools.</li>
+        <li>Fraud detection systems.</li>
+        <li>Secure data storage and backup procedures.</li>
+        <li>Regular security reviews and vulnerability assessments.</li>
+    </ul>
+    <p>Although we implement robust security measures, no system can guarantee absolute security. Users are encouraged to maintain the confidentiality of their login credentials and security information.</p>
+
+    <h2 class="wow" id="retention">9. Data Retention</h2>
+    <p>We retain personal information only for as long as necessary to:</p>
+    <ul>
+        <li>Provide services.</li>
+        <li>Fulfill contractual obligations.</li>
+        <li>Resolve disputes.</li>
+        <li>Enforce agreements.</li>
+        <li>Meet legal, regulatory, accounting, and tax requirements.</li>
+    </ul>
+    <p>Certain financial and compliance records may be retained for extended periods as required by applicable laws and regulations.</p>
+
+    <h2 class="wow" id="transfers">10. International Data Transfers</h2>
+    <p>In some circumstances, information may be processed or stored outside Tanzania through trusted technology partners and service providers. Where such transfers occur, EvPay implements reasonable safeguards to ensure personal information remains protected and is handled in accordance with applicable data protection requirements.</p>
+
+    <h2 class="wow" id="rights">11. Your Rights</h2>
+    <p>Subject to applicable laws and regulatory requirements, you may have the right to:</p>
+    <ul>
+        <li>Access your personal information.</li>
+        <li>Request correction of inaccurate information.</li>
+        <li>Request deletion of information where permitted.</li>
+        <li>Object to certain processing activities.</li>
+        <li>Withdraw consent where applicable.</li>
+        <li>Request information about how your data is used.</li>
+    </ul>
+    <p>Requests may be subject to identity verification and legal limitations.</p>
+
+    <h2 class="wow" id="cookies">12. Cookies and Similar Technologies</h2>
+    <p>EvPay uses cookies and related technologies to:</p>
+    <ul>
+        <li>Improve website functionality.</li>
+        <li>Enhance user experience.</li>
+        <li>Maintain security.</li>
+        <li>Analyze platform performance.</li>
+        <li>Remember user preferences.</li>
+    </ul>
+    <p>Users may manage cookie preferences through their browser settings.</p>
+
+    <h2 class="wow" id="changes">13. Changes to this Privacy Policy</h2>
+    <p>EvPay may amend this Privacy Policy from time to time to reflect changes in legal requirements, technology, products, or business practices. Updated versions will be published on our website and platforms. Continued use of our services following publication constitutes acceptance of the revised Privacy Policy.</p>
+
+    <h2 class="wow" id="contact">14. Contact Information</h2>
+    <p>For questions, requests, or concerns regarding this Privacy Policy or our privacy practices, please contact:</p>
+    <div class="legal-card">
+        <p><strong>EvMak Tanzania Limited</strong></p>
+        <p>Plot No. 235, Oysterbay, Mtwara Crescent / Off Guba Road</p>
+        <p>P.O. Box 71485</p>
+        <p>Dar es Salaam, Tanzania</p>
+        <p>Email: <a href="mailto:info@evmak.com">info@evmak.com</a></p>
+    </div>
+    <p style="margin-top:24px;">For the latest version of this Privacy Policy, please visit our website and merchant platforms. By accessing or using EvPay services, you acknowledge that you have read, understood, and agreed to this Privacy Policy.</p>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="max-w-7xl mx-auto px-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-16 items-start">
+
+            <div class="max-w-xs">
+                <div class="flex items-center mb-6">
+                    <img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="EvMak Tanzania logo" width="160" height="32" loading="lazy" decoding="async" class="h-8 w-auto">
+                </div>
+                <p class="footer-about">
+                    Your technology partner for innovative and impactful digital solutions.
+                    Follow us on social media for updates.
+                </p>
+                <div class="flex gap-3 mt-6">
+                    <a href="https://www.linkedin.com/company/evmak-tanzania-ltd" target="_blank" rel="noopener noreferrer" aria-label="EvMak on LinkedIn" class="footer-social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43c-1.14 0-2.07-.93-2.07-2.07 0-1.14.93-2.07 2.07-2.07 1.14 0 2.07.93 2.07 2.07 0 1.14-.93 2.07-2.07 2.07zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+                    <a href="https://www.instagram.com/evmakco/" target="_blank" rel="noopener noreferrer" aria-label="EvMak on Instagram" class="footer-social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13a5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+                    <a href="https://web.facebook.com/evmak/?_rdc=1&amp;_rdr" target="_blank" rel="noopener noreferrer" aria-label="EvMak on Facebook" class="footer-social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.1 24V13.06H5.46V8.86H9.1V5.74C9.1 2.13 11.31 0 14.54 0c1.55 0 2.88.12 3.27.17v3.79h-2.25c-1.76 0-2.1.84-2.1 2.07v2.83h4.2l-.55 4.2H13.46V24"/></svg></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">SERVICES</h4>
+                <ul class="footer-links">
+                    <li>Tech Consult</li>
+                    <li>Develop</li>
+                    <li>Implement</li>
+                    <li>Assessment</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">COMPANY</h4>
+                <ul class="footer-links">
+                    <li>About</li>
+                    <li>Partnership</li>
+                    <li>Products</li>
+                    <li>Career</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">LINKS</h4>
+                <ul class="footer-links">
+                    <li>Contact</li>
+                    <li>Help Center</li>
+                    <li>Let us Have coffee</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom flex flex-col md:flex-row justify-between items-center">
+            <p>Copyright @ EvMak Tanzania.</p>
+            <div class="flex items-center gap-4 mt-4 md:mt-0">
+                <a href="/privacy">Privacy Policy</a>
+                <span class="text-gray-400">|</span>
+                <a href="/terms">Our Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const drawer = document.getElementById("drawer");
+        const overlay = document.getElementById("overlay");
+        drawer.classList.toggle("active");
+        overlay.classList.toggle("active");
+        document.body.classList.toggle("drawer-open");
+    }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && document.getElementById('drawer').classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+
+    // Elementor-style scroll animations (IntersectionObserver) — matches home page
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.wow').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

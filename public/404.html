@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | EvPay by EvMak</title>
+    <meta name="description" content="The page you requested could not be found on EvPay. Head back to our homepage to explore Tanzania's complete digital payment gateway.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://evpay.co.tz/">
+
+    <meta name="theme-color" content="#3d63dd">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Work+Sans:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Work+Sans:wght@500;600&display=swap"></noscript>
+
+    <style>
+        * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        html, body { margin: 0; padding: 0; height: 100%; }
+        body {
+            font-family: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+            color: #000;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 22px 32px;
+            border-bottom: 1px solid #eef0f3;
+        }
+
+        .nav img { height: 36px; width: auto; }
+
+        .nav a.docs {
+            font-family: "Work Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #1f1f1f;
+            border: 2px solid #1f1f1f;
+            padding: 10px 22px;
+            border-radius: 999px;
+            transition: all .25s ease;
+        }
+
+        .nav a.docs:hover { background: #1f1f1f; color: #fff; }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 24px;
+        }
+
+        .card {
+            max-width: 640px;
+            text-align: center;
+        }
+
+        .err {
+            font-family: "Hanken Grotesk", sans-serif;
+            font-size: clamp(96px, 18vw, 168px);
+            font-weight: 700;
+            letter-spacing: -4px;
+            line-height: 1;
+            color: #1a57e4;
+            margin: 0 0 12px;
+        }
+
+        h1 {
+            font-size: clamp(28px, 4vw, 38px);
+            font-weight: 700;
+            margin: 0 0 14px;
+            letter-spacing: -.5px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+            margin: 0 0 32px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn {
+            font-family: "Work Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 999px;
+            transition: all .25s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #1a57e4;
+            color: #fff;
+            border: 2px solid #1a57e4;
+        }
+
+        .btn-primary:hover {
+            background: #1244b8;
+            border-color: #1244b8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(26, 87, 228, 0.25);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: #1f1f1f;
+            border: 2px solid #1f1f1f;
+        }
+
+        .btn-ghost:hover {
+            background: #1f1f1f;
+            color: #fff;
+        }
+
+        .helpful {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #eef0f3;
+        }
+
+        .helpful h2 {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #555;
+            margin: 0 0 18px;
+        }
+
+        .helpful ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+
+        .helpful a {
+            font-size: 15px;
+            font-weight: 500;
+            color: #1a57e4;
+            text-decoration: none;
+        }
+
+        .helpful a:hover { text-decoration: underline; }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+            color: #777;
+            border-top: 1px solid #eef0f3;
+        }
+    </style>
+</head>
+<body>
+
+<header class="nav">
+    <a href="/" aria-label="EvPay home">
+        <img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="EvMak" width="160" height="36">
+    </a>
+    <a href="https://docs.evpay.co.tz/introduction" target="_blank" rel="noopener noreferrer" class="docs">API Docs</a>
+</header>
+
+<main>
+    <div class="card">
+        <div class="err" aria-hidden="true">404</div>
+        <h1>This page took a different payment rail</h1>
+        <p>
+            The page you're looking for doesn't exist or has been moved. Don't worry &mdash;
+            EvPay's payment gateway is up and running. Head back to our homepage or jump to
+            one of the resources below.
+        </p>
+
+        <div class="actions">
+            <a class="btn btn-primary" href="/">Back to Home</a>
+            <a class="btn btn-ghost" href="https://docs.evpay.co.tz/introduction" target="_blank" rel="noopener noreferrer">View API Docs</a>
+        </div>
+
+        <div class="helpful">
+            <h2>You might be looking for</h2>
+            <ul>
+                <li><a href="/#faq">FAQ</a></li>
+                <li><a href="https://evmak.com/about-us/" target="_blank" rel="noopener noreferrer">About EvMak</a></li>
+                <li><a href="https://evmak.com/contact-us/" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                <li><a href="https://evmak.com/career/" target="_blank" rel="noopener noreferrer">Careers</a></li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; EvMak Tanzania &middot; <a href="/" style="color:#1a57e4; text-decoration:none;">evpay.co.tz</a>
+</footer>
+
+</body>
+</html>

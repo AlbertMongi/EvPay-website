@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://evpay.co.tz/</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://evpay.co.tz/assets/img/responsive/hero-section-1280.jpg</image:loc>
+      <image:title>EvPay payment gateway hero</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://evpay.co.tz/assets/img/responsive/why-evpay-800.jpg</image:loc>
+      <image:title>Why choose EvPay</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://docs.evpay.co.tz/introduction</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

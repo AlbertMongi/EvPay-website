@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git log *)",
+      "Bash(git ls-tree *)",
+      "Bash(git rev-list *)",
+      "Bash(git checkout *)",
+      "Bash(sed 's/-[0-9]*\\\\..*//')"
+    ]
+  }
+}

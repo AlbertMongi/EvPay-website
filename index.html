@@ -3,18 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EvMak - Payment Solutions</title>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Primary SEO -->
+    <title>EvPay by EvMak — Payment Gateway & Financial Solutions in Tanzania</title>
+    <meta name="description" content="EvPay is Tanzania's complete digital payment gateway. Accept mobile money (M-Pesa, Tigo Pesa, Airtel Money, Halopesa), bank transfers, Visa/Mastercard, QR and USSD via one secure API and dashboard. PSP-licensed by the Bank of Tanzania.">
+    <meta name="author" content="EvMak Tanzania">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="TZ">
+    <meta name="geo.placename" content="Dar es Salaam, Tanzania">
+    <link rel="canonical" href="https://evpay.co.tz/">
 
-    <!-- Elementor Kit Fonts: Hanken Grotesk (primary), Alfa Slab One, Work Sans -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="EvPay">
+    <meta property="og:url" content="https://evpay.co.tz/">
+    <meta property="og:title" content="EvPay by EvMak — Payment Gateway & Financial Solutions in Tanzania">
+    <meta property="og:description" content="One API for mobile money, banks, cards, QR and USSD payments in Tanzania. PSP-licensed, secure, and built for businesses.">
+    <meta property="og:image" content="https://evpay.co.tz/assets/img/responsive/hero-section-1280.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="715">
+    <meta property="og:image:alt" content="EvPay payment platform">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EvPay — Payment Gateway for Tanzania">
+    <meta name="twitter:description" content="Accept mobile money, banks, cards, QR and USSD via one secure API. Built for businesses in Tanzania.">
+    <meta name="twitter:image" content="https://evpay.co.tz/assets/img/responsive/hero-section-1280.jpg">
+
+    <!-- Theme & icons -->
+    <meta name="theme-color" content="#3d63dd">
+    <meta name="msapplication-TileColor" content="#3d63dd">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="./assets/favicon/EvPay Colored.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="./assets/favicon/EvPay Colored.svg">
+    <link rel="shortcut icon" href="./assets/favicon/EvPay Colored.svg">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#3d63dd">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest.json">
+
+    <!-- Performance: preconnect to third-party origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Alfa+Slab+One&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="https://i.ytimg.com">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind (self-hosted, built locally — no CDN, no render-blocking external request) -->
+    <link rel="stylesheet" href="./assets/css/main.min.css">
+
+    <!-- Preload above-the-fold hero image (LCP) — responsive set so the browser picks
+         the right size for the viewport instead of always pulling the largest image. -->
+    <link rel="preload" as="image" type="image/webp"
+          imagesrcset="./assets/img/responsive/hero-section-480.webp 480w,
+                       ./assets/img/responsive/hero-section-800.webp 800w,
+                       ./assets/img/responsive/hero-section-1280.webp 1280w"
+          imagesizes="(min-width: 1280px) 1280px, 100vw"
+          fetchpriority="high">
+
+    <!-- Fonts: Hanken Grotesk (primary), Alfa Slab One, Work Sans — non-blocking via preload + onload swap -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Alfa+Slab+One&family=Work+Sans:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&family=Alfa+Slab+One&family=Work+Sans:wght@300;400;500;600;700&display=swap"></noscript>
+
+    <!-- Structured data: Organization + WebSite + FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://evpay.co.tz/#organization",
+          "name": "EvPay by EvMak",
+          "url": "https://evpay.co.tz/",
+          "logo": "https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png",
+          "description": "EvPay is a Tanzanian payment gateway by EvMak offering mobile money, bank, card, QR, and USSD payment solutions through one API.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "TZ",
+            "addressLocality": "Dar es Salaam"
+          },
+          "sameAs": [
+            "https://evmak.com/",
+            "https://docs.evpay.co.tz/introduction"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://evpay.co.tz/#website",
+          "url": "https://evpay.co.tz/",
+          "name": "EvPay",
+          "publisher": { "@id": "https://evpay.co.tz/#organization" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Can I start without a developer?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can use Payment Links and digital invoices to go live instantly without coding. EvPay provides a simple dashboard to track transactions, monitor payments, and manage your business in real time." } },
+            { "@type": "Question", "name": "How fast do I receive funds?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Settlement times depend on the payment channel used. You always have real-time visibility of transaction status and settlement updates through your dashboard." } },
+            { "@type": "Question", "name": "Can we test before going live?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. EvPay provides a sandbox environment where you can simulate transactions, test payment flows, run sample batches, and handle return scenarios safely before processing real payments." } },
+            { "@type": "Question", "name": "How do you handle failed or returned payments?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Failed or returned payments are communicated using return codes and webhook notifications, allowing your system to automatically retry transactions or offer alternative payment options." } },
+            { "@type": "Question", "name": "Do you support approvals for large transactions?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. EvPay supports multi-step approval workflows with configurable thresholds and alerts, ensuring secure handling of high-value or bulk transactions." } }
+          ]
+        }
+      ]
+    }
+    </script>
+
 
 <style>
     /* ===== ELEMENTOR KIT TYPOGRAPHY ===== */
@@ -175,14 +272,22 @@
     }
 
     /* ===== HAMBURGER (ElementsKit icon style) ===== */
+    /* Hidden by default — only shown on phone view via the media query below.
+       Without this, the inline .hamburger rule overrides Tailwind's md:hidden
+       (same specificity, and this <style> block loads after main.min.css),
+       leaving the three lines visible on desktop. */
     .hamburger {
         width: 40px; height: 40px;
-        display: flex; align-items: center; justify-content: center;
+        display: none; align-items: center; justify-content: center;
         cursor: pointer;
         font-size: 22px;
         color: #1f1f1f;
         background: transparent;
         border: none;
+    }
+
+    @media (max-width: 767px) {
+        .hamburger { display: flex; }
     }
 
     /* ===== DRAWER (ElementsKit offcanvas — slides from LEFT) ===== */
@@ -327,6 +432,9 @@
         line-height: 1.7;
         color: #ffffff;
     }
+
+    /* Keep the subject (person on right side of source image) in frame on every viewport */
+    .hero-img-bg { object-position: 80% center; }
 
     /* ===== SECTION HEADINGS / BODY (Elementor kit) ===== */
     .section-heading {
@@ -512,6 +620,42 @@
 
     .footer-bottom a:hover { color: #555555; }
 
+    /* ===== YOUTUBE FACADE ===== */
+    .yt-facade { background: #000; }
+    .yt-facade .yt-play {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        opacity: 0.95;
+        pointer-events: none;
+    }
+    .yt-facade:hover .yt-play { opacity: 1; transform: translate(-50%, -50%) scale(1.06); }
+    .yt-facade:focus-visible { outline: 3px solid #1a57e4; outline-offset: 2px; }
+
+    /* ===== FEATURE STRIP ICONS ===== */
+    .feature-icon {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0f4ff;
+        border-radius: 50%;
+        color: #1a57e4;
+    }
+
+    .feature-title {
+        font-family: "Hanken Grotesk", sans-serif;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    .feature-desc {
+        font-family: "Hanken Grotesk", sans-serif;
+        color: #444;
+    }
+
     /* ===== SOLUTION CARDS ===== */
     .solution-card img { transition: transform 0.6s ease; }
     .solution-card:hover img { transform: scale(1.04); }
@@ -544,6 +688,20 @@
         .faq-content { flex-direction: column; }
         .hero-title { font-size: 36px !important; }
         h2 { font-size: 28px !important; }
+
+        /* Phone view: container is narrow + tall, so default object-cover would crop the
+           subject. Shift the focal point to the right and add a darker overlay so the
+           headline stays readable against the now-visible subject area. */
+        .hero-img-bg { object-position: 78% center; }
+        .hero-overlay {
+            background-image: linear-gradient(
+                to right,
+                rgba(0,0,0,0.85) 0%,
+                rgba(0,0,0,0.65) 55%,
+                rgba(0,0,0,0.30) 100%
+            ) !important;
+        }
+        .hero-text-block { max-width: 70%; }
     }
 </style>
 </head>
@@ -555,9 +713,9 @@
 <!-- Drawer (ElementsKit offcanvas) -->
 <div id="drawer" class="drawer">
     <div class="drawer-identity">
-        <a href="#"><img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="EvMak"></a>
+        <a href="#"><img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="EvMak Tanzania logo" width="160" height="32" decoding="async"></a>
         <button class="drawer-close" onclick="toggleMenu()" aria-label="Close">
-            <i class="fas fa-times"></i>
+            <svg class="icon" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2 L14 14 M14 2 L2 14"/></svg>
         </button>
     </div>
 
@@ -580,7 +738,7 @@
     <div class="max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
 
         <div class="flex items-center">
-            <img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" class="nav-logo" alt="EvMak">
+            <img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" class="nav-logo" alt="EvMak Tanzania logo" width="200" height="40" fetchpriority="high" decoding="async">
         </div>
 
         <div class="desktop-menu hidden md:flex gap-10 items-center">
@@ -592,13 +750,15 @@
         </div>
 
         <div class="flex items-center gap-4">
-    <a href="https://docs.evpay.co.tz/introduction" target="_blank"
-       class="lets-talk-btn hidden md:block">
-        API DOCS
-    </a>
+   <a href="https://docs.evpay.co.tz/introduction" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   class="lets-talk-btn hidden md:block">
+    API DOCS
+</a>
 
     <button class="hamburger md:hidden" onclick="toggleMenu()" aria-label="Menu">
-        <i class="fas fa-bars"></i>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
 </div>
     </div>
@@ -607,11 +767,25 @@
 <!-- Hero Section -->
 <section class="px-6 md:px-16 pt-4 pb-10">
   <div class="relative max-w-7xl mx-auto rounded-2xl overflow-hidden min-h-[600px] flex items-center">
-    <img src="./assets/img/HERO SECTION.jpg" alt="Hero"
-         class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent"></div>
+    <picture>
+      <source type="image/webp"
+              srcset="./assets/img/responsive/hero-section-480.webp 480w,
+                      ./assets/img/responsive/hero-section-800.webp 800w,
+                      ./assets/img/responsive/hero-section-1280.webp 1280w"
+              sizes="(min-width: 1280px) 1280px, 100vw">
+      <img src="./assets/img/responsive/hero-section-1280.jpg"
+           srcset="./assets/img/responsive/hero-section-480.jpg 480w,
+                   ./assets/img/responsive/hero-section-800.jpg 800w,
+                   ./assets/img/responsive/hero-section-1280.jpg 1280w"
+           sizes="(min-width: 1280px) 1280px, 100vw"
+           alt="EvPay payment gateway dashboard for mobile money and card payments in Tanzania"
+           width="1280" height="715"
+           fetchpriority="high" decoding="async"
+           class="hero-img-bg absolute inset-0 w-full h-full object-cover">
+    </picture>
+    <div class="hero-overlay absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent"></div>
 
-    <div class="relative z-10 px-10 md:px-16 max-w-2xl wow">
+    <div class="hero-text-block relative z-10 px-10 md:px-16 max-w-2xl wow">
       <h1 class="hero-title text-5xl md:text-6xl">
         Payment gateway<br>
         and financial solution<br>
@@ -623,7 +797,7 @@
       </p>
 
     <!-- Buttons -->
-<div class="mt-10 flex flex-wrap gap-4">
+<!-- <div class="mt-10 flex flex-wrap gap-4">
   <a href="#"
      class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-lg font-semibold transition duration-300 shadow-lg">
     Get Started
@@ -633,7 +807,7 @@
      class="px-8 py-3 border border-white text-white hover:bg-white hover:text-black rounded-full text-lg font-semibold transition duration-300">
     Login
   </a>
-</div>
+</div> -->
     </div>
   </div>
 </section>
@@ -643,8 +817,20 @@
 
     <div class="flex justify-center lg:justify-start wow-left wow">
       <div class="rounded-2xl overflow-hidden shadow-lg">
-        <img src="./assets/img/WHY EVPAY.jpg" alt="EvPay platform"
-             class="w-full h-[420px] object-cover" />
+        <picture>
+          <source type="image/webp"
+                  srcset="./assets/img/responsive/why-evpay-480.webp 480w,
+                          ./assets/img/responsive/why-evpay-800.webp 800w"
+                  sizes="(min-width: 1024px) 480px, 100vw">
+          <img src="./assets/img/responsive/why-evpay-800.jpg"
+               srcset="./assets/img/responsive/why-evpay-480.jpg 480w,
+                       ./assets/img/responsive/why-evpay-800.jpg 800w"
+               sizes="(min-width: 1024px) 480px, 100vw"
+               alt="Tanzanian businesses using EvPay digital payment platform for mobile money and bank payments"
+               width="800" height="800"
+               loading="lazy" decoding="async"
+               class="w-full h-[420px] object-cover" />
+        </picture>
       </div>
     </div>
 
@@ -668,12 +854,26 @@
     </div>
 
     <div class="space-y-6 wow wow-delay-400">
-      <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-        <iframe class="w-full h-full"
-          src="https://www.youtube.com/embed/CwTyE3osZbU?rel=0"
-          title="EvPay Intro Video" frameborder="0" style="border:0;"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+      <!-- YouTube facade: ships a static poster on first paint, swaps in the iframe on click.
+           Eliminates ~1MB of YouTube embed JS/CSS from initial page load. -->
+      <div class="yt-facade relative w-full aspect-video rounded-xl overflow-hidden shadow-lg cursor-pointer"
+           role="button" tabindex="0"
+           aria-label="Play EvPay intro video"
+           data-yt-id="CwTyE3osZbU"
+           onclick="loadYouTube(this)"
+           onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();loadYouTube(this);}">
+        <picture>
+          <source srcset="https://i.ytimg.com/vi_webp/CwTyE3osZbU/maxresdefault.webp" type="image/webp">
+          <img src="https://i.ytimg.com/vi/CwTyE3osZbU/maxresdefault.jpg"
+               onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/CwTyE3osZbU/hqdefault.jpg';"
+               alt="EvPay intro video — how the payment platform works in Tanzania"
+               width="1280" height="720"
+               loading="lazy" decoding="async"
+               class="absolute inset-0 w-full h-full object-cover">
+        </picture>
+        <span class="yt-play" aria-hidden="true">
+          <svg width="68" height="48" viewBox="0 0 68 48"><path d="M66.52 7.74a8.55 8.55 0 0 0-6-6C55.16 0 34 0 34 0S12.84 0 7.48 1.74a8.55 8.55 0 0 0-6 6A89.65 89.65 0 0 0 0 24a89.65 89.65 0 0 0 1.48 16.26 8.55 8.55 0 0 0 6 6C12.84 48 34 48 34 48s21.16 0 26.52-1.74a8.55 8.55 0 0 0 6-6A89.65 89.65 0 0 0 68 24a89.65 89.65 0 0 0-1.48-16.26z" fill="#f00"/><path d="M27 34l18-10-18-10z" fill="#fff"/></svg>
+        </span>
       </div>
 
       <div>
@@ -685,7 +885,7 @@
       </div>
        <!-- Button -->
    <div class="mt-6">
-  <a href="https://docs.evpay.co.tz/introduction" target="_blank"
+  <a href="https://docs.evpay.co.tz/introduction" target="_blank" rel="noopener noreferrer"
      class="inline-block px-8 py-3 bg-blue-600 hover:bg-black-700 text-white rounded-full text-sm font-semibold transition duration-300 shadow-md">
     Explore More
   </a>
@@ -699,8 +899,22 @@
   <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
     <div class="w-full lg:w-[60%] wow-left wow">
       <div class="rounded-2xl overflow-hidden shadow-lg">
-        <img src="./assets/img/hero.png" alt="Dashboard Preview"
-             class="w-full h-auto object-contain" />
+        <picture>
+          <source type="image/webp"
+                  srcset="./assets/img/responsive/dashboard-480.webp 480w,
+                          ./assets/img/responsive/dashboard-800.webp 800w,
+                          ./assets/img/responsive/dashboard-1280.webp 1280w"
+                  sizes="(min-width: 1024px) 60vw, 100vw">
+          <img src="./assets/img/responsive/dashboard-800.jpg"
+               srcset="./assets/img/responsive/dashboard-480.jpg 480w,
+                       ./assets/img/responsive/dashboard-800.jpg 800w,
+                       ./assets/img/responsive/dashboard-1280.jpg 1280w"
+               sizes="(min-width: 1024px) 60vw, 100vw"
+               alt="EvPay intuitive payment dashboard for real-time transaction tracking in Tanzania"
+               width="1280" height="729"
+               loading="lazy" decoding="async"
+               class="w-full h-auto object-contain" />
+        </picture>
       </div>
     </div>
 
@@ -709,7 +923,7 @@
 
       <p class="section-subheading mb-8">
         Track and manage all your payments in real-time through our user-friendly dashboard featuring
-        detailed analytics, transaction monitoring, settlement tracking, and customizable reports 
+        detailed analytics, transaction monitoring, settlement tracking, and customizable reports
         all accessible from a single screen with role-based access control.
       </p>
     </div>
@@ -734,7 +948,20 @@
       <!-- Collection Service -->
       <div class="solution-card wow">
         <div class="overflow-hidden rounded-md">
-          <img src="./assets/img/COLLECTION.jpg" class="w-full h-[280px] object-cover" alt="Collection Service">
+          <picture>
+            <source type="image/webp"
+                    srcset="./assets/img/responsive/collection-480.webp 480w,
+                            ./assets/img/responsive/collection-800.webp 800w"
+                    sizes="(min-width: 768px) 33vw, 100vw">
+            <img src="./assets/img/responsive/collection-800.jpg"
+                 srcset="./assets/img/responsive/collection-480.jpg 480w,
+                         ./assets/img/responsive/collection-800.jpg 800w"
+                 sizes="(min-width: 768px) 33vw, 100vw"
+                 width="800" height="597"
+                 loading="lazy" decoding="async"
+                 class="w-full h-[280px] object-cover"
+                 alt="EvPay Collection Service - Accept mobile money payments across Tanzania">
+          </picture>
         </div>
        <p class="solution-tag mt-5 uppercase text-blue-500">COLLECTION SERVICE</p>
         <h3 class="mt-2">Get paid across mobile money</h3>
@@ -748,7 +975,20 @@
       <!-- Payout Service -->
       <div class="solution-card wow wow-delay-200">
         <div class="overflow-hidden rounded-md">
-          <img src="./assets/img/PAYOUT.jpg" class="w-full h-[280px] object-cover" alt="Payout Service">
+          <picture>
+            <source type="image/webp"
+                    srcset="./assets/img/responsive/payout-480.webp 480w,
+                            ./assets/img/responsive/payout-800.webp 800w"
+                    sizes="(min-width: 768px) 33vw, 100vw">
+            <img src="./assets/img/responsive/payout-800.jpg"
+                 srcset="./assets/img/responsive/payout-480.jpg 480w,
+                         ./assets/img/responsive/payout-800.jpg 800w"
+                 sizes="(min-width: 768px) 33vw, 100vw"
+                 width="800" height="597"
+                 loading="lazy" decoding="async"
+                 class="w-full h-[280px] object-cover"
+                 alt="EvPay Payout Service - Send money to mobile wallets and Tanzanian banks at scale">
+          </picture>
         </div>
         <p class="solution-tag mt-5 uppercase text-blue-500">PAYOUT SERVICE</p>
         <h3 class="mt-2">Enterprise grade payouts, simplified</h3>
@@ -762,7 +1002,20 @@
       <!-- Card Payment Service -->
       <div class="solution-card wow wow-delay-400">
         <div class="overflow-hidden rounded-md">
-          <img src="./assets/img/CARD.jpg" class="w-full h-[280px] object-cover" alt="Card Payment Service">
+          <picture>
+            <source type="image/webp"
+                    srcset="./assets/img/responsive/card-480.webp 480w,
+                            ./assets/img/responsive/card-800.webp 800w"
+                    sizes="(min-width: 768px) 33vw, 100vw">
+            <img src="./assets/img/responsive/card-800.jpg"
+                 srcset="./assets/img/responsive/card-480.jpg 480w,
+                         ./assets/img/responsive/card-800.jpg 800w"
+                 sizes="(min-width: 768px) 33vw, 100vw"
+                 width="800" height="597"
+                 loading="lazy" decoding="async"
+                 class="w-full h-[280px] object-cover"
+                 alt="EvPay Card Payment Service - Accept Visa and Mastercard with PCI-compliant 3-D Secure checkout">
+          </picture>
         </div>
         <p class="solution-tag mt-5 uppercase text-blue-500">CARD PAYMENT SERVICE</p>
         <h3 class="mt-2">Card acceptance that fits your business</h3>
@@ -787,25 +1040,25 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
 
         <div class="text-center">
-          <div class="feature-icon mx-auto mb-4"><i class="fas fa-code"></i></div>
+          <div class="feature-icon mx-auto mb-4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
           <h4 class="feature-title text-base">One API, One Dashboard</h4>
           <p class="feature-desc text-sm mt-2">Unified across collection, payout, and cards.</p>
         </div>
 
         <div class="text-center">
-          <div class="feature-icon mx-auto mb-4"><i class="fas fa-bell"></i></div>
+          <div class="feature-icon mx-auto mb-4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
           <h4 class="feature-title text-base">Webhooks &amp; Idempotency</h4>
           <p class="feature-desc text-sm mt-2">Clean retries and guaranteed consistency.</p>
         </div>
 
         <div class="text-center">
-          <div class="feature-icon mx-auto mb-4"><i class="fas fa-shield-halved"></i></div>
+          <div class="feature-icon mx-auto mb-4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <h4 class="feature-title text-base">Compliance by Design</h4>
           <p class="feature-desc text-sm mt-2">PSP-licensed with data hosted locally.</p>
         </div>
 
         <div class="text-center">
-          <div class="feature-icon mx-auto mb-4"><i class="fas fa-rotate"></i></div>
+          <div class="feature-icon mx-auto mb-4"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/><path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/></svg></div>
           <h4 class="feature-title text-base">Finance-Ready Reporting</h4>
           <p class="feature-desc text-sm mt-2">Settlements, exports, and audit logs.</p>
         </div>
@@ -867,7 +1120,19 @@
         </div>
 
         <div class="faq-right">
-            <img src="./assets/img/FAQ.jpg" alt="Support">
+            <picture>
+                <source type="image/webp"
+                        srcset="./assets/img/responsive/faq-480.webp 480w,
+                                ./assets/img/responsive/faq-800.webp 800w"
+                        sizes="(min-width: 768px) 50vw, 100vw">
+                <img src="./assets/img/responsive/faq-800.jpg"
+                     srcset="./assets/img/responsive/faq-480.jpg 480w,
+                             ./assets/img/responsive/faq-800.jpg 800w"
+                     sizes="(min-width: 768px) 50vw, 100vw"
+                     alt="EvPay customer support team answering payment platform questions"
+                     width="800" height="597"
+                     loading="lazy" decoding="async">
+            </picture>
         </div>
     </div>
 </section>
@@ -883,18 +1148,24 @@
       <div class="flex items-center gap-16 animate-scroll whitespace-nowrap">
 
         <!-- Logos (NO grayscale) -->
-        <img src="./assets/img/bot.png" alt="Bank of Tanzania" class="h-20 object-contain">
-        <img src="https://cdn.prod.website-files.com/5fb8ce4afaee58b9d9393635/6287a06a2571b374ee7dbd57_tcra-logo.jpg" alt="TCRA" class="h-20 object-contain">
-        <img src="https://evmak.com/wp-content/uploads/2024/01/duns-evmak_tanzania.png" alt="DUNS" class="h-16 object-contain">
-        <img src="https://evmak.com/wp-content/uploads/2024/01/ftcc_evmak.png" alt="FTCC" class="h-16 object-contain">
-        <img src="https://evmak.com/wp-content/uploads/2024/01/03-UNCDF_evmak_tanzania.png" alt="UNCDF" class="h-16 object-contain">
+        <picture>
+          <source srcset="./assets/img/bot.webp" type="image/webp">
+          <img src="./assets/img/bot.png" alt="Bank of Tanzania regulator logo" width="240" height="223" loading="lazy" decoding="async" class="h-20 object-contain">
+        </picture>
+        <img src="https://cdn.prod.website-files.com/5fb8ce4afaee58b9d9393635/6287a06a2571b374ee7dbd57_tcra-logo.jpg" alt="Tanzania Communications Regulatory Authority logo" width="240" height="240" loading="lazy" decoding="async" class="h-20 object-contain">
+        <img src="https://evmak.com/wp-content/uploads/2024/01/duns-evmak_tanzania.png" alt="DUNS Registered business identifier logo" width="200" height="120" loading="lazy" decoding="async" class="h-16 object-contain">
+        <img src="https://evmak.com/wp-content/uploads/2024/01/ftcc_evmak.png" alt="Fair Trade Commission Certified logo" width="200" height="120" loading="lazy" decoding="async" class="h-16 object-contain">
+        <img src="https://evmak.com/wp-content/uploads/2024/01/03-UNCDF_evmak_tanzania.png" alt="UN Capital Development Fund partner logo" width="200" height="120" loading="lazy" decoding="async" class="h-16 object-contain">
 
-        <!-- Duplicate for smooth infinite scroll -->
-        <img src="./assets/img/bot.png" alt="" class="h-20 object-contain">
-        <img src="https://cdn.prod.website-files.com/5fb8ce4afaee58b9d9393635/6287a06a2571b374ee7dbd57_tcra-logo.jpg" alt="" class="h-20 object-contain">
-        <img src="https://evmak.com/wp-content/uploads/2024/01/duns-evmak_tanzania.png" alt="" class="h-16 object-contain">
-        <img src="https://evmak.com/wp-content/uploads/2024/01/ftcc_evmak.png" alt="" class="h-16 object-contain">
-        <img src="https://evmak.com/wp-content/uploads/2024/01/03-UNCDF_evmak_tanzania.png" alt="" class="h-16 object-contain">
+        <!-- Duplicate for smooth infinite scroll (decorative; hidden from assistive tech) -->
+        <picture aria-hidden="true">
+          <source srcset="./assets/img/bot.webp" type="image/webp">
+          <img src="./assets/img/bot.png" alt="" aria-hidden="true" width="240" height="223" loading="lazy" decoding="async" class="h-20 object-contain">
+        </picture>
+        <img src="https://cdn.prod.website-files.com/5fb8ce4afaee58b9d9393635/6287a06a2571b374ee7dbd57_tcra-logo.jpg" alt="" aria-hidden="true" width="240" height="240" loading="lazy" decoding="async" class="h-20 object-contain">
+        <img src="https://evmak.com/wp-content/uploads/2024/01/duns-evmak_tanzania.png" alt="" aria-hidden="true" width="200" height="120" loading="lazy" decoding="async" class="h-16 object-contain">
+        <img src="https://evmak.com/wp-content/uploads/2024/01/ftcc_evmak.png" alt="" aria-hidden="true" width="200" height="120" loading="lazy" decoding="async" class="h-16 object-contain">
+        <img src="https://evmak.com/wp-content/uploads/2024/01/03-UNCDF_evmak_tanzania.png" alt="" aria-hidden="true" width="200" height="120" loading="lazy" decoding="async" class="h-16 object-contain">
 
       </div>
     </div>
@@ -927,7 +1198,7 @@
 
             <div class="max-w-xs wow">
                 <div class="flex items-center mb-6">
-                    <img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="Logo" class="h-8 w-auto">
+                    <img src="https://evmak.com/wp-content/uploads/2024/01/logo_very-Big.png" alt="EvMak Tanzania logo" width="160" height="32" loading="lazy" decoding="async" class="h-8 w-auto">
                 </div>
 
                 <p class="footer-about">
@@ -936,9 +1207,9 @@
                 </p>
 
                 <div class="flex gap-3 mt-6">
-                    <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/evmak-tanzania-ltd" target="_blank" rel="noopener noreferrer" aria-label="EvMak on LinkedIn" class="footer-social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43c-1.14 0-2.07-.93-2.07-2.07 0-1.14.93-2.07 2.07-2.07 1.14 0 2.07.93 2.07 2.07 0 1.14-.93 2.07-2.07 2.07zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+                    <a href="https://www.instagram.com/evmakco/" target="_blank" rel="noopener noreferrer" aria-label="EvMak on Instagram" class="footer-social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13a5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+                    <a href="https://web.facebook.com/evmak/?_rdc=1&amp;_rdr" target="_blank" rel="noopener noreferrer" aria-label="EvMak on Facebook" class="footer-social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.1 24V13.06H5.46V8.86H9.1V5.74C9.1 2.13 11.31 0 14.54 0c1.55 0 2.88.12 3.27.17v3.79h-2.25c-1.76 0-2.1.84-2.1 2.07v2.83h4.2l-.55 4.2H13.46V24"/></svg></a>
                 </div>
             </div>
 
@@ -976,15 +1247,32 @@
         <div class="footer-bottom flex flex-col md:flex-row justify-between items-center">
             <p>Copyright @ EvMak Tanzania.</p>
             <div class="flex items-center gap-4 mt-4 md:mt-0">
-                <a href="#">Privacy Policy</a>
+                <a href="/privacy">Privacy Policy</a>
                 <span class="text-gray-400">|</span>
-                <a href="#">Our Terms</a>
+                <a href="/terms">Our Terms</a>
             </div>
         </div>
     </div>
 </footer>
 
 <script>
+    // YouTube facade: replace poster with real iframe only when the user clicks.
+    function loadYouTube(el) {
+        const id = el.getAttribute('data-yt-id');
+        if (!id) return;
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('class', 'absolute inset-0 w-full h-full');
+        iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0');
+        iframe.setAttribute('title', 'EvPay Intro Video — How EvPay payment platform works in Tanzania');
+        iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('frameborder', '0');
+        iframe.style.border = '0';
+        el.innerHTML = '';
+        el.appendChild(iframe);
+    }
+
     // Drawer toggle — ElementsKit style
     function toggleMenu() {
         const drawer = document.getElementById("drawer");
